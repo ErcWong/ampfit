@@ -1,73 +1,73 @@
 /* jssor slider bullet navigator skin 21 css */
-        /*
-            .jssorb21 div           (normal)
-            .jssorb21 div:hover     (normal mouseover)
-            .jssorb21 .av           (active)
-            .jssorb21 .av:hover     (active mouseover)
-            .jssorb21 .dn           (mousedown)
-            */
-        .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
-            background: url(../img/b21.png) no-repeat;
-            overflow: hidden;
-            cursor: pointer;
-        }
+/*
+	.jssorb21 div           (normal)
+	.jssorb21 div:hover     (normal mouseover)
+	.jssorb21 .av           (active)
+	.jssorb21 .av:hover     (active mouseover)
+	.jssorb21 .dn           (mousedown)
+	*/
+.jssorb21 div, .jssorb21 div:hover, .jssorb21 .av {
+	background: url(../img/b21.png) no-repeat;
+	overflow: hidden;
+	cursor: pointer;
+}
 
-        .jssorb21 div {
-            background-position: -5px -5px;
-        }
+.jssorb21 div {
+	background-position: -5px -5px;
+}
 
-            .jssorb21 div:hover, .jssorb21 .av:hover {
-                background-position: -35px -5px;
-            }
+	.jssorb21 div:hover, .jssorb21 .av:hover {
+		background-position: -35px -5px;
+	}
 
-        .jssorb21 .av {
-            background-position: -65px -5px;
-        }
+.jssorb21 .av {
+	background-position: -65px -5px;
+}
 
-        .jssorb21 .dn, .jssorb21 .dn:hover {
-            background-position: -95px -5px;
-        }
+.jssorb21 .dn, .jssorb21 .dn:hover {
+	background-position: -95px -5px;
+}
         
 /* jssor slider arrow navigator skin 21 css */
-        /*
-            .jssora21l              (normal)
-            .jssora21r              (normal)
-            .jssora21l:hover        (normal mouseover)
-            .jssora21r:hover        (normal mouseover)
-            .jssora21ldn            (mousedown)
-            .jssora21rdn            (mousedown)
-            */
-        .jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn {
-            position: absolute;
-            cursor: pointer;
-            display: block;
-            background: url(../img/a21.png) center center no-repeat;
-            overflow: hidden;
-        }
+/*
+	.jssora21l              (normal)
+	.jssora21r              (normal)
+	.jssora21l:hover        (normal mouseover)
+	.jssora21r:hover        (normal mouseover)
+	.jssora21ldn            (mousedown)
+	.jssora21rdn            (mousedown)
+	*/
+.jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn {
+	position: absolute;
+	cursor: pointer;
+	display: block;
+	background: url(../img/a21.png) center center no-repeat;
+	overflow: hidden;
+}
 
-        .jssora21l {
-            background-position: -3px -33px;
-        }
+.jssora21l {
+	background-position: -3px -33px;
+}
 
-        .jssora21r {
-            background-position: -63px -33px;
-        }
+.jssora21r {
+	background-position: -63px -33px;
+}
 
-        .jssora21l:hover {
-            background-position: -123px -33px;
-        }
+.jssora21l:hover {
+	background-position: -123px -33px;
+}
 
-        .jssora21r:hover {
-            background-position: -183px -33px;
-        }
+.jssora21r:hover {
+	background-position: -183px -33px;
+}
 
-        .jssora21ldn {
-            background-position: -243px -33px;
-        }
+.jssora21ldn {
+	background-position: -243px -33px;
+}
 
-        .jssora21rdn {
-            background-position: -303px -33px;
-        }
+.jssora21rdn {
+	background-position: -303px -33px;
+}
 
 .strokeme
 {
@@ -82,197 +82,25 @@
 
 /* TESTING */
 
-html {
-height: 100%;
+/* our menu styles */
+#sticky_navigation_wrapper { width:100%; height:50px; }
+#sticky_navigation { 
+	width:100%; 
+	height:50px; 
+	background:url(../img/trans-black-60.png); 
+	-moz-box-shadow: 0 0 5px #999; 
+	-webkit-box-shadow: 0 0 5px #999; 
+	box-shadow: 0 0 5px #999; 
+	text-align: center;
 }
-body {
-background: #272D30;
-padding: 0;
-text-align: center;
-font-family: 'open sans';
-position: relative;
-margin: 0;
-height: 100%;
+
+#sticky_navigation ul {
+	list-style-type:none; 
+	display: inline-block;
+	margin:0; 
+	padding:5px; 
 }
-.wrapper {
-height: auto !important;
-height: 100%;
-margin: 0 auto;
-overflow: hidden;
-}
-a {
-text-decoration: none;
-}
-h1, h2 {
-width: 100%;
-float: left;
-}
-h1 {
-margin-top: 100px;
-color: #000;
-margin-bottom: 5px;
-font-size: 70px;
-letter-spacing: -4px;
-}
-h2 {
-letter-spacing: 2px;
-color: #000;
-font-weight: 100;
-margin-top: 10px;
-margin-bottom: 10px;
-}
-.pointer {
-color: #00B0FF;
-font-family: 'Pacifico';
-font-size: 24px;
-margin-top: 15px;
-position: fixed;
-top: 62px;
-left: 25px;
-}
-pre {
-margin: 80px auto;
-}
-pre code {
-padding: 35px;
-border-radius: 5px;
-font-size: 15px;
-background: rgba(0,0,0,0.1);
-border: rgba(0,0,0,0.05) 5px solid;
-max-width: 500px;
-}
-.main {
-float: left;
-width: 100%;
-margin: 0 auto;
-}
-.main h1 {
-padding: 20px 50px 10px;
-float: left;
-width: 100%;
-font-size: 60px;
-box-sizing: border-box;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-font-weight: 100;
-margin: 0;
-padding-top: 25px;
-font-family: 'open sans';
-letter-spacing: -3px;
-text-transform: uppercase;
-}
-.main h1.demo1 {
-background: #1ABC9C;
-}
-.reload.bell {
-font-size: 12px;
-padding: 20px;
-width: 45px;
-text-align: center;
-height: 47px;
-border-radius: 50px;
--webkit-border-radius: 50px;
--moz-border-radius: 50px;
-}
-.reload.bell #notification {
-font-size: 25px;
-line-height: 140%;
-}
-.reload, .btn {
-display: inline-block;
-border: 4px solid #A2261E;
-border-radius: 5px;
--moz-border-radius: 5px;
--webkit-border-radius: 5px;
-background: #CC3126;
-display: inline-block;
-line-height: 100%;
-padding: 0.7em;
-text-decoration: none;
-color: #fff;
-width: 100px;
-line-height: 140%;
-font-size: 17px;
-font-family: open sans;
-font-weight: bold;
-}
-.reload:hover {
-background: #A2261E;
-}
-.btn {
-width: 200px;
-color: #fff;
-border: none;
-margin-left: 10px;
-background: #00B0FF;
-}
-.clear {
-width: auto;
-}
-.btn:hover, .btn:hover {
-background: #00CDFF;
-}
-.btns {
-width: 410px;
-margin: 50px auto;
-}
-.credit {
-background: #f6f6f6;
-text-align: center;
-color: #000;
-padding: 10px;
-margin: 0 0 40px 0;
-float: left;
-width: 100%;
-letter-spacing: 1px;
-}
-.credit a {
-color: #000;
-text-decoration: none;
-font-weight: bold;
-}
-.back {
-position: absolute;
-top: 0;
-left: 0;
-text-align: center;
-display: block;
-padding: 7px;
-width: 100%;
-box-sizing: border-box;
--moz-box-sizing: border-box;
--webkit-box-sizing: border-box;
-background: #00B0FF;
-font-weight: bold;
-font-size: 13px;
-color: #fff;
--webkit-transition: all 200ms ease-out;
--moz-transition: all 200ms ease-out;
--o-transition: all 200ms ease-out;
-transition: all 200ms ease-out;
-}
-.back:hover {
-background: #00CDFF;
-}
-.fsm-sidebar {
-position: fixed;
-}
-.fsm-button {
-font-size: 24px;
-color: #000;
-top: 36px;
-line-height: 100%;
-}
-.page-container {
-max-width: 700px;
-margin: auto;
-}
-.page-container p {
-font-size: 21px;
-font-weight: 100;
-line-height: 180%;
-}
-.page-container h3 {
-font-family: "noto serif";
-font-size: 23px;
-}
+
+#sticky_navigation ul li { margin:0; padding:0; display:inline; }
+#sticky_navigation ul li a { display:block; float:left; margin:0 0 0 5px; padding:0 20px; height:40px; line-height:40px; font-size:14px; font-family:Arial, serif; font-weight:bold; color:#ddd; background:#333; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; }
+#sticky_navigation ul li a:hover, #sticky_navigation ul li a.selected { color:#fff; background:#111; }
