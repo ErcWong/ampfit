@@ -1,2 +1,0 @@
-# ampfit
-yolo
