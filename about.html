@@ -11,30 +11,36 @@
 	<script type="text/javascript" src="js/jquery-1.2.2.pack.js"></script>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
-
-<!-- Let's do the animation -->
-<script type="text/javascript">
-	$(function() {
-		// set opacity to nill on page load
-		$("ul#menu span").css("opacity","0");
-		// on mouse over
-		$("ul#menu span").hover(function () {
-			// animate opacity to full
-			$(this).stop().animate({
-				opacity: 1
-			}, 'slow');
-		},
-		// on mouse out
-		function () {
-			// animate opacity to nill
-			$(this).stop().animate({
-				opacity: 0
-			}, 'slow');
-		});
-	});
-</script>
 </head>
 <body style="padding:0px; margin:0px; font-family:Arial, Verdana;" background="img/background.jpg">
+	<script>
+		$(document).ready(function() {
+			// NAVIGATION MENU BAR
+			// grab the initial top offset of the navigation 
+			var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+			 
+			// our function that decides weather the navigation bar should have "fixed" css position or not.
+			var sticky_navigation = function(){
+				var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+				
+				// if we've scrolled more than the navigation, change its position to fixed to stick to top,
+				// otherwise change it back to relative
+				if (scroll_top > sticky_navigation_offset_top) { 
+					$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+				} else {
+					$('#sticky_navigation').css({ 'position': 'relative' }); 
+				}   
+			};
+			 
+			// run our function on load
+			sticky_navigation();
+			 
+			// and run it again every time you scroll
+			$(window).scroll(function() {
+				 sticky_navigation();
+			});
+		});
+	</script>
 
 	<div style="width: 100%; text-align:center;">
 	 
@@ -58,7 +64,7 @@
 				<h1 class="strokeme" style="float: left;">AMP Methodology</h1>
 			</div>
 			<br style="clear: both;">
-			<div style="float: left; width: 50%;">
+			<div style="float: left; width: 55%;">
 				<p class="text">
 					Movement followed by Strength. Our methods teach you how to apply these basic principles in whatever endeavor you choose.
 				</p>
@@ -73,26 +79,33 @@
 					injuries.
 				</p>
 			</div>
-			<div style="float: right; width: 50%;">
-				<img style="border:1px solid white; margin: 25px;" src="img/amp/swingin.png"/>
+			<div style="float: left; width: 45%;">
+				<img style="border:1px solid white; margin: 20px; width: 100%;" src="img/amp/swingin.png"/>
 			</div>
 			
-			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-			<img src="img/amp/AMPmethodnew.png"/>
+			<br style="clear: both;">
 			
 			<hr class="ampsep">
 			
 			<br style="clear: both;">
 			
-			<div style="height: 475px;">
-				<div style="float: left; padding-left: 25px;">
-					<h1 class="strokeme" style="float: left; margin: 0px;">Owen Chau</h1><br style="clear: both;">
-					<p class="text" style="float: right; margin: 0px;">Head Trainer &amp; Owner</p><br style="clear: both;">
+			<div style="max-height: 600px;">
+				<div style="float: left; padding-left: 25px; width: 100%;">
+					<table style="border: 0px;">
 					
-					<img style="border: 2px solid white;" src="img/amp/honeyoweny.png">
-				</div>
-				<div style="float: right; width: 70%; height: 100%;">
-					<div class="border-left" style="float: left; width: 48%;">
+					<tbody>
+					<tr>
+					
+					<td style="width: 25%; vertical-align: top;">
+					<h1 class="strokeme" style="float: left; margin: 0px;">Owen Chau</h1><br style="clear: both;">
+					<div style="width: 90%;">
+						<p class="text" style="float: right; margin: 0px;">Head Trainer &amp; Owner</p><br style="clear: both;">
+						<img style="border: 2px solid white; width: 100%;" src="img/amp/honeyoweny.png">
+					</div>
+					</td>
+					
+					<td class="border-left" style="width: 30%;">
+					<div style="width: 95%;">
 						<p class="text">
 							I started as a martial artist who wanted to improve my skills and prevent injury. For this purpose, I decided to pursue basic
 							strength training. I discovered that this was not only beneficial for athletes, but for the general population as well. This
@@ -104,7 +117,10 @@
 							weight for ages and with horrible, horrible form. In a commerical gym, these types of things are unavoidable.
 						</p>
 					</div>
-					<div class="border-left" style="float: right; width: 48%;">
+					</td>
+					
+					<td class="border-left" style="width: 30%;">
+					<div>
 						<p class="text">
 							These are the reasons why I wanted to open an <span class="ampfit">AMPFit</span> facility. <span class="ampfit">AMPFit</span>
 							was created to avoid these clich&eacute;s and produce a higher standard of training.
@@ -118,17 +134,28 @@
 							tools to ensure every one of my students is <span class="ampfit">Always Making Progress.</span>
 						</p>
 					</div>
+					</td>
+					
+					</tr>
+					</tbody>
+					</table>
+					
+					
 				</div>
 			</div>
 			
-			<br><br>
 			<br style="clear: both;">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
 			<hr class="ampsep">
 			
 			<br style="clear: both;">
-			<img src="img/amp/OwenWebprofilelarge.png"/>
-			<img src="img/amp/Owenaboutsection1.png"/>
-			<img src="img/amp/Owenaboutsection2.png"/>
+			
+			<img class="hero-unit" src="img/amp/AMPmethodnew.png"/>
+			<br style="clear: both;">
+			<img class="hero-unit" src="img/amp/OwenWebprofilelarge.png"/>
+			<img class="hero-unit" src="img/amp/Owenaboutsection1.png"/>
+			<img class="hero-unit" src="img/amp/Owenaboutsection2.png"/>
 		</div>
 		
 		<br style="clear: both;">

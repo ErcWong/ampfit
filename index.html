@@ -10,28 +10,6 @@
 	<script type="text/javascript" src="js/jquery-1.2.2.pack.js"></script>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
-
-<!-- Let's do the animation -->
-<script type="text/javascript">
-	$(function() {
-		// set opacity to nill on page load
-		$("ul#menu span").css("opacity","0");
-		// on mouse over
-		$("ul#menu span").hover(function () {
-			// animate opacity to full
-			$(this).stop().animate({
-				opacity: 1
-			}, 'slow');
-		},
-		// on mouse out
-		function () {
-			// animate opacity to nill
-			$(this).stop().animate({
-				opacity: 0
-			}, 'slow');
-		});
-	});
-</script>
 </head>
 <body style="padding:0px; margin:0px; font-family:Arial, Verdana;" background="img/background.jpg">
     <script>
