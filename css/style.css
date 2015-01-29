@@ -69,18 +69,44 @@
 	background-position: -303px -33px;
 }
 
-.strokeme
-{
-    color: white;
+.strokeme {
+    color: black;
     text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;  
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;  
 }
 
-div .content {
-	width: 75%;
+h1 {
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+}
+
+h3 {
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+p.text {
+	color: white;
+	text-indent: 50px;
+	text-align: left;
+	font-size: 20px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.ampfit {
+	font-weight: bold;
+	color: #9E0808;
+}
+
+div.content {
+	width: 60%;
     margin: 0 auto;
 	display: inline-block;
 	white-space: normal;
@@ -89,6 +115,35 @@ div .content {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0 2%;
+}
+
+.border-left {
+	height: 100%; 
+	border-left: 1px solid #333;
+}
+
+.border-left p {
+	margin-left: 20px;
+}
+
+hr.ampsep{
+	margin: 0;
+    padding: 0;
+	padding-top: 10px;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.ampsep:after {
+    content: "Always Making Progress";
+    display: inline-block;
+    position: relative; 
+    top: -0.7em;  
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: "img/background.jpg";
+	font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* TESTING */
@@ -112,8 +167,7 @@ div .content {
 	list-style-type:none; 
 	display: inline-block;
 	margin:0; 
-	padding:5px; 
-	min-width: 726px;
+	padding:5px;
 }
 
 #sticky_navigation ul li {
@@ -131,7 +185,7 @@ div .content {
 	height:40px; 
 	line-height:40px; 
 	font-size:14px; 
-	font-family:Arial, serif; 
+	font-family: 'Open Sans Condensed', sans-serif;
 	font-weight:bold; 
 	color:#fff; 
 	background:#666; 
