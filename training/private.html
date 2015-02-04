@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMPFIT | Always Making Progress</title>
+    
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    
+	<script type="text/javascript" src="../js/jquery-1.2.2.pack.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../js/ampfit.js"></script>
+    
+</head>
+<body style="padding:0px; margin:0px; font-family:Arial, Verdana;" background="../img/background.jpg">
+	<script>
+		$(document).ready(function() {
+			initStickyNav();
+		});
+	</script>
+
+	<div style="width: 100%; text-align:center;">
+		<!-- Nav Bar -->	 
+		<div id="sticky_navigation_wrapper">
+			<div id="sticky_navigation">
+				<ul>
+					<li><a href="/ampfit">HOME</a></li>
+					<li><a href="/ampfit/about.html">ABOUT</a></li>
+					<li><a href="/ampfit/training/private.html" class="selected">TRAINING</a></li>
+					<li><a href="#">CORPORATE</a></li>
+					<li><a href="#">TESTIMONIALS</a></li>
+					<li><a href="#">CONTACT US</a></li>
+				</ul>
+			</div>
+		</div>
+		
+
+		<div class="content">
+			<div style="text-align: center; margin-top: 30px;">
+	    		<div style="display: inline-block">
+	    			<a href="#">
+	    				<img class="circle" src="../img/amp/private_training.jpg" 
+	    					onmouseover="this.src='../img/amp/private_training_hover.jpg'" onmouseout="this.src='../img/amp/private_training.jpg'">
+	    			</a>
+	    			<p class="label">Private Training</p>
+	    		</div>
+	    		<div style="display: inline-block">
+		    		<a href="#">
+		    			<img class="circle" src="../img/amp/group_training.jpg"
+		    				onmouseover="this.src='../img/amp/group_training_hover.jpg'" onmouseout="this.src='../img/amp/group_training.jpg'">
+		    		</a>
+		    		<p class="label">Group Training</p>
+	    		</div>
+	    		<div style="display: inline-block">
+		    		<a href="#">
+		    			<img class="circle" src="../img/amp/weightlifting.png"
+		    				onmouseover="this.src='../img/amp/weightlifting_hover.png'" onmouseout="this.src='../img/amp/weightlifting.png'">
+		    		</a>
+		    		<p class="label">Weightlifting Club</p>
+	    		</div>
+	    	</div>
+		
+			<div id="ampfit_pricing" style="float: left; display: inline-block; width: 70%;">
+				<div>
+					<h1 class="strokeme" style="float: left;">Personal Training Sessions</h1>
+				</div>
+				<br style="clear: both;">
+				<div style="float: left; width: 100%;">
+					<p class="text">
+						Are you ready? Take the first step in <span class="ampfit">Always Making Progress</span>. Lessons will be
+						one on one with an instructor and will focus on panda bears. Livia is also a cool instructor too right? Oh boy
+						dad I'm so excited! 1 hour <b>Personal Training</b> from <span class="ampfit">$60</span>/session.
+						<br><br>
+					</p>
+				</div>
+				<br style="clear: both;">
+				<hr class="ampsep">
+				
+				<div>
+					<h1 class="strokeme" style="float: left;">Basic Package - 1 Hour Sessions</h1>
+				</div>
+				<br style="clear: both;">
+				<div id="basic_training_div" style="float: left; width: 100%;">
+					<ul>
+						<li style="color: white;" onclick="javascript:test('basic', this);">
+							<p class="label" style="text-align: left;">Single Session - $90 + Tax
+								<img style="display: none; float: right; width: 25px; height: 25px;" src="../img/check.png" />
+								<span class="rate" style="float: right; margin-right: 25px;">/session</span> 
+								<span class="ampfit" style="float: right;">$90</span>
+							</p>
+						</li>
+						<li style="color: white;" onclick="javascript:test('basic', this);">
+							<p class="label" style="text-align: left;">8 Session Package - $640 + Tax
+								<img style="display: none; float: right; width: 25px; height: 25px;" src="../img/check.png" />
+								<span class="rate" style="float: right; margin-right: 25px;">/session</span> 
+								<span style="float: right;" class="ampfit">$80</span>
+							</p>
+						</li>
+						<li style="color: white;" onclick="javascript:test('basic', this);">
+							<p class="label" style="text-align: left;">12 Session Package - $900 + Tax
+								<img style="display: none; float: right; width: 25px; height: 25px;" src="../img/check.png"/>
+								<span class="rate" style="float: right; margin-right: 25px;">/session</span> 
+								<span class="ampfit" style="float: right;">$75</span>
+							</p>
+						</li>
+					</ul>
+					
+					<div>
+						<p class="label" style="float: left; margin: 0px;">Select a package above</p>
+						<button style="float: right; margin-bottom: 15px; margin-right: 25px;">Paypal button</button>
+					</div>
+				</div>
+				<br style="clear: both;">
+				<hr class="ampsep">
+				
+				<div>
+					<h1 class="strokeme" style="float: left;">Quaterly Package - 1 Hour Sessions</h1>
+				</div>
+				<br style="clear: both;">
+				<div id="quaterly_training_div" style="float: left; width: 100%;">
+					<ul>
+						<li style="color: white;" onclick="javascript:test('quaterly', this);">
+							<p class="label" style="text-align: left;">24 Session Package @ 3 Months, 2x/week - $1560 + Tax
+								<img style="display: none; float: right; width: 25px; height: 25px;" src="../img/check.png" />
+								<span class="rate" style="float: right; margin-right: 25px;">/session</span> 
+								<span class="ampfit" style="float: right;">$65</span>
+							</p>
+						</li>
+						<li style="color: white;" onclick="javascript:test('quaterly', this);">
+							<p class="label" style="text-align: left;">36 Session Package @ 3 Month, 3x/week - $2160 + Tax
+								<img style="display: none; float: right; width: 25px; height: 25px;" src="../img/check.png" />
+								<span class="rate" style="float: right; margin-right: 25px;">/session</span> 
+								<span style="float: right;" class="ampfit">$60</span>
+							</p>
+						</li>
+					</ul>
+					
+					<div>
+						<p class="label" style="float: left; margin: 0px;">Select a package above</p>
+						<button style="float: right; margin-bottom: 15px; margin-right: 25px;">Paypal button</button>
+					</div>
+				</div>
+				<br style="clear: both;">
+				<hr class="ampsep">
+			</div>
+			<div style="float: right; display: inline-block; width: 25%; border: 1px solid white; margin-top: 30px;">
+				<h3 style="margin: 0px;">Personal Training Policies:</h3>
+				<p class="label" style="font-size: 15px; text-align: left; padding: 5px;">
+					If you have any questions regarding these policies, do not hesitate to ask.
+					<br><br>
+					- Payment: Payment must be made in advance before the start of your first session.
+					<br><br>
+					- Tardiness: All clients and trainers are encouraged to be prompt. If client is late, this time will be 
+						deducted from the session; contrarily, if a trainer is late, the amount of time will be added for an 
+						extended session. Please be advised that trainers are required to wait 15 minutes for a scheduled client, 
+						after which time the session is subject to cancellation and clients will be charged for a full session.
+					<br><br>
+					- Cancellations: In order to cancel or reschedule a session, please contact AMP at least 24 hours in advance 
+						of the scheduled appointment or you will be charged for that session. Similarly, if AMP does not contact 
+						you atleast 24 hours in advance to cancel or reschedule an appointment you will receive a complimentary 
+						session. If a client does not show up for a scheduled session, he/she will be charged for that session.
+					<br><br>
+					- Refunds: Please be sure that our services match your needs before committing through payment. If you are 
+						fully committed to your AMP training program and are still not satisfied with the services provided. AMP 
+						will be happy to provide you with a refund*. </p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
