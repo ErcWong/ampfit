@@ -15,6 +15,7 @@
 *.class
 .classpath
 .project
+.settings
 
 # Binary Files
 *.xls*
