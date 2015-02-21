@@ -1,0 +1,36 @@
+# Generic Files
+*~
+*.lock
+*.~lock*
+*.DS_Store
+*.swp
+*.out
+*.log
+
+# IntelliJ Files
+*.iml
+.idea/
+
+# Java Files
+*.class
+.classpath
+.project
+
+# Binary Files
+*.xls*
+*.xlsx*
+*.doc*
+
+# Directories
+.settings/
+.externalToolBuilders/
+bin/
+log/
+logs/
+target/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+/target
