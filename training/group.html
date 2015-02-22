@@ -66,7 +66,7 @@
 
       </div>
     </div>
-
+    
     <div class="container marketing" style="margin-top: 150px;">
 		<div>
 			<span>Training -> Group Training Classes</span>
@@ -82,9 +82,21 @@
         </div><!-- /.col-lg-2 -->
 		<span style="padding-left: 5px;">What do we teach?</span><br>
         <div class="col-lg-2">
-          <h4>GENERAL FITNESS + STRENGTH</h4>
-          <p>Incorporating the use of your bodyweight, kettlebells, barbells, and dumbells.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          
+          <div class="hover panel">
+          	<div class="front">
+            	<div class="box1">
+              		<h4>GENERAL FITNESS + STRENGTH</h4>
+            	</div>
+          	</div>
+          	<div class="back">
+            	<div class="box2">
+              		<p>Incorporating the use of your bodyweight, kettlebells, barbells, and dumbells.</p>
+          			<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            	</div>
+          	</div>
+        </div>
+        
         </div><!-- /.col-lg-2 -->
         <div class="col-lg-2">
           <h4>BODYWEIGHT</h4>
@@ -108,16 +120,13 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-	<script src="../js/pongstagr.am.min.js"></script>
+    <script src="../js/ampfit.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
 	
 	<script>
 		$(document).ready(function() {
-			$('#instagram-feed').pongstgrm({
-				accessId: '22267308',
-				accessToken: '22267308.0d74a25.d9092a998b584993816e07d01cbf2ce7'
-			});
+			setupOnPanelHover();
 		});
 	</script>
   </body>
