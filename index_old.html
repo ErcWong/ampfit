@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMPFIT | Always Making Progress</title>
-    
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-    
-	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
-    <script type="text/javascript" src="js/jquery.simplemodal.1.4.4.min.js"></script>
-    <script type="text/javascript" src="js/ampfit.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMPFIT | Always Making Progress</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link
+	href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700'
+	rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+<script type="text/javascript" src="js/jquery.simplemodal.1.4.4.min.js"></script>
+<script type="text/javascript" src="js/ampfit.js"></script>
 </head>
-<body style="padding:0px; margin:0px; font-family:Arial, Verdana;" background="img/background.jpg">
-    <script>
-    	$(document).ready(function() {
-    		initJssorSlider();
-        	initStickyNav();
-        	initTwitterFeed();
-    	});
-    </script>
-	
-	<div style="width: 100%; text-align:center;">
-		<!-- Nav Bar -->	 
+<body style="padding: 0px; margin: 0px; font-family: Arial, Verdana;"
+	background="img/background.jpg">
+	<script>
+		$(document).ready(function() {
+			initJssorSlider();
+			initStickyNav();
+			initTwitterFeed();
+		});
+	</script>
+
+	<div style="width: 100%; text-align: center;">
+		<!-- Nav Bar -->
 		<div id="sticky_navigation_wrapper">
 			<div id="sticky_navigation">
 				<ul>
@@ -36,131 +39,139 @@
 				</ul>
 			</div>
 		</div>
-    
-	    <!-- Jssor Slider Begin -->
-	    <!-- You can move inline styles to css file or css block. -->
-	    <div id="slider1_container" style="position: relative; margin: 0 auto;
-	        top: 0px; left: 0px; width: 1300px; height: 450px; overflow: hidden;">
-	        <!-- Loading Screen -->
-	        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-	            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;
-	                top: 0px; left: 0px; width: 100%; height: 100%;">
-	            </div>
-	            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
-	                top: 0px; left: 0px; width: 100%; height: 100%;">
-	            </div>
-	        </div>
-	        <!-- Slides Container -->
-	        <div data-u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
-	            height: 500px; overflow: hidden;">
-	          	<div>
-	               	<img data-u="image" src="img/amp/AMPheader.png" alt="" />
-			    </div>
-	            <div>
-	                <img data-u="image" src="img/amp/amp_pic3.jpg" alt="" />
-	                <div style="position: absolute; width: 80%; height: 120px; top: 30px; left: 30px; padding: 5px;
-	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-	                        color: #FFFFFF;"><span class="strokeme">AMPFIT | Always Making Progress</span>
-	                </div>
-	                <div style="position: absolute; height: 150px; top: 380px; left: 550px; padding: 5px;
-	                    text-align: left; line-height: 36px; font-size: 30px;
-	                        color: #FFFFFF;">
-							<span class="strokeme">AMP - A community that believes in the importance of movement, strength, and Always Making Progress</span>
-	                </div>
-	            </div>
-	            <div>
-	                <img data-u="image" src="img/amp/amp_pic2.jpg" alt="" />
-	                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-	                        color: #FFFFFF;">Personal Training
-	                </div>
-	                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-	                    text-align: left; line-height: 36px; font-size: 30px;
-	                        color: #FFFFFF;">
-	                        Who's your daddy? It's Owen or Seb.
-	                </div>
-	            </div>
-	            <div>
-	                <img data-u="image" src="img/amp/amp_pic1.jpg" alt="" />
-	                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-	                        color: #FFFFFF;">Group Training
-	                </div>
-	                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-	                    text-align: left; line-height: 36px; font-size: 30px;
-	                        color: #FFFFFF;">
-	                        Build your slider with anything, includes image, content, text, html, photo, picture
-	                </div>
-	            </div>
-	            <div>
-	                <img data-u="image" src="img/1920/red.jpg" alt="" />
-	                <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-	                        color: #FFFFFF;">AMP Weightlifting Club
-	                </div>
-	                <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-	                    text-align: left; line-height: 36px; font-size: 30px;
-	                        color: #FFFFFF;">
-						
-	                </div>
-	            </div>
-	            <div id="ytdiv">
-					<iframe class="ytplayer" src="//www.youtube.com/embed/1-CONCY_WE8" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-	            </div>
-	        </div>
-	                
-	        <!-- Bullet Navigator Skin Begin -->
-	        <!-- bullet navigator container -->
-	        <div data-u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-	            <!-- bullet navigator item prototype -->
-	            <div data-u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
-	        </div>
-	        <!-- Bullet Navigator Skin End -->
-	
-	        <!-- Arrow Navigator Skin Begin -->
-	        <!-- Arrow Left -->
-	        <span data-u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
-	        <!-- Arrow Right -->
-	        <span data-u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
-	        <!-- Arrow Navigator Skin End -->
-	    </div>
-	    <br>
-	    
-	    <div class="content" style="height: 10000px;">
-	    	<div style="text-align: center;">
-	    		<div style="display: inline-block">
-	    			<a href="/ampfit/training/private.html">
-	    				<img class="circle" src="img/amp/private_training.jpg" 
-	    					onmouseover="this.src='img/amp/private_training_hover.jpg'" onmouseout="this.src='img/amp/private_training.jpg'">
-	    			</a>
-	    			<p class="label">Private Training</p>
-	    		</div>
-	    		<div style="display: inline-block">
-		    		<a href="#">
-		    			<img class="circle" src="img/amp/group_training.jpg"
-		    				onmouseover="this.src='img/amp/group_training_hover.jpg'" onmouseout="this.src='img/amp/group_training.jpg'">
-		    		</a>
-		    		<p class="label">Group Training</p>
-	    		</div>
-	    		<div style="display: inline-block">
-		    		<a href="#">
-		    			<img class="circle" src="img/amp/weightlifting.png"
-		    				onmouseover="this.src='img/amp/weightlifting_hover.png'" onmouseout="this.src='img/amp/weightlifting.png'">
-		    		</a>
-		    		<p class="label">Weightlifting Club</p>
-	    		</div>
-	    	</div>
-	    	<br style="clear: both;">
-			<div>
-				<a class="twitter-timeline" href="https://twitter.com/AMPfitdotca" height="860" width="300" data-theme="dark" data-widget-id="555950624999620608">@AMPfitdotca</a>
-				<iframe src="http://widget.websta.me/in/ampfit.ca/?s=200&w=2&h=4&b=1&p=5" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:430px; height: 860px" ></iframe> <!-- websta - web.stagram.com -->
+
+		<!-- Jssor Slider Begin -->
+		<!-- You can move inline styles to css file or css block. -->
+		<div id="slider1_container"
+			style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 450px; overflow: hidden;">
+			<!-- Loading Screen -->
+			<div data-u="loading"
+				style="position: absolute; top: 0px; left: 0px;">
+				<div
+					style="filter: alpha(opacity = 70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;">
+				</div>
+				<div
+					style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+				</div>
 			</div>
-	    </div>
-	
+			<!-- Slides Container -->
+			<div data-u="slides"
+				style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;">
+				<div>
+					<img data-u="image" src="img/amp/AMPheader.png" alt="" />
+				</div>
+				<div>
+					<img data-u="image" src="img/amp/amp_pic3.jpg" alt="" />
+					<div
+						style="position: absolute; width: 80%; height: 120px; top: 30px; left: 30px; padding: 5px; text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px; color: #FFFFFF;">
+						<span class="strokeme">AMPFIT | Always Making Progress</span>
+					</div>
+					<div
+						style="position: absolute; height: 150px; top: 380px; left: 550px; padding: 5px; text-align: left; line-height: 36px; font-size: 30px; color: #FFFFFF;">
+						<span class="strokeme">AMP - A community that believes in
+							the importance of movement, strength, and Always Making Progress</span>
+					</div>
+				</div>
+				<div>
+					<img data-u="image" src="img/amp/amp_pic2.jpg" alt="" />
+					<div
+						style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px; text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px; color: #FFFFFF;">Personal
+						Training</div>
+					<div
+						style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px; text-align: left; line-height: 36px; font-size: 30px; color: #FFFFFF;">
+						Who's your daddy? It's Owen or Seb.</div>
+				</div>
+				<div>
+					<img data-u="image" src="img/amp/amp_pic1.jpg" alt="" />
+					<div
+						style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px; text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px; color: #FFFFFF;">Group
+						Training</div>
+					<div
+						style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px; text-align: left; line-height: 36px; font-size: 30px; color: #FFFFFF;">
+						Build your slider with anything, includes image, content, text,
+						html, photo, picture</div>
+				</div>
+				<div>
+					<img data-u="image" src="img/1920/red.jpg" alt="" />
+					<div
+						style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px; text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px; color: #FFFFFF;">AMP
+						Weightlifting Club</div>
+					<div
+						style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px; text-align: left; line-height: 36px; font-size: 30px; color: #FFFFFF;">
+
+					</div>
+				</div>
+				<div id="ytdiv">
+					<iframe class="ytplayer" src="//www.youtube.com/embed/1-CONCY_WE8"
+						width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<!-- Bullet Navigator Skin Begin -->
+			<!-- bullet navigator container -->
+			<div data-u="navigator" class="jssorb21"
+				style="position: absolute; bottom: 26px; left: 6px;">
+				<!-- bullet navigator item prototype -->
+				<div data-u="prototype"
+					style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align: center; line-height: 19px; color: White; font-size: 12px;"></div>
+			</div>
+			<!-- Bullet Navigator Skin End -->
+
+			<!-- Arrow Navigator Skin Begin -->
+			<!-- Arrow Left -->
+			<span data-u="arrowleft" class="jssora21l"
+				style="width: 55px; height: 55px; top: 123px; left: 8px;"></span>
+			<!-- Arrow Right -->
+			<span data-u="arrowright" class="jssora21r"
+				style="width: 55px; height: 55px; top: 123px; right: 8px"></span>
+			<!-- Arrow Navigator Skin End -->
+		</div>
+		<br>
+
+		<div class="content" style="height: 10000px;">
+			<div style="text-align: center;">
+				<div style="display: inline-block">
+					<a href="/ampfit/training/private.html"> <img class="circle"
+						src="img/amp/private_training.jpg"
+						onmouseover="this.src='img/amp/private_training_hover.jpg'"
+						onmouseout="this.src='img/amp/private_training.jpg'">
+					</a>
+					<p class="label">Private Training</p>
+				</div>
+				<div style="display: inline-block">
+					<a href="#"> <img class="circle"
+						src="img/amp/group_training.jpg"
+						onmouseover="this.src='img/amp/group_training_hover.jpg'"
+						onmouseout="this.src='img/amp/group_training.jpg'">
+					</a>
+					<p class="label">Group Training</p>
+				</div>
+				<div style="display: inline-block">
+					<a href="#"> <img class="circle"
+						src="img/amp/weightlifting.png"
+						onmouseover="this.src='img/amp/weightlifting_hover.png'"
+						onmouseout="this.src='img/amp/weightlifting.png'">
+					</a>
+					<p class="label">Weightlifting Club</p>
+				</div>
+			</div>
+			<br style="clear: both;">
+			<div>
+				<a class="twitter-timeline" href="https://twitter.com/AMPfitdotca"
+					height="860" width="300" data-theme="dark"
+					data-widget-id="555950624999620608">@AMPfitdotca</a>
+				<iframe
+					src="http://widget.websta.me/in/ampfit.ca/?s=200&w=2&h=4&b=1&p=5"
+					allowtransparency="true" frameborder="0" scrolling="no"
+					style="border: none; overflow: hidden; width: 430px; height: 860px"></iframe>
+				<!-- websta - web.stagram.com -->
+			</div>
+		</div>
+
 		<br style="clear: both;">
 		<div class="footer" style="position: absolute; bottom: 0; left: 0;">
-	   		<span>Contact</span>
+			<span>Contact</span>
 		</div>
-	<div>
+		<div>
 </body>
 </html>
