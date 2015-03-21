@@ -187,6 +187,7 @@ hr.ampsep:after {
 }
 
 .panel .back {
+	width: 100%;
 	height: inherit;
 	position: absolute;
 	top: 0;
@@ -205,12 +206,14 @@ hr.ampsep:after {
 }
 
 .panel.flip .front {
+	width: 100%;
 	z-index: 900;
 	-webkit-transform: rotateY(180deg);
 	-moz-transform: rotateY(180deg);
 }
 
 .panel.flip .back {
+	width: 100%;
 	z-index: 1000;
 	-webkit-transform: rotateX(0deg) rotateY(0deg);
 	-moz-transform: rotateX(0deg) rotateY(0deg);
@@ -236,4 +239,12 @@ hr.ampsep:after {
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
+}
+
+.amp {
+	color: #9E1D20;
+}
+
+.amp-top {
+	border-top: 1px solid #9E1D20;
 }
