@@ -17,5 +17,15 @@ function setupOnPanelHover() {
 	});
 }
 
+function openTestimonial(name) {
+	$.ajax({
+        url : name + ".txt",
+        dataType: "text",
+        success : function (data) {
+            $(".text").html(data);
+        }
+    });
+}
+
 function sendInquiry() {
 }
