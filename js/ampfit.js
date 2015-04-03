@@ -1,3 +1,19 @@
+function loadHeaderAndFooter(page) {
+	$('header').load('header.html', function() {
+		$('li:contains(' + page + ')').addClass('active');		
+	});
+	$('footer').load('footer.html');
+}
+
+function loadPongstgram() {
+	$('#instagram-feed').pongstgrm(
+		{
+			accessId : '295165979',
+			accessToken : '295165979.167035a.f95a0b3a5f54421f9fb59572756b3059'
+		}
+	);
+}
+
 function test(type, element) {
 	var div = $('#' + type + '_training_div'); 
 	div.find('img').hide();
