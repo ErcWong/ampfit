@@ -1,8 +1,8 @@
 function loadHeaderAndFooter(page) {
-	$('header').load('header.html', function() {
+	$('header').load('/ampfit/header.html', function() {
 		$('li:contains(' + page + ')').addClass('active');		
 	});
-	$('footer').load('footer.html');
+	$('footer').load('/ampfit/footer.html');
 }
 
 function loadPongstgram() {
