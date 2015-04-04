@@ -1,6 +1,6 @@
 function loadHeaderAndFooter(page) {
 	$('header').load('/ampfit/header.html', function() {
-		$('li:contains(' + page + ')').addClass('active');		
+		$('li:contains(' + page + ')').first().addClass('active');		
 	});
 	$('footer').load('/ampfit/footer.html');
 }
