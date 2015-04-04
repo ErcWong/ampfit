@@ -158,6 +158,7 @@ hr.ampsep:after {
 	margin: 0 auto;
 	height: 300px; 
 	position: relative;
+	background-color: #222;
 	-webkit-perspective: 600px;
 	-moz-perspective: 600px;
 }
@@ -221,7 +222,7 @@ hr.ampsep:after {
 }
 
 .box1 {
-	background-color: #29292a;
+	background-color: #9E1D20;
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
@@ -232,7 +233,7 @@ hr.ampsep:after {
 }
 
 .box2 {
-	background-color: #900000;
+	background-color: white;
 	width: 100%;
 	height: 100%;
 	margin: 0 auto;
