@@ -247,6 +247,10 @@ hr.ampsep:after {
 	color: #9E1D20;
 }
 
+.amp-bg {
+	background-color: #9E1D20;
+}
+
 .amp-top {
 	border-top: 1px solid #9E1D20;
 }
