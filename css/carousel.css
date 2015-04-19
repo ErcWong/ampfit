@@ -328,3 +328,8 @@ hr.ampsep:after {
 .amp-top {
 	border-top: 1px solid #9E1D20;
 }
+
+.amp-testimonial {
+	background-color: black;
+	border-color: #9E1D20;
+}
