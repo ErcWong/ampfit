@@ -195,6 +195,21 @@ body {
 
 /* CUSTOM
 -------------------------------------------------- */
+
+ul.nav.navbar-nav li a {
+	font-size: 18px;
+}
+
+.jumbotron {
+	background-image: url('/ampfit/img/amp/amp_pic4.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+	min-height: 400px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+
 hr.ampsep {
 	margin: 0;
 	padding: 0;
