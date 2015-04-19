@@ -5,6 +5,15 @@ function loadHeaderAndFooter(page) {
 	$('footer').load('/ampfit/footer.html');
 }
 
+function loadTrainingTab(uri, anchor) {
+	$('#training-tab-content').load(uri);
+	
+	$('ul.nav-tabs li.active').removeClass('active');
+	if (anchor != null) {
+		$(anchor).parent().addClass('active');
+	}
+}
+
 function loadPongstgram() {
 	$('#instagram-feed').pongstgrm(
 		{

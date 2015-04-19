@@ -35,199 +35,24 @@
 	<hr class="featurette-divider amp-top" style="margin-top: 150px;">
 
 	<div class="container marketing">
-		<div class="row">
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">PERSONAL<br>TRAINING</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 40px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p class="lead">Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">GROUP<br>TRAINING</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 40px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p>Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">CORPORATE TRAINING</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 40px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p>Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		
-		<hr class="featurette-divider amp-top">
-		
-		<!-- FITNESS STRENGTH BODYWEIGHT -->
-		<div class="row">
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">MOVEMENT</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 40px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p class="lead">Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">STRENGTH</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 40px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p>Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">BODYWEIGHT</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 40px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p>Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
+		<ul class="nav nav-tabs">
+			<li role="presentation"><a href="#" onclick="loadTrainingTab('/ampfit/training/tabs/goals.html', this);">Goals</a></li>
+			<li role="presentation"><a href="#" onclick="loadTrainingTab('/ampfit/training/tabs/personal.html', this);">Personal</a></li>
+			<li role="presentation" class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Group <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li role="presentation"><a href="#" onclick="loadTrainingTab('/ampfit/training/tabs/principles.html', this);">Lifting Principles</a></li>
+					<li role="presentation"><a href="#" onclick="loadTrainingTab('/ampfit/training/tabs/weightlifting.html', this);">Weightlifting</a></li>
+					<li role="presentation"><a href="#" onclick="loadTrainingTab('/ampfit/training/tabs/sweatsaturday.html', this);">Sweat Saturday</a></li>
+				</ul>
+			</li>
+			<li role="presentation"><a href="#" onclick="loadTrainingTab('/ampfit/training/tabs/corporate.html', this);">Corporate</a></li>
+			<li role="presentation"><a href="#" onclick="loadTrainingTab('/ampfit/training/tabs/rates.html', this);">Rates</a></li>
+		</ul>
+		<div id="training-tab">
+			<br><div id="training-tab-content"></div>
 		</div>
-		
-		<!-- KETTLEBELL BARBELL OLYMPIC -->		
-		<div class="row">
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">KETTLEBELL</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 40px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p>Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">BARBELL</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 40px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p>Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="hover panel">
-					<div class="front">
-						<div class="box1">
-							<h2 style="color: white;">OLYMPIC WEIGHTLIFTING</h2>
-							<img src="/ampfit/img/amp/kettlebell.jpg" style="margin-top: 5px; width: 100px; height: 100px;"></img>
-						</div>
-					</div>
-					<div class="back">
-						<div class="box2">
-							<p>Incorporating the use of your bodyweight, kettlebells,
-								barbells, and dumbells.</p>
-							<p>
-								<a class="btn btn-default" href="#" role="button">View
-									details &raquo;</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.row -->
 
 		<footer></footer>
 	</div>
@@ -243,6 +68,7 @@
 		$(document).ready(function() {
 			loadHeaderAndFooter('Training');
 			setupOnPanelHover();
+			$('ul.nav-tabs a').first().click();
 		});
 	</script>
 </body>
