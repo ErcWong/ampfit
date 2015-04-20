@@ -5,6 +5,19 @@ function loadHeaderAndFooter(page) {
 	$('footer').load('/ampfit/footer.html');
 }
 
+function loadTrainingTab(uri, anchor) {
+	$('#training-tab-content').load(uri);
+	
+	$('ul.nav-tabs li.active').removeClass('active');
+	if (anchor != null) {
+		$(anchor).parent().addClass('active');
+	}
+}
+
+function loadTestimonial(name) {
+	$('#testimonial').load('/ampfit/testimonials/' + name + '.txt');
+}
+
 function loadPongstgram() {
 	$('#instagram-feed').pongstgrm(
 		{
@@ -12,14 +25,6 @@ function loadPongstgram() {
 			accessToken : '295165979.167035a.f95a0b3a5f54421f9fb59572756b3059'
 		}
 	);
-}
-
-function test(type, element) {
-	var div = $('#' + type + '_training_div'); 
-	div.find('img').hide();
-	div.find('.rate').css('margin-right', '25px');
-	$(element).find('img').show();
-	$(element).find('.rate').css('margin-right', 0);
 }
 
 function setupOnPanelHover() {
@@ -31,17 +36,4 @@ function setupOnPanelHover() {
 	},function(){
 		$(this).removeClass('flip');
 	});
-}
-
-function openTestimonial(name) {
-	$.ajax({
-        url : name + ".txt",
-        dataType: "text",
-        success : function (data) {
-            $(".text").html(data);
-        }
-    });
-}
-
-function sendInquiry() {
 }
