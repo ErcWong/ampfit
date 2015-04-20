@@ -388,7 +388,8 @@
 }
 .view-cap,
 .view-container-border {
-    background-color: #5a5a5a
+	color: white;
+    background-color: transparent
 }
 .view-container {
     overflow: hidden;
@@ -510,7 +511,7 @@
 }
 .header {
     padding: 0 2px;
-    background-color: #222;
+    background-color: transparent;
     color: white;
 }
 .header img {
@@ -1200,7 +1201,8 @@ img.agenda-web-content {
 }
 .wk-weektop {
     table-layout: fixed;
-    width: 100%;
+	/* TODO: Not the biggest issue but calendar weeks header do not line up with schedule*/
+    width: 101.6%;
     background-color: #5a5a5a;
     overflow: hidden;
     font-size: 11px;
