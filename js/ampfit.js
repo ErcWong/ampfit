@@ -6,7 +6,9 @@ function loadHeaderAndFooter(page) {
 }
 
 function loadTrainingTab(uri, anchor) {
-	$('#training-tab-content').load(uri);
+	$('#training-tab-content').load(uri, function() {
+		setupOnPanelHover();
+	});
 	
 	$('ul.nav-tabs li.active').removeClass('active');
 	if (anchor != null) {

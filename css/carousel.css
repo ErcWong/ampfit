@@ -271,9 +271,17 @@ hr.ampsep:after {
 	margin: 0 auto;
 	height: 300px;
 	position: relative;
-	background-color: #222;
 	-webkit-perspective: 600px;
 	-moz-perspective: 600px;
+	
+	background: -moz-linear-gradient(top, rgba(38,38,38,0) 15%, rgba(38,38,38,0.82) 45%, rgba(38,38,38,0.9) 48%, rgba(38,38,38,0.9) 52%, rgba(38,38,38,0.84) 55%, rgba(0,0,0,0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,rgba(38,38,38,0)), color-stop(45%,rgba(38,38,38,0.82)), color-stop(48%,rgba(38,38,38,0.9)), color-stop(52%,rgba(38,38,38,0.9)), color-stop(55%,rgba(38,38,38,0.84)), color-stop(100%,rgba(0,0,0,0)));
+	background: -webkit-linear-gradient(top, rgba(38,38,38,0) 15%,rgba(38,38,38,0.82) 45%,rgba(38,38,38,0.9) 48%,rgba(38,38,38,0.9) 52%,rgba(38,38,38,0.84) 55%,rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(top, rgba(38,38,38,0) 15%,rgba(38,38,38,0.82) 45%,rgba(38,38,38,0.9) 48%,rgba(38,38,38,0.9) 52%,rgba(38,38,38,0.84) 55%,rgba(0,0,0,0) 100%);
+	background: -ms-linear-gradient(top, rgba(38,38,38,0) 15%,rgba(38,38,38,0.82) 45%,rgba(38,38,38,0.9) 48%,rgba(38,38,38,0.9) 52%,rgba(38,38,38,0.84) 55%,rgba(0,0,0,0) 100%);
+	background: linear-gradient(to bottom, rgba(38,38,38,0) 15%,rgba(38,38,38,0.82) 45%,rgba(38,38,38,0.9) 48%,rgba(38,38,38,0.9) 52%,rgba(38,38,38,0.84) 55%,rgba(0,0,0,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00262626', endColorstr='#00000000',GradientType=0 );
+	background-attachment: fixed;
 }
 
 .panel .front, .panel .back {
