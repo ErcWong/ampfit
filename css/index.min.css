@@ -36,3 +36,7 @@ a {
 .dropdown-menu>.divider {
 	background-color: red !important;
 }
+
+.featurette-divider {
+	margin:40px 0;
+}
