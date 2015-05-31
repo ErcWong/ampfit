@@ -16,6 +16,8 @@ function loadTrainingTab(uri, anchor) {
 
 function loadTestimonial(name) {
 	$('#testimonial').load('/ampfit/testimonials/' + name + '.txt');
+	$('#testimonial_title').text($('#' + name + '_title').text());
+	$('#testimonial_img').attr('src', '/ampfit/img/amp/testimonials/' + name + '.jpg');
 }
 
 function loadPongstgram() {
