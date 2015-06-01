@@ -5,6 +5,17 @@ function loadHeaderAndFooter(page) {
 	$('footer').load('/ampfit/footer.html');
 }
 
+function loadInitialTrainingTab() {
+	var tab_parts = window.location.href.split('#');
+
+	if (tab_parts.length > 1) {
+		var tab = tab_parts[1];
+		$('a[href=#' + tab + ']').click();
+	} else {
+		$('ul.nav-tabs a').first().click();}
+	}
+
+
 function loadTrainingTab(uri, anchor) {
 	$('#training-tab-content').load(uri, function() {
 		setupOnFolioHover();
