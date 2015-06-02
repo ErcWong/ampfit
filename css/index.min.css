@@ -43,7 +43,7 @@ a {
 
 .wrapper {
   display: inline-block;
-  margin-top: 25px;
+/*   margin-top: 25px; */
   position: relative;
 }
 
@@ -56,12 +56,13 @@ a {
 
 .wrapper .overlay {
   position: absolute;
-  margin-left: 50%;
+  margin-left: 39%;
   margin-right: auto;
-  top:0;
-  left:0;
-  width:50%;
+  top: 0;
+  left: 0;
+  width: 61%;
   height:100%;
   background-color: rgba(0,0,0,0.25);
   color:white;
+  
 }

@@ -30,7 +30,29 @@ function loadTrainingTab(uri, anchor) {
 function loadTestimonial(name) {
 	$('#testimonial').load('/ampfit/testimonials/' + name + '.txt');
 	$('#testimonial_title').text($('#' + name + '_title').text());
-	$('#testimonial_img').attr('src', '/ampfit/img/amp/testimonials/' + name + '.jpg');
+	
+	var tmp = '/ampfit/img/amp/testimonials/' + name + '.jpg';
+	
+	var result = doesFileExist(tmp);
+	 
+	if (result == true) {
+		$('#testimonial_img').attr('src', '/ampfit/img/amp/testimonials/' + name + '.jpg');
+	} else {
+		$('#testimonial_img').attr('src', '/ampfit/img/amp/testimonials/default.jpg');
+	}
+}
+
+function doesFileExist(urlToFile)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', urlToFile, false);
+    xhr.send();
+     
+    if (xhr.status == "404") {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 function loadPongstgram() {
