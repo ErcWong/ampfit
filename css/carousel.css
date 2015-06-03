@@ -77,7 +77,7 @@ body {
 /* tablets */
 @media ( max-width : 991px) and (min-width: 768px) {
 	.carousel-crop {
-		height: 500px;
+		height: auto;
 		overflow: hidden;
 	}
 	.carousel-crop>img {
@@ -88,10 +88,10 @@ body {
 /* laptops */
 @media ( max-width : 1023px) and (min-width: 992px) {
 	.carousel-crop {
-		height: 500px;
+		max-height: 400px;
 	}
 	.carousel-crop>img {
-		height: 400px;
+		max-height: 400px;
 		width: auto;
 	}
 }
@@ -99,10 +99,10 @@ body {
 /* desktops */
 @media ( min-width : 1024px) {
 	.carousel-crop {
-		height: 500px;
+		max-height: 500px;
 	}
 	.carousel-crop>img {
-		height: 500px;
+		max-height: 500px;
 		width: auto;
 	}
 }
