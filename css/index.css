@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+
+html {
+	background-color: #000000;
+}
+
+body {
+	background: -moz-linear-gradient(top, rgba(38, 38, 38, 0) 18%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, rgba(38,
+		38, 38, 0)), color-stop(45%, rgba(38, 38, 38, 0.82)),
+		color-stop(48%, rgba(38, 38, 38, 0.9)),
+		color-stop(52%, rgba(38, 38, 38, 0.9)),
+		color-stop(55%, rgba(38, 38, 38, 0.84)),
+		color-stop(100%, rgba(0, 0, 0, 0)));
+	background: -webkit-linear-gradient(top, rgba(38, 38, 38, 0) 18%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	background: -o-linear-gradient(top, rgba(38, 38, 38, 0) 18%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	background: -ms-linear-gradient(top, rgba(38, 38, 38, 0) 18%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	background: linear-gradient(to bottom, rgba(38, 38, 38, 0) 18%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00262626',
+		endColorstr='#00000000', GradientType=0);
+	background-attachment: local;
+}
+
+a {
+	color: #9E1D20;
+}
+
+.col-lg-4>.crop {
+	width: auto;
+	height: 140px;
+	overflow: hidden;
+}
+
+.dropdown-menu {
+	background-color: #181818;
+}
+
+.dropdown-menu>li>a {
+	color: #d2d2d2;
+}
+
+.dropdown-menu>.divider {
+	background-color: red !important;
+}
+
+.featurette-divider {
+	margin: 40px 0;
+}
+
+.wrapper {
+	display: inline-block;
+	/*   margin-top: 25px; */
+	position: relative;
+}
+
+.wrapper img {
+	display: block;
+	max-width: 100%;
+	/*   opacity: 0.3; */
+	/*   filter: alpha(opacity=30); For IE8 and earlier */
+}
+
+.wrapper .overlay {
+	position: absolute;
+	margin-left: 39%;
+	margin-right: auto;
+	top: 0;
+	left: 0;
+	width: 61%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.25);
+	color: white;
+}
+
+.btn-danger, .btn-primary {
+	background-color: #9E1D20;
+	border-color: #9E1D20;
+	font-variant: small-caps;
+}
+
+.btn-default {
+	color: #868585;
+	background-color: #4F4F4F;
+	border-color: #4F4F4F;
+	font-variant: small-caps;
+}
+
+/* button for ig load more */
+.btn-ig {
+	font-variant: small-caps;
+	margin-right: 20px;
+	background-color: #9E1D20 !important;
+	border-color: #9E1D20 !important;
+}
+
+.btn-success:hover {
+	margin-right: 20px;
+	background-color: #e77e80 !important;
+	border-color: #e77e80 !important;
+}
