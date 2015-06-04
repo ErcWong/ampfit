@@ -88,8 +88,9 @@ a {
 }
 
 .btn-danger, .btn-primary {
-	background-color: #9E1D20;
-	border-color: #9E1D20;
+	background-color: rgba(158, 29, 32, 0);
+	border-color: rgba(158, 29, 32, 0.5);
+	border-width: 2px;
 	font-variant: small-caps;
 }
 

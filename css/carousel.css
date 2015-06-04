@@ -11,6 +11,16 @@ body {
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
+/* Mobile */
+@media ( max-width : 767px) {
+	.nav {
+		float: none !important;
+	}
+	div#navbar {
+		width: 100%;
+	}
+}
+
 .navbar-wrapper {
 	position: absolute;
 	top: 0;
@@ -57,25 +67,33 @@ body {
 	background-color: #000;
 }
 
-.carousel-inner h1 {
-	font-size: 45px;
-}
-
 /* Mobile */
 @media ( max-width : 767px) {
+	#myCarousel {
+		margin-top: 195px !important;
+	}
+	.carousel-inner h1 {
+		font-size: 25px !important;
+	}
 	.carousel-crop {
 		height: auto;
 		overflow: hidden;
 	}
 	.carousel-crop>img {
-/* 		max-width: none; */
-	padding-top: 50px;
-	min-width: 100%;
+		padding-top: 60px;
+		min-width: 190%;
+		margin-left: -30%;
+	}
+	.carousel-caption {
+		padding-bottom: 15% !important;
 	}
 }
 
 /* tablets */
 @media ( max-width : 991px) and (min-width: 768px) {
+	.carousel-inner h1 {
+		font-size: 45px;
+	}
 	.carousel-crop {
 		height: auto;
 		overflow: hidden;
@@ -87,6 +105,9 @@ body {
 
 /* laptops */
 @media ( max-width : 1023px) and (min-width: 992px) {
+	.carousel-inner h1 {
+		font-size: 45px;
+	}
 	.carousel-crop {
 		max-height: 400px;
 	}
@@ -98,6 +119,9 @@ body {
 
 /* desktops */
 @media ( min-width : 1024px) {
+	.carousel-inner h1 {
+		font-size: 45px;
+	}
 	.carousel-crop {
 		max-height: 500px;
 	}
@@ -233,7 +257,6 @@ body {
 
 /* CUSTOM
 -------------------------------------------------- */
-
 ul.nav li a {
 	font-size: 18px;
 	color: #9d9d9d;
@@ -247,7 +270,6 @@ ul.nav li a {
 	margin-top: 0px;
 	margin-bottom: 8px;
 }
-
 
 hr.ampsep {
 	margin: 0;
@@ -273,14 +295,34 @@ hr.ampsep:after {
 	position: relative;
 	-webkit-perspective: 600px;
 	-moz-perspective: 600px;
-	
-	background: -moz-linear-gradient(top, rgba(38,38,38,0) 15%, rgba(38,38,38,0.82) 45%, rgba(38,38,38,0.9) 48%, rgba(38,38,38,0.9) 52%, rgba(38,38,38,0.84) 55%, rgba(0,0,0,0) 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%,rgba(38,38,38,0)), color-stop(45%,rgba(38,38,38,0.82)), color-stop(48%,rgba(38,38,38,0.9)), color-stop(52%,rgba(38,38,38,0.9)), color-stop(55%,rgba(38,38,38,0.84)), color-stop(100%,rgba(0,0,0,0)));
-	background: -webkit-linear-gradient(top, rgba(38,38,38,0) 15%,rgba(38,38,38,0.82) 45%,rgba(38,38,38,0.9) 48%,rgba(38,38,38,0.9) 52%,rgba(38,38,38,0.84) 55%,rgba(0,0,0,0) 100%);
-	background: -o-linear-gradient(top, rgba(38,38,38,0) 15%,rgba(38,38,38,0.82) 45%,rgba(38,38,38,0.9) 48%,rgba(38,38,38,0.9) 52%,rgba(38,38,38,0.84) 55%,rgba(0,0,0,0) 100%);
-	background: -ms-linear-gradient(top, rgba(38,38,38,0) 15%,rgba(38,38,38,0.82) 45%,rgba(38,38,38,0.9) 48%,rgba(38,38,38,0.9) 52%,rgba(38,38,38,0.84) 55%,rgba(0,0,0,0) 100%);
-	background: linear-gradient(to bottom, rgba(38,38,38,0) 15%,rgba(38,38,38,0.82) 45%,rgba(38,38,38,0.9) 48%,rgba(38,38,38,0.9) 52%,rgba(38,38,38,0.84) 55%,rgba(0,0,0,0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00262626', endColorstr='#00000000',GradientType=0 );
+	background: -moz-linear-gradient(top, rgba(38, 38, 38, 0) 15%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, rgba(38,
+		38, 38, 0)), color-stop(45%, rgba(38, 38, 38, 0.82)),
+		color-stop(48%, rgba(38, 38, 38, 0.9)),
+		color-stop(52%, rgba(38, 38, 38, 0.9)),
+		color-stop(55%, rgba(38, 38, 38, 0.84)),
+		color-stop(100%, rgba(0, 0, 0, 0)));
+	background: -webkit-linear-gradient(top, rgba(38, 38, 38, 0) 15%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	background: -o-linear-gradient(top, rgba(38, 38, 38, 0) 15%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	background: -ms-linear-gradient(top, rgba(38, 38, 38, 0) 15%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	background: linear-gradient(to bottom, rgba(38, 38, 38, 0) 15%,
+		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
+		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
+		rgba(0, 0, 0, 0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00262626',
+		endColorstr='#00000000', GradientType=0);
 	background-attachment: fixed;
 }
 
