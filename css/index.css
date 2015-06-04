@@ -88,8 +88,8 @@ a {
 }
 
 .btn-danger, .btn-primary {
-	background-color: #9E1D20;
-	border-color: #9E1D20;
+	background-color: #9E1D20 !important;
+	border-color: #9E1D20 !important;
 	font-variant: small-caps;
 }
 

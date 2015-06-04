@@ -10,6 +10,10 @@ body {
 	color: #868585;
 }
 
+.text-small {
+    font-size: 90% !important;
+}
+
 .text-light {
 	color: #C7C7C7 !important;
 }
