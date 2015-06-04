@@ -254,15 +254,19 @@
 					<h4 id="testimonial_title" class="modal-title text-light" style="text-align: center;"></h4>
 				</div>
 				<div class="modal-body" style="background-color: black; padding: 0">
-					<div class="wrapper">
-						  <img id="testimonial_img">
-						  <div class="overlay">
+					<div id="testimonial_modal" class="wrapper">
+						  <img id="testimonial_img" class="col-md-12">
+						  <div class="overlay" class="col-md-4">
 						    <p id="testimonial" class="testimonials"></p>
-						  </div>
+						      </div>
+                        <div class="modal-footer col-md-12" style="background-color: black; border-top-color:red">
+	            </div>
 					</div>
 				</div>
+<!--
 	            <div class="modal-footer" style="background-color: black; border-top-color:red">
 	            </div>
+-->
 			</div>
 	</div>
 
@@ -278,6 +282,22 @@
         $(document).ready(function() {
             loadHeaderAndFooter('Testimonials');
         });
+        if($(window).width() > 767 ){
+            $('#testimonial_modal').addClass('wrapper');
+            $('#testimonial_modal').removeClass('container marketing');
+        }else{
+            $('#testimonial_modal').addClass('container marketing');
+            $('#testimonial_modal').removeClass('wrapper');
+        }
+        $(window).on('resize', function() {
+            if($(window).width() > 767 ){
+                $('#testimonial_modal').addClass('wrapper');
+                $('#testimonial_modal').removeClass('container marketing');
+            }else{
+                $('#testimonial_modal').addClass('container marketing');
+                $('#testimonial_modal').removeClass('wrapper');
+            }
+        })
     </script>
 </body>
 
