@@ -26,7 +26,7 @@
     <link href="/ampfit/css/index.min.css" rel="stylesheet">
     <link href="/ampfit/css/font.min.css" rel="stylesheet">
     <link href="/ampfit/css/justifiedGallery.min.css" rel="stylesheet">
-    <link href="/ampfit/css/swipebox.min.css" rel="stylesheet">
+    <link href="/ampfit/css/lightbox.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Michroma|Open+Sans:300,400|Raleway' rel='stylesheet' type='text/css'>
 </head>
 <!-- NAVBAR
@@ -108,47 +108,47 @@
         <a name="facility-gallery"></a>
         <h2>The Facility</h2>
         <div id="mygallery">
-            <a href="/ampfit/img/amp/gallery/01.jpg" class="swipebox" title="The stage">
+            <a href="/ampfit/img/amp/gallery/01.jpg" data-lightbox="gallery"  data-title="The stage">
                 <img alt="The stage" src="/ampfit/img/amp/gallery/01.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/02.jpg" class="swipebox" title="">
+            <a href="/ampfit/img/amp/gallery/02.jpg" data-lightbox="gallery" data-title="">
                 <img alt="" src="/ampfit/img/amp/gallery/02.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/03.jpg" class="swipebox" title="Looking good, Josh">
+            <a href="/ampfit/img/amp/gallery/03.jpg" data-lightbox="gallery" data-title="Looking good, Josh">
                 <img alt="Looking good, Josh" src="/ampfit/img/amp/gallery/03.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/04.jpg" class="swipebox" title="Where did you get all those muscles, Josh?">
+            <a href="/ampfit/img/amp/gallery/04.jpg" data-lightbox="gallery" data-title="Where did you get all those muscles, Josh?">
                 <img alt="Where did you get all those muscles, Josh?" src="/ampfit/img/amp/gallery/04.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/05.jpg" class="swipebox" title="Where we do our squats, pull-ups, chin-ups, trx rows, and everything inbetween.">
+            <a href="/ampfit/img/amp/gallery/05.jpg" data-lightbox="gallery" data-title="Where we do our squats, pull-ups, chin-ups, trx rows, and everything inbetween.">
                 <img alt="Where we do our squats, pull-ups, chin-ups, trx rows, and everything inbetween." src="/ampfit/img/amp/gallery/05.jpg"
                 />
             </a>
-            <a href="/ampfit/img/amp/gallery/06.jpg" class="swipebox" title="Hold me, baby.">
+            <a href="/ampfit/img/amp/gallery/06.jpg" data-lightbox="gallery" data-title="Hold me, baby.">
                 <img alt="Hold me, baby." src="/ampfit/img/amp/gallery/06.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/07.jpg" class="swipebox" title="Ah, fresh air........">
+            <a href="/ampfit/img/amp/gallery/07.jpg" data-lightbox="gallery" data-title="Ah, fresh air........">
                 <img alt="Ah, fresh air........" src="/ampfit/img/amp/gallery/07.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/08.jpg" class="swipebox" title="Barf.">
+            <a href="/ampfit/img/amp/gallery/08.jpg" data-lightbox="gallery" data-title="Barf.">
                 <img alt="Barf." src="/ampfit/img/amp/gallery/08.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/09.jpg" class="swipebox" title="NBD. Just weights.">
+            <a href="/ampfit/img/amp/gallery/09.jpg" data-lightbox="gallery" data-title="NBD. Just weights.">
                 <img alt="NBD. Just weights." src="/ampfit/img/amp/gallery/09.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/10.jpg" class="swipebox" title="Beauty">
+            <a href="/ampfit/img/amp/gallery/10.jpg" data-lightbox="gallery" data-title="Beauty">
                 <img alt="Beauty" src="/ampfit/img/amp/gallery/10.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/11.jpg" class="swipebox" title="and the Beast">
+            <a href="/ampfit/img/amp/gallery/11.jpg" data-lightbox="gallery" data-title="and the Beast">
                 <img alt="and the Beast" src="/ampfit/img/amp/gallery/11.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/12.jpg" class="swipebox" title="Rack Buddies">
+            <a href="/ampfit/img/amp/gallery/12.jpg" data-lightbox="gallery" data-title="Rack Buddies">
                 <img alt="Squat buddies." src="/ampfit/img/amp/gallery/12.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/13.jpg" class="swipebox" title="Equipment">
+            <a href="/ampfit/img/amp/gallery/13.jpg" data-lightbox="gallery" data-title="Equipment">
                 <img alt="Equipment" src="/ampfit/img/amp/gallery/13.jpg" />
             </a>
-            <a href="/ampfit/img/amp/gallery/14.jpg" class="swipebox" title="There are no strings on me...">
+            <a href="/ampfit/img/amp/gallery/14.jpg" data-lightbox="gallery" data-title="There are no strings on me...">
                 <img alt="There are no strings on me..." src="/ampfit/img/amp/gallery/14.jpg" />
             </a>
         </div>
@@ -169,14 +169,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/ampfit/js/bootstrap.min.js"></script>
     <script src="/ampfit/js/ampfit.js"></script>.
-    <script src="/ampfit/js/jquery-1.9.1.min.js"></script>
     <script src="/ampfit/js/jquery.justifiedGallery.min.js"></script>
-    <script src="/ampfit/js/jquery.swipebox.min.js"></script>
+    <script src="/ampfit/js/lightbox.min.js"></script>
 
     <script>
-        $(document).ready(function() {
-            loadGallery('About');
-        });
         $(document).ready(function() {
             loadHeaderAndFooter('About');
         });
@@ -184,9 +180,7 @@
             rowHeight: 300,
             lastRow: 'nojustify',
             margins: 3
-        }).on('jg.complete', function() {
-            $('#mygallery a').swipebox();
-        });;
+        })
     </script>
 </body>
 
