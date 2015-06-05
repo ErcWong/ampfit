@@ -114,3 +114,17 @@ a {
 	background-color: #e77e80 !important;
 	border-color: #e77e80 !important;
 }
+
+.post>img {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 440px !important;
+}
+
+/* mobile and tablets */
+@media ( max-width : 991px) {
+	.post>img {
+		margin-left: -30;
+	}
+}

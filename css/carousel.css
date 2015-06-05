@@ -84,7 +84,7 @@ body {
 		min-width: 190%;
 		margin-left: -30%;
 	}
-    .carousel-caption {
+	.carousel-caption {
 		padding-bottom: 15% !important;
 	}
 }
@@ -129,7 +129,7 @@ body {
 		max-height: 500px;
 		width: auto;
 	}
-    div.carousel-caption {
+	div.carousel-caption {
 		padding-bottom: 10% !important;
 	}
 }
@@ -425,6 +425,6 @@ hr.ampsep:after {
 	border-color: #9E1D20;
 }
 
-#testimonial_img.col-md-12, .container {
-    padding: 0px !important;
+#testimonial_img.col-md-12, #testimonial_modal.container {
+	padding: 0px !important;
 }

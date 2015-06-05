@@ -5,6 +5,10 @@ function loadHeaderAndFooter(page) {
 	$('footer').load('/ampfit/footer.html');
 }
 
+function loadGallery(page) {
+	$('gallery').load('/ampfit/about/gallery.html');
+}
+
 function loadInitialTrainingTab() {
 	var tab_parts = window.location.href.split('#');
 
