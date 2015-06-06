@@ -121,6 +121,21 @@ body {
 		max-height: 400px;
 		width: auto;
 	}
+	.testimonial-img-crop{
+		width:auto; 
+		height: 175px; 
+		overflow:hidden
+	}
+	.testimonial-img-crop> img{
+		height:100%;
+		width: auto !important;
+		display:block;
+	}
+	.btn-testimonial {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
 
 /* desktops */
@@ -143,6 +158,21 @@ body {
 		height: 136px; /*same height as header*/
 		margin-top: -136px; /*same height as header*/
 		visibility: hidden;
+	}
+	.testimonial-img-crop{
+		width:auto; 
+		height: 225px; 
+		overflow:hidden
+	}
+	.testimonial-img-crop> img{
+		height:100%;
+		width: auto !important;
+		display:block;
+	}
+	.btn-testimonial {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 }
 /*

@@ -27,8 +27,12 @@ function loadTrainingTab(uri, anchor) {
 	}
 }
 
+function loadTestimonials(page) {
+	$('#testimonial-block').load('testimonialblock.html');
+}
+
 function loadTestimonial(name) {
-	$('#testimonial').load('/ampfit/testimonials/' + name + '.txt');
+	$('#testimonial').load('/ampfit/testimonials/testimony/' + name + '.txt');
 	$('#testimonial_title').text($('#' + name + '_title').text());
 	
 	var tmp = '/ampfit/img/amp/testimonials/' + name + '.jpg';

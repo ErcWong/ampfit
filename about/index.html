@@ -34,7 +34,7 @@
 
 <body>
     <header></header>
-
+	<div id="loading"></div>
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -168,16 +168,20 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/ampfit/js/bootstrap.min.js"></script>
-    <script src="/ampfit/js/ampfit.js"></script>.
+    <script src="/ampfit/js/ampfit.js"></script>
     <script src="/ampfit/js/jquery.justifiedGallery.min.js"></script>
     <script src="/ampfit/js/lightbox.min.js"></script>
 
     <script>
+	    $(window).ready(function() {
+				$('#loading').hide();
+		});
         $(document).ready(function() {
             loadHeaderAndFooter('About');
         });
         $("#mygallery").justifiedGallery({
-            rowHeight: 300,
+            rowHeight: 250,
+            fixedHeight: false,
             lastRow: 'nojustify',
             margins: 3
         })
