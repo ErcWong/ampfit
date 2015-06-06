@@ -128,7 +128,3 @@ a {
 		margin-left: -30;
 	}
 }
-
-#loading {
-    position: absolute; width: 100%; height: 100%; background: url('/ampfit/img/loading.gif') no-repeat center center;
-}
