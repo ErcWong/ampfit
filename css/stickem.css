@@ -1,0 +1,28 @@
+.content {
+	float: left;
+	width: 640px;
+}
+
+.aside {
+	float: right;
+	width: 260px;
+}
+
+.stickit {
+	position: fixed;
+	top: 0;
+}
+
+.stickit-end {
+	bottom: 40px;
+	position: absolute;
+	right: 0;
+}
+
+.social-buttons {
+	margin-top: 145px;
+	margin-left: -87px;
+	z-index: 9;
+	width: 36px;
+	line-height: 40px;	
+}

@@ -59,7 +59,7 @@ a {
 }
 
 .featurette-divider {
-	margin: 40px 0;
+	margin: 35px 0;
 }
 
 .wrapper {
@@ -119,12 +119,13 @@ a {
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	width: 440px !important;
+	width: 440px;
 }
 
 /* mobile and tablets */
 @media ( max-width : 991px) {
 	.post>img {
 		margin-left: -30;
+		width: 100%;
 	}
 }

@@ -106,19 +106,6 @@ h2 {
 	}
 }
 
-/* folio stuff */
-@media ( min-width : 768px) {
-	.post-content h2, h3 {
-		color: white;
-	}
-	#posts .post .post-content p {
-		font-size: 15px;
-		text-transform: none;
-		font-variant: small-caps;
-	}
-}
-/* end of folio stuff */
-
 /*table stuff */
 th {
 	font-size: 19px;

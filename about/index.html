@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 
 <head>
     <meta charset="utf-8">
@@ -11,41 +11,39 @@
     <title>AMPFIT | Always Making Progress</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/ampfit/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/ampfit/css/bootstrap-social.css" rel="stylesheet">
-    <link href="/ampfit/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/ampfit/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/ampfit/css/bootstrap-social.css">
+	<link rel="stylesheet" href="/ampfit/css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="/ampfit/css/carousel.css" rel="stylesheet">
-    <link href="/ampfit/css/index.min.css" rel="stylesheet">
-    <link href="/ampfit/css/font.min.css" rel="stylesheet">
-    <link href="/ampfit/css/justifiedGallery.min.css" rel="stylesheet">
-    <link href="/ampfit/css/lightbox.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans|Michroma|Open+Sans:300,400|Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/ampfit/css/custom/carousel.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
+    <link rel="stylesheet" href="/ampfit/css/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/ampfit/css/lightbox.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans|Michroma|Open+Sans:300,400|Raleway">
 </head>
+
 <!-- NAVBAR
 ================================================== -->
-
 <body>
     <header></header>
+    <hr class="featurette-divider amp-top amp-header-divider">
+    
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <hr class="featurette-divider amp-top" style="margin-top: 150px;">
-    <div class="container marketing">
-
-        <!-- START THE FEATURETTES -->
-
+    <div class="container container-body marketing">
+   		<!-- START THE FEATURETTES -->
         <div class="row featurette">
             <div class="col-md-7">
-                <h2>AMP Methodology</h2>
+                <h2 style="margin-top: 0px">AMP Methodology</h2>
                 <span class="headings text-muted" style="font-size: 15px;">
 					Always.Making.Progress </span>
                 <br>
@@ -105,7 +103,7 @@
         <hr class="featurette-divider amp-top">
 
         <span class="anchor" id="facility-gallery"></span>
-        <h2>The Facility</h2>
+        <h2 style="margin-top: 0px">The Facility</h2>
         <div id="mygallery">
             <a href="/ampfit/img/amp/gallery/01.jpg" data-lightbox="gallery"  data-title="The stage">
                 <img alt="The stage" src="/ampfit/img/amp/gallery/01.jpg" />
@@ -153,35 +151,46 @@
         </div>
         <hr class="featurette-divider amp-top">
         <!-- /END THE FEATURETTES -->
-
-
-        <!-- FOOTER -->
         <footer></footer>
-
     </div>
-    <!-- /.container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/ampfit/js/bootstrap.min.js"></script>
+    
+    <!-- Custom js for this template -->
     <script src="/ampfit/js/ampfit.js"></script>
     <script src="/ampfit/js/jquery.justifiedGallery.min.js"></script>
     <script src="/ampfit/js/lightbox.min.js"></script>
-
+    <script src="/ampfit/js/jquery.nicescroll.min.js"></script>
     <script>
         $(document).ready(function() {
-            loadHeaderAndFooter('About');
+        	loadHeaderAndFooter('About');
+        	if($(window).width() > 414 ){
+        		$("#mygallery").justifiedGallery({
+                    rowHeight: 250,
+                    fixedHeight: false,
+                    lastRow: 'justify',
+                    margins: 3,
+                });
+            }else{
+            	$("#mygallery").justifiedGallery({
+                    rowHeight: 150,
+                    fixedHeight: false,
+                    lastRow: 'justify',
+                    margins: 3,
+                });
+            }
+        	$(window).load(function(){
+        		$("body").niceScroll({
+               		zindex: 10,
+                   	scrollspeed: 100,
+                   	mousescrollstep: 60
+                });
+        	})
         });
-        $("#mygallery").justifiedGallery({
-            rowHeight: 250,
-            fixedHeight: false,
-            lastRow: 'nojustify',
-            margins: 3
-        })
     </script>
 </body>
-
 </html>
