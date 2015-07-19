@@ -1,28 +1,26 @@
-.content {
-	float: left;
-	width: 640px;
-}
 
 .aside {
-	float: right;
+	float: left;
+	padding: 0 20px;
 	width: 260px;
 }
 
 .stickit {
+	margin-left: 660px;
 	position: fixed;
 	top: 0;
 }
 
 .stickit-end {
-	bottom: 40px;
+	float: left;
+	bottom: 200px;
 	position: absolute;
-	right: 0;
 }
 
 .social-buttons {
-	margin-top: 145px;
+/* 	margin-top: 145px; */
 	margin-left: -5%;
-	z-index: 9;
+	z-index: 1;
 	width: 36px;
 	line-height: 40px;	
 }
