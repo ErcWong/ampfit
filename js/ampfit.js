@@ -49,14 +49,20 @@ function loadInitialTrainingTab() {
 	}
 }
 
-function loadTrainingTab(uri, anchor) {
+function loadTrainingTab(uri, tab, anchor) {
 	$('#training-tab-content').load(uri, function() {
 		setupOnFolioHover();
+
+		if (anchor != null) {
+			$('#' + anchor)[0].scrollIntoView();
+		}
 	});
 
 	$('ul.nav-tabs li.active').removeClass('active');
-	if (anchor != null) {
-		$(anchor).parent().addClass('active');
+	if (tab != null) {
+		$(tab).parent().addClass('active');
+		$('li[role=presentation]').find('a.dropdown-toggle').css('color', '#9d9d9d');
+		$(tab).parents('li[role=presentation]').find('a.dropdown-toggle').css('color', '#9E1D20');
 	}
 }
 
@@ -72,7 +78,7 @@ function loadTestimonial(name) {
 	
 	var result = doesFileExist(tmp);
 	 
-	if (result == true) {
+	if (result) {
 		$('#testimonial_img').attr('src', '/ampfit/img/amp/testimonials/' + name + '.jpg');
 	} else {
 		$('#testimonial_img').attr('src', '/ampfit/img/amp/testimonials/default.jpg');
@@ -83,12 +89,7 @@ function doesFileExist(urlToFile) {
     var xhr = new XMLHttpRequest();
     xhr.open('HEAD', urlToFile, false);
     xhr.send();
-     
-    if (xhr.status == "404") {
-        return false;
-    } else {
-        return true;
-    }
+    return xhr.status != "404";
 }
 
 function loadPongstgram() {
