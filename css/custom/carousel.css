@@ -422,16 +422,14 @@ ul.nav li a {
 	margin-bottom: 8px;
 }
 
-.jumbotron2 {
+#about-methodology-jumbo {
 	background-image: url('/ampfit/img/amp/about_amp_methodology.jpg');
-	background-attachment: fixed;
+	background-position-y: 120px;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	border-radius: 5px;
 	padding: 30px 15px;
 	min-height: 580px;
-	margin-top: 0px;
-	margin-bottom: 8px;
 }
 
 hr.ampsep {
