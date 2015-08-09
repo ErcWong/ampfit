@@ -60,7 +60,9 @@ function loadTrainingTab(uri, tab, anchor) {
 
 	$('ul.nav-tabs li.active').removeClass('active');
 	if (tab != null) {
-		$(tab).parents('li[role=presentation]').addClass('active');
+		$(tab).parent().addClass('active');
+		$('li[role=presentation]').find('a.dropdown-toggle').css('color', '#9d9d9d');
+		$(tab).parents('li[role=presentation]').find('a.dropdown-toggle').css('color', '#9E1D20');
 	}
 }
 
