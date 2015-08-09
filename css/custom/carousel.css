@@ -424,8 +424,8 @@ ul.nav li a {
 
 #about-methodology-jumbo {
 	background-image: url('/ampfit/img/amp/about_amp_methodology.jpg');
-	background-position-y: 120px;
-	background-size: 100% auto;
+	background-position:100% 100%;
+	background-size: auto 100%;
 	background-repeat: no-repeat;
 	border-radius: 5px;
 	padding: 30px 15px;
@@ -616,4 +616,16 @@ hr.ampsep:after {
 		margin-bottom: 10px;
 		visibility: hidden;
 	}
+}
+
+ul.nav.nav-pills {
+	text-align: right;
+	
+}
+
+.nav-pills>li {
+	float: none;
+	display: inline-block;
+}
+}
 }
