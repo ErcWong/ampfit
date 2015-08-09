@@ -212,6 +212,15 @@ body {
 		padding-right: 0px;
 	}
 }
+
+.testimonial-img-crop{
+	border-radius: 0px !important;	
+}
+
+.btn-testimonial{
+	border-radius: 0px !important;
+}
+
 /*
   Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
   CSS from:       http://codepen.io/transportedman/pen/NPWRGq
@@ -409,6 +418,18 @@ ul.nav li a {
 	background-attachment: fixed;
 	background-size: cover;
 	min-height: 400px;
+	margin-top: 0px;
+	margin-bottom: 8px;
+}
+
+.jumbotron2 {
+	background-image: url('/ampfit/img/amp/about_amp_methodology.jpg');
+	background-attachment: fixed;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	padding: 30px 15px;
+	min-height: 580px;
 	margin-top: 0px;
 	margin-bottom: 8px;
 }

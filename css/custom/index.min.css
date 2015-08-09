@@ -131,3 +131,8 @@ a {
 		width: 100%;
 	}
 }
+
+.caption {
+	padding: 0px !important;
+	padding-top: 5px !important;
+}
