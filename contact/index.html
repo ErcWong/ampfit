@@ -54,6 +54,12 @@
 			</div>
 		</div>
 		<hr class="featurette-divider amp-top">
+		<div class="row">
+			<div class="embed-responsive embed-responsive-16by9">
+			<iframe src="/ampfit/schedule/gcalendar.html" style="border-width:0 " width="800" height="600"></iframe>
+			</div>
+		</div>
+		<hr class="featurette-divider amp-top">
 		<!-- /END THE FEATURETTES -->
 		<!-- FOOTER -->
 		<p class="headings pull-right">
@@ -74,14 +80,11 @@
 	<!-- Custom js for this template -->
     <script src="/ampfit/js/ampfit.js"></script>
     <script src="/ampfit/js/jquery.nicescroll.min.js"></script>
+    <script src="/ampfit/js/jquery.nicescroll.plus.min.js"></script>
 	<script>
 		$(document).ready(function() {
 			loadHeaderAndFooter('Contact');
-			$("body").niceScroll({
-	       		zindex: 20,
-	           	scrollspeed: 100,
-	           	mousescrollstep: 60
-	        });
+			loadNiceScroll('body', 20, 100, 60);
 		});
 	</script>
 </body>

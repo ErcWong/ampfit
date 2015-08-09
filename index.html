@@ -182,16 +182,13 @@
     <script src="/ampfit/js/ampfit.js"></script>
     <script src="/ampfit/js/pongstagr.am.min.js"></script>
     <script src="/ampfit/js/jquery.nicescroll.min.js"></script>
+    <script src="/ampfit/js/jquery.nicescroll.plus.min.js"></script>
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Home');
+            loadNiceScroll('body', 100, 60);
             loadPongstgram();
-            $("body").niceScroll({
-           		zindex: 20,
-               	scrollspeed: 100,
-               	mousescrollstep: 60
-            });
-        });
+		});
     </script>
 </body>
 

@@ -128,8 +128,15 @@
 }
 
 /*---custom styling---*/
+
+
 .post-content h2, h3 {
 	color: white;
+}
+
+p#folio_p {
+	font-family: 'Open Sans', sans-serif; 
+	font-size: medium !important;
 }
 
 /* Responsive css */

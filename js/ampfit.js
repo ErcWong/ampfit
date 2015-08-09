@@ -5,6 +5,39 @@ function loadHeaderAndFooter(page) {
 	$('footer').load('/ampfit/footer.html');
 }
 
+function loadNiceScroll(section, speed, mousestep) {
+	$(section).niceScroll({
+		styler: "fb",
+		zindex: 20,
+       	scrollspeed: speed,
+       	mousescrollstep: mousestep,
+       	cursorborder: '0px solid #fff',
+       	boxzoom: true, 
+    });
+}
+
+function resizeNiceScroll(div) {
+	$(div).getNiceScroll().resize();
+}
+
+function justifyGalleryLayout(){
+	if($(window).width() > 414 ){
+		$("#mygallery").justifiedGallery({
+	        rowHeight: 250,
+	        fixedHeight: false,
+	        lastRow: 'justify',
+	        margins: 3,
+	    });
+	}else{
+		$("#mygallery").justifiedGallery({
+	        rowHeight: 150,
+	        fixedHeight: false,
+	        lastRow: 'justify',
+	        margins: 3,
+	    });
+	}
+}
+
 function loadInitialTrainingTab() {
 	var tab_parts = window.location.href.split('#');
 
@@ -12,9 +45,9 @@ function loadInitialTrainingTab() {
 		var tab = tab_parts[1];
 		$('a[href=#' + tab + ']').click();
 	} else {
-		$('ul.nav-tabs a').first().click();}
+		$('ul.nav-tabs a').first().click();
 	}
-
+}
 
 function loadTrainingTab(uri, anchor) {
 	$('#training-tab-content').load(uri, function() {
@@ -64,6 +97,25 @@ function loadPongstgram() {
 		accessId : '295165979',
 		accessToken : '295165979.167035a.f95a0b3a5f54421f9fb59572756b3059'
 	});
+}
+
+function justifyTestimonialLayout() {
+	if($(window).width() > 759 ){
+	    $('#testimonial_modal').addClass('wrapper');
+	    $('#testimonial_modal').removeClass('container marketing');
+	}else{
+	    $('#testimonial_modal').addClass('container marketing');
+	    $('#testimonial_modal').removeClass('wrapper');
+	}
+	$(window).on('resize', function() {
+	    if($(window).width() > 759 ){
+	        $('#testimonial_modal').addClass('wrapper');
+	        $('#testimonial_modal').removeClass('container marketing');
+	    }else{
+	        $('#testimonial_modal').addClass('container marketing');
+	        $('#testimonial_modal').removeClass('wrapper');
+	    }
+	})
 }
 
 function setupOnFolioHover() {

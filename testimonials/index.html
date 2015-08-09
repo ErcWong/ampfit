@@ -76,32 +76,14 @@
 	<!-- Custom js for this template -->
     <script src="/ampfit/js/ampfit.js"></script>
     <script src="/ampfit/js/jquery.nicescroll.min.js"></script>
+    <script src="/ampfit/js/jquery.nicescroll.plus.min.js"></script>
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Testimonials');
+            loadNiceScroll('body', 100, 60);
             loadTestimonials('Testimonials');
-            $("body").niceScroll({
-           		zindex: 20,
-               	scrollspeed: 100,
-               	mousescrollstep: 60
-       		});
+            justifyTestimonialLayout();
         });
-        if($(window).width() > 759 ){
-            $('#testimonial_modal').addClass('wrapper');
-            $('#testimonial_modal').removeClass('container marketing');
-        }else{
-            $('#testimonial_modal').addClass('container marketing');
-            $('#testimonial_modal').removeClass('wrapper');
-        }
-        $(window).on('resize', function() {
-            if($(window).width() > 759 ){
-                $('#testimonial_modal').addClass('wrapper');
-                $('#testimonial_modal').removeClass('container marketing');
-            }else{
-                $('#testimonial_modal').addClass('container marketing');
-                $('#testimonial_modal').removeClass('wrapper');
-            }
-        })
     </script>
 </body>
 </html>
