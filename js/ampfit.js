@@ -49,14 +49,18 @@ function loadInitialTrainingTab() {
 	}
 }
 
-function loadTrainingTab(uri, anchor) {
+function loadTrainingTab(uri, tab, anchor) {
 	$('#training-tab-content').load(uri, function() {
 		setupOnFolioHover();
+
+		if (anchor != null) {
+			$('#' + anchor)[0].scrollIntoView();
+		}
 	});
 
 	$('ul.nav-tabs li.active').removeClass('active');
-	if (anchor != null) {
-		$(anchor).parent().addClass('active');
+	if (tab != null) {
+		$(tab).parents('li[role=presentation]').addClass('active');
 	}
 }
 
@@ -72,7 +76,7 @@ function loadTestimonial(name) {
 	
 	var result = doesFileExist(tmp);
 	 
-	if (result == true) {
+	if (result) {
 		$('#testimonial_img').attr('src', '/ampfit/img/amp/testimonials/' + name + '.jpg');
 	} else {
 		$('#testimonial_img').attr('src', '/ampfit/img/amp/testimonials/default.jpg');
@@ -83,12 +87,7 @@ function doesFileExist(urlToFile) {
     var xhr = new XMLHttpRequest();
     xhr.open('HEAD', urlToFile, false);
     xhr.send();
-     
-    if (xhr.status == "404") {
-        return false;
-    } else {
-        return true;
-    }
+    return xhr.status != "404";
 }
 
 function loadPongstgram() {
