@@ -176,32 +176,13 @@
     <script src="/ampfit/js/jquery.justifiedGallery.min.js"></script>
     <script src="/ampfit/js/lightbox.min.js"></script>
     <script src="/ampfit/js/jquery.nicescroll.min.js"></script>
+    <script src="/ampfit/js/jquery.nicescroll.plus.min.js"></script>
     <script>
         $(document).ready(function() {
         	loadHeaderAndFooter('About');
-        	if($(window).width() > 414 ){
-        		$("#mygallery").justifiedGallery({
-                    rowHeight: 250,
-                    fixedHeight: false,
-                    lastRow: 'justify',
-                    margins: 3,
-                });
-            }else{
-            	$("#mygallery").justifiedGallery({
-                    rowHeight: 150,
-                    fixedHeight: false,
-                    lastRow: 'justify',
-                    margins: 3,
-                });
-            }
-        	$(window).load(function(){
-        		$("body").niceScroll({
-               		zindex: 20,
-                   	scrollspeed: 100,
-                   	mousescrollstep: 60
-                });
-        	});
-        });
+        	loadNiceScroll('body', 100, 60);
+        	justifyGalleryLayout();
+		});
     </script>
 </body>
 </html>
