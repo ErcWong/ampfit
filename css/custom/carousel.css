@@ -418,7 +418,7 @@ ul.nav li a {
 	background-position: 50% 50%;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 100% auto;
 	background-color: black;
 	min-height: 400px;
 	margin-top: 0px;
@@ -439,8 +439,8 @@ ul.nav li a {
 
 #weightlifting-jumbo {
 	background-image: url('/ampfit/img/amp/weightlifting_membership.jpg');
-	background-position-y: 50%;
-	background-size: contain;
+	background-position: 50% 0%;
+	background-size: 100% auto;
 	border-radius: 5px;
 	min-height: 350px;
 }
