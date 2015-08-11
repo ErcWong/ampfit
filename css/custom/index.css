@@ -2,9 +2,11 @@
 
 html {
 	background-color: #000000;
+	height: auto;
 }
 
 body {
+	height: auto;
 	background: -moz-linear-gradient(top, rgba(38, 38, 38, 0) 18%,
 		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
 		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,

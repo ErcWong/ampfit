@@ -1,0 +1,67 @@
+.jumbotron {
+	width: 100%;
+	height: 100%;
+	/* 	background-position: 50% 140px; */
+/* 		background-attachment: fixed; */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: black;
+	border-radius: 5px !important;
+	margin: 0px 0px 30px;
+	padding: 0 !important;
+}
+
+#about-methodology {
+	background-image: url('/ampfit/img/amp/about/amp_methodology.jpg');
+	/* 	background-position:100% 100%; */
+	/* 	background-size: auto 100%; */
+	min-height: 360px;
+	margin-bottom: 0px;
+}
+
+#about-trainer-owen {
+	background-image: url('/ampfit/img/amp/about/trainer_owen2.jpg');
+	min-height: 400px;
+	margin-bottom: 20px;
+}
+
+
+#group-lifting-principles {
+	background-image: url('/ampfit/img/amp/training/group/lifting_principles.jpg');
+	background-position: right bottom;
+	min-height: 750px;
+	margin-top: 20px;
+}
+
+#weightlifting-jumbo {
+	background-image:
+		url('/ampfit/img/amp/training/weightlifting/membership.jpg');
+	background-position: 50% 0%;
+	background-size: 100% auto;
+	margin-bottom: 0px;
+	min-height: 350px;
+}
+
+#weightlifting-snatch {
+	/* 	background: url('/ampfit/img/amp/training/weightlifting/snatch.jpg') no-repeat center center fixed; */
+	/* 	background-size: cover; */
+	/* 	border-radius: 5px; */
+	/* 	padding: 30px 15px; */
+	/* 	min-height: 500px; */
+	background-image:
+		url('/ampfit/img/amp/training/weightlifting/snatch.jpg');
+	background-size: auto 100%;
+	background-position: left 140px;
+}
+
+#weightlifting-jerk {
+	background: url('/ampfit/img/amp/training/weightlifting/jerk.jpg')
+		no-repeat center center fixed;
+	overflow-y: hidden ! important;
+	overflow-x: hidden ! important;
+	background-color: #f8f8f8;
+	background-image: url('/ampfit/img/amp/training/weightlifting/jerk.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center 140px;
+}

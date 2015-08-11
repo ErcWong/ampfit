@@ -18,6 +18,10 @@ body {
     font-size: 90% !important;
 }
 
+.text-bright {
+	color: #FFFFFF !important;
+}
+
 .text-light {
 	color: #C7C7C7 !important;
 }
@@ -42,6 +46,10 @@ body {
 	font-family: 'Raleway', sans-serif !important;
 }
 
+underline{
+	text-decoration: underline;
+}
+
 .navbar-inverse .navbar-nav>li>a {
 	color: #4F4F4F;
 }
@@ -62,7 +70,7 @@ body {
 }
 
 p {
-	font-size: 21px;
+	font-size: 15px;
 	line-height: 150%;
 }
 

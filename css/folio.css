@@ -41,7 +41,8 @@
 	position: relative;
 	z-index: 1;
 	display: inline-block;
-	background: #2e5d5a;
+	/* green tint: #2e5d5a */
+	background: #000000;
 }
 
 #posts .post img {
@@ -60,7 +61,7 @@
 }
 
 #posts .post:hover img {
-	opacity: 0.5;
+	opacity: 0.25;
 	-webkit-transform: translate3d(0, 0, 0) scale(1);
 	transform: translate3d(0, 0, 0) scale(1);
 }
