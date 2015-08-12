@@ -7,6 +7,7 @@
 *.swp
 *.out
 *.log
+*.db
 
 # IntelliJ Files
 *.iml

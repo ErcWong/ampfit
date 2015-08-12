@@ -324,10 +324,6 @@ body {
 -------------------------------------------------- */
 
 /* Mobile */
-
-@media ( max-width : 767px) {
-	
-}
 @media ( max-width : 767px) {
 	/* CUSTOMIZE NAVBAR ------------------------------ */
 	.nav {
@@ -411,55 +407,6 @@ body {
 ul.nav li a {
 	font-size: 18px;
 	color: #9d9d9d;
-}
-
-.jumbotron {
-	background-image: url('/ampfit/img/amp/yummyowen.jpg');
-	background-position: 50% 50%;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-size: 100% auto;
-	background-color: black;
-	min-height: 400px;
-	margin-top: 0px;
-	margin-bottom: 8px;
-	margin-left: 0px;
-	width: 100%;
-    height: 100%;
-}
-
-#about-methodology-jumbo {
-	background-image: url('/ampfit/img/amp/about_amp_methodology.jpg');
-	background-position:100% 100%;
-	background-size: auto 100%;
-	border-radius: 5px;
-	padding: 30px 15px;
-	min-height: 580px;
-}
-
-#weightlifting-jumbo {
-	background-image: url('/ampfit/img/amp/weightlifting_membership.jpg');
-	background-position: 50% 0%;
-	background-size: 100% auto;
-	border-radius: 5px;
-	min-height: 350px;
-}
-
-#weightlifting-snatch {
-	background-image: url('/ampfit/img/amp/weightlifting_snatch.jpg');
-	background-size: auto 100%;
-	border-radius: 5px;
-	padding: 30px 15px;
-	min-height: 500px;
-}
-
-#weightlifting-jerk {
-	background-image: url('/ampfit/img/amp/weightlifting_jerk.jpg');
-	background-position: 60% 40%;
-	background-size: 100% auto;
-	border-radius: 5px;
-	padding: 30px 15px;
-	min-height: 500px;
 }
 
 hr.ampsep {
@@ -639,11 +586,19 @@ hr.ampsep:after {
 }
 
 @media (min-width: 768px) {
-.anchor {
+	.anchor {
 		display: block;
 		height: 140px; 
 		margin-top: -150px;
 		margin-bottom: 10px;
+		visibility: hidden;
+	}
+	
+	.anchor-training {
+		display: block;
+		height: 160px; 
+		margin-top: -130px;
+		margin-bottom: 30px;
 		visibility: hidden;
 	}
 }
@@ -656,6 +611,4 @@ ul.nav.nav-pills {
 .nav-pills>li {
 	float: none;
 	display: inline-block;
-}
-}
 }

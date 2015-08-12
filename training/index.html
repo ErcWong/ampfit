@@ -25,7 +25,9 @@
 	<link rel="stylesheet" href="/ampfit/css/custom/carousel.css">
     <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
     <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
-	<link rel="stylesheet" href="/ampfit/css/folio.css" >
+    <link rel="stylesheet" href="/ampfit/css/custom/jumbotron.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/desktop.css">
+	<link rel="stylesheet" href="/ampfit/css/folio.css">
 	<link href='http://fonts.googleapis.com/css?family=Droid+Sans|Michroma|Open+Sans|Raleway' rel='stylesheet' type='text/css'>
 </head>
 
@@ -37,9 +39,10 @@
 	
 	<!-- Marketing messaging and featurettes
     ================================================== -->
-	<div class="container container-body marketing">
+	   <div class="container container-body marketing">
 		<!-- START THE FEATURETTES -->
-		<ul class="nav nav-tabs">
+		<ul class="nav nav-tabs navbar-fixed-top" style="background:black; top: 141px; 
+            z-index: 20; padding-top: 20px; width: 100%; max-width: 1140px; height: auto; left: auto; right: auto">
 			<li role="presentation"><a href="#whatweteach" onclick="loadTrainingTab('/ampfit/training/tabs/what_we_teach.html', this);">What We Teach</a></li>
 			<li role="presentation" class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Group <span class="caret"></span></a>
@@ -68,10 +71,11 @@
 				</ul>
 			</li>
 		</ul>
-		<div id="training-tab">
-			<br><div id="training-tab-content"></div>
+       </div>
+       <div class="container marketing">
+		<div id="training-tab" style="height: auto; margin-top: 20px;">
+			<br><div id="training-tab-content" style="width: auto"></div>
 		</div>
-        <hr class="featurette-divider amp-top">
 		<!-- /END THE FEATURETTES -->
 		<footer></footer>
 	</div>
@@ -90,10 +94,21 @@
 		$(document).ready(function() {
 			loadHeaderAndFooter('Training');
 			loadInitialTrainingTab();
-			loadNiceScroll('body', 100, 60);
+			loadNiceScroll('body', 20, 100, 60);
 		});
-		$(window).load(function(){
-			loadNiceScroll('#weightlifting-body', 100, 60);
+		$(window).bind('popstate', function(event){
+		    var url = null;
+
+		    if (event.state && event.state.url) {
+		        url = event.state.url;
+		    } else {
+		        url = './index.html'; // or whatever your initial url was
+		    }
+		    // Update the contents of the page with whatever url was stored in the state.
+		    $.get(url, function(data){
+		    	loadInitialTrainingTab();
+		    	resizeNiceScroll('body');
+		    });
 		});
 	</script>
 </body>
