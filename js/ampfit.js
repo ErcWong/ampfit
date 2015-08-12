@@ -18,6 +18,7 @@ function loadNiceScroll(section, zidx, speed, mousestep) {
 
 function resizeNiceScroll(div) {
 	$(div).getNiceScroll().resize();
+	$('html,body').scrollTop(0);
 }
 
 function scrollAlong(div) {

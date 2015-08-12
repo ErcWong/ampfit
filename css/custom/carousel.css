@@ -586,11 +586,19 @@ hr.ampsep:after {
 }
 
 @media (min-width: 768px) {
-.anchor {
+	.anchor {
 		display: block;
 		height: 140px; 
 		margin-top: -150px;
 		margin-bottom: 10px;
+		visibility: hidden;
+	}
+	
+	.anchor-training {
+		display: block;
+		height: 160px; 
+		margin-top: -130px;
+		margin-bottom: 30px;
 		visibility: hidden;
 	}
 }

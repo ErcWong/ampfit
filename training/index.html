@@ -76,7 +76,6 @@
 		<div id="training-tab" style="height: auto; margin-top: 20px;">
 			<br><div id="training-tab-content" style="width: auto"></div>
 		</div>
-        <hr class="featurette-divider amp-top">
 		<!-- /END THE FEATURETTES -->
 		<footer></footer>
 	</div>
@@ -108,6 +107,7 @@
 		    // Update the contents of the page with whatever url was stored in the state.
 		    $.get(url, function(data){
 		    	loadInitialTrainingTab();
+		    	resizeNiceScroll('body');
 		    });
 		});
 	</script>

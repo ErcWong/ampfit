@@ -11,7 +11,7 @@
 	padding: 0 !important;
 }
 
-#header-logo{
+#header-logo {
 	background-image: url('/ampfit/img/amplogo.png');
 	background-attachment: fixed;
 	min-height: 50px;
@@ -35,7 +35,23 @@
 	background-image:
 		url('/ampfit/img/amp/training/group/lifting_principles.jpg');
 	background-position: right top;
-	min-height: 780px;
+	min-height: 770px;
+	margin-top: 20px;
+}
+
+#group-training {
+	background-image:
+		url('/ampfit/img/amp/training/group/group_training.jpg');
+	background-position: center 84%;
+	min-height: 500px;
+	margin-top: 20px;
+}
+
+#group-sweat-saturday {
+	background-image:
+		url('/ampfit/img/amp/training/group/sweat_saturday.jpg');
+	background-position: 15% 84%;
+	min-height: 500px;
 	margin-top: 20px;
 }
 
@@ -48,7 +64,8 @@
 }
 
 #private-small-group {
-	background-image: url('/ampfit/img/amp/training/private/small_group.jpg');
+	background-image:
+		url('/ampfit/img/amp/training/private/small_group.jpg');
 	background-position: 80% 25%;
 	background-size: cover;
 	min-height: 500px;
@@ -56,34 +73,20 @@
 }
 
 #weightlifting-jumbo {
-	background-image:
-		url('/ampfit/img/amp/training/weightlifting/membership.jpg');
-	background-position: 50% 0%;
-	background-size: 100% auto;
+	background-image: url('/ampfit/img/amp/training/weightlifting/membership.jpg');
+	background-position: 50% 50%;
 	margin-bottom: 0px;
-	min-height: 350px;
-}
-
-#weightlifting-snatch {
-	/* 	background: url('/ampfit/img/amp/training/weightlifting/snatch.jpg') no-repeat center center fixed; */
-	/* 	background-size: cover; */
-	/* 	border-radius: 5px; */
-	/* 	padding: 30px 15px; */
-	/* 	min-height: 500px; */
-	background-image:
-		url('/ampfit/img/amp/training/weightlifting/snatch.jpg');
-	background-size: auto 100%;
-	background-position: left 140px;
+	min-height: 500px;
 }
 
 #weightlifting-jerk {
-	background: url('/ampfit/img/amp/training/weightlifting/jerk.jpg')
-		no-repeat center center fixed;
-	overflow-y: hidden ! important;
-	overflow-x: hidden ! important;
-	background-color: #f8f8f8;
 	background-image: url('/ampfit/img/amp/training/weightlifting/jerk.jpg');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center 140px;
+	background-position: center center;
+	min-height: 400px;
+}
+
+#weightlifting-snatch {
+	background-image: url('/ampfit/img/amp/training/weightlifting/snatch.jpg');
+	background-position: center center;
+	min-height: 400px;
 }
