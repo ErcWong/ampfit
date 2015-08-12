@@ -39,9 +39,10 @@
 	
 	<!-- Marketing messaging and featurettes
     ================================================== -->
-	<div class="container container-body marketing">
+	   <div class="container-body marketing">
 		<!-- START THE FEATURETTES -->
-		<ul class="nav nav-tabs">
+		<ul class="nav nav-tabs navbar-fixed-top" style="background:black; top: 141px; 
+            z-index: 20; padding-top: 20px; width: 100%; height: auto; padding-left: 5%">
 			<li role="presentation"><a href="#whatweteach" onclick="loadTrainingTab('/ampfit/training/tabs/what_we_teach.html', this);">What We Teach</a></li>
 			<li role="presentation" class="dropdown">
 				<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Group <span class="caret"></span></a>
@@ -70,8 +71,10 @@
 				</ul>
 			</li>
 		</ul>
-		<div id="training-tab" style="height: 700px;">
-			<br><div id="training-tab-content" style="width: 1140px;"></div>
+       </div>
+       <div class="container marketing">
+		<div id="training-tab" style="height: auto; margin-top: 20px;">
+			<br><div id="training-tab-content" style="width: auto"></div>
 		</div>
         <hr class="featurette-divider amp-top">
 		<!-- /END THE FEATURETTES -->
@@ -95,8 +98,8 @@
 			loadNiceScroll('body', 20, 100, 60);
 		});
 		$(window).load(function(){
-			loadNiceScroll('#training-tab', 0, 100, 60);
-			resizeNiceScroll('#training-tab');
+// 			loadNiceScroll('#training-tab', 0, 100, 60);
+// 			resizeNiceScroll('#training-tab');
 		});
 	</script>
 </body>
