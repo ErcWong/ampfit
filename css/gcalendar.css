@@ -381,7 +381,9 @@
     text-decoration: line-through
 }
 .calendar-container {
-    margin: 0;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0;
     font-size-adjust: none;
     position: relative
@@ -397,7 +399,7 @@
 }
 .view-container-border {
     clear: right;
-    padding: 0 8px;
+    padding: 0 0px;
     position: relative;
     zoom: 1
 }
@@ -510,7 +512,9 @@
     cursor: pointer
 }
 .header {
-    padding: 0 2px;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: transparent;
     color: white;
 }
@@ -1200,20 +1204,22 @@ img.agenda-web-content {
     padding: 0
 }
 .wk-weektop {
+	width: 100%;
     table-layout: fixed;
-	/* TODO: Not the biggest issue but calendar weeks header do not line up with schedule*/
-    width: 101.6%;
     background-color: #5a5a5a;
     overflow: hidden;
     font-size: 11px;
-    line-height: 14px
+    line-height: 14px;
+}
+table.wk-weektop> tbody >tr.wk-daynames> th{
+	width: 14%;
 }
 .wk-dayname {
     font-weight: normal;
     color: white;
     background-color: #9E1D20;
     padding: 2px 4px;
-    white-space: nowrap
+    white-space: nowrap;
 }
 .wk-today {
     background-color: #222;
@@ -1408,6 +1414,7 @@ body.ie .tg-mainwrapper {
     background-position: -67px -68px
 }
 .wk-tzlabel {
+	min-width: 40px;
     color: #666;
     vertical-align: bottom;
     text-align: center;
