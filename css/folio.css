@@ -61,7 +61,7 @@
 }
 
 #posts .post:hover img {
-	opacity: 0.25;
+	opacity: 0.20;
 	-webkit-transform: translate3d(0, 0, 0) scale(1);
 	transform: translate3d(0, 0, 0) scale(1);
 }
