@@ -30,7 +30,7 @@
 
 #group-lifting-principles {
 	background-image: url('/ampfit/img/amp/training/group/lifting_principles.jpg');
-	background-position: right top;
+	background-position: 75% top;
 	min-height: 770px;
 	margin-top: 20px;
 }
@@ -44,7 +44,7 @@
 
 #group-training {
 	background-image: url('/ampfit/img/amp/training/group/group_training.jpg');
-	background-position: center 84%;
+	background-position: 98% 84%;
 	min-height: 500px;
 	margin-top: 20px;
 }
@@ -66,10 +66,8 @@
 
 #weightlifting-jumbo {
 	background-image: url('/ampfit/img/amp/training/weightlifting/membership.jpg');
-	background-position: 50% 0%;
-	background-size: 100% auto;
-	margin-bottom: 0px;
-	min-height: 350px;
+	background-position: 50% 60%;
+	min-height: 500px;
 }
 
 #weightlifting-jerk {
@@ -80,6 +78,6 @@
 
 #weightlifting-snatch {
 	background-image: url('/ampfit/img/amp/training/weightlifting/snatch.jpg');
-	background-position: center center;
+	background-position: center 75%;
 	min-height: 400px;
 }
