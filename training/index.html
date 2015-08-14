@@ -34,7 +34,7 @@
 <!-- NAVBAR
 ================================================== -->
 <body>
-	<header></header>
+	<header id="top"></header>
 	<hr class="featurette-divider amp-top amp-header-divider">
 	
 	<!-- Marketing messaging and featurettes
@@ -75,10 +75,8 @@
 						</ul>
 					</li>
 				</ul>
-		       </div>
-		       <div class="container marketing">
-				<div id="training-tab" style="height: auto; margin-top: 20px;">
-					<br><div id="training-tab-content" style="width: auto"></div>
+				<div id="training-tab" style="height: auto; margin-top: 37px">
+					<div id="training-tab-content" style="width: auto"></div>
 				</div>
 				<!-- /END THE FEATURETTES -->
 				<footer></footer>
@@ -102,6 +100,9 @@
 			loadInitialTrainingTab();
 			loadNiceScroll('body', 20, 100, 60);
 		});
+		$(window).load(function() {
+			resizeNiceScroll('body');
+		});
 		$(window).bind('popstate', function(event){
 		    var url = null;
 
@@ -113,7 +114,6 @@
 		    // Update the contents of the page with whatever url was stored in the state.
 		    $.get(url, function(data){
 		    	loadInitialTrainingTab();
-		    	resizeNiceScroll('body');
 		    });
 		});
 	</script>

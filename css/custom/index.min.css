@@ -54,6 +54,11 @@ background {
 		endColorstr='#00000000', GradientType=0);
 }
 
+top #top{
+	display: block;
+	visibility: hidden;
+}
+
 a {
 	color: #9E1D20;
 }
