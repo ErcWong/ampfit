@@ -2,7 +2,7 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 body {
-	padding-bottom: 40px;
+/* 	padding-bottom: 20px; */
 	color: #5a5a5a;
 	background-color: #222;
 }
@@ -100,6 +100,9 @@ body {
 
 /* Carousel base class */
 .carousel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 	margin-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
@@ -116,6 +119,7 @@ body {
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
+	height: 100%;
 	background-color: #000;
 }
 
@@ -187,10 +191,10 @@ body {
 		font-size: 45px;
 	}
 	.carousel-crop {
-		max-height: 500px;
+		max-height: 100%;
 	}
 	.carousel-crop>img {
-		max-height: 500px;
+		max-height: 100%;
 		width: auto;
 	}
 	div.carousel-caption {
@@ -322,7 +326,9 @@ body {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
+.header-padding {
+		padding-top: 140px !important;
+	}
 /* Mobile */
 @media ( max-width : 767px) {
 	/* CUSTOMIZE NAVBAR ------------------------------ */
@@ -563,8 +569,9 @@ hr.ampsep:after {
 
 .amp-header-divider {
 	position: fixed;
-	z-index: 10;
-	margin: -30px 0px 20px 0px !important;
+	z-index: 20;
+/* 	margin: -30px 0px 20px 0px !important; */
+	top: 100px;
 	width: 100%;
 }
 
@@ -611,4 +618,10 @@ ul.nav.nav-pills {
 .nav-pills>li {
 	float: none;
 	display: inline-block;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
 }
