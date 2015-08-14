@@ -21,13 +21,6 @@ function resizeNiceScroll(div) {
 	$('html,body').scrollTop(0);
 }
 
-function scrollAlong(div) {
-	$(window).scroll(function() {
-		var scrolledY = $(window).scrollTop();
-		$(div).css('background-position', 'left' + ((-scrolledY)) + 'px');
-	});
-}
-
 function justifyGalleryLayout(){
 	if($(window).width() > 414 ){
 		$("#mygallery").justifiedGallery({
@@ -164,7 +157,7 @@ function setupOnPanelHover() {
 	// although this can be done without JavaScript, we've attached these events
 	// because it causes the hover to be triggered when the element is tapped on
 	// a touch device
-	$('.hover').hover(function() {
+	$('#filter').hover(function() {
 		$(this).addClass('flip');
 	}, function() {
 		$(this).removeClass('flip');
