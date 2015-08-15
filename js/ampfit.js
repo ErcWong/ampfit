@@ -5,13 +5,20 @@ function loadHeaderAndFooter(page) {
 	$('footer').load('/ampfit/footer.html');
 }
 
-function scrollToTop(target) {
-    var jump = target;
-    var new_position = $(jump,top.document).offset();
-    $('html,body').stop(true, true).animate({
-          scrollTop: new_position.top - 135
-        }, 500);
-    return false;
+function scrollToTag(target) {
+	    var jump = target;
+	    var new_position = $(jump,top.document).offset();
+	    $('html,body').stop(true, true).animate({
+	          scrollTop: new_position.top - 135
+	        }, 500);
+	    return false;
+}
+
+function loadPage() {
+	var hash = location.hash;
+	if (hash){
+		scrollToTag(hash);
+	}
 }
 
 function loadNiceScroll(section, zidx, speed, mousestep) {
@@ -74,7 +81,7 @@ function loadTrainingTab(uri, tab, anchor) {
 		$('li[role=presentation]').find('a.dropdown-toggle').css('color', '#9d9d9d');
 		$(tab).parents('li[role=presentation]').find('a.dropdown-toggle').css('color', '#9E1D20');
 	}
-	resizeNiceScroll('body');
+	resizeNiceScroll('html');
 }
 
 function loadTestimonials(page) {

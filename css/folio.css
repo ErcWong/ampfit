@@ -136,8 +136,8 @@
 }
 
 p#folio_p {
-	font-family: 'Open Sans', sans-serif; 
-	font-size: medium !important;
+
+/* 	font-size: medium !important; */
 }
 
 /* Responsive css */
@@ -153,9 +153,10 @@ p#folio_p {
 	}
 }
 
-#posts .post .post-content p {
-	font-size: 15px;
+.post-content > p {
+	font-size: medium !important;
 	text-transform: none;
-	font-variant: small-caps;
+	/* 	font-family: 'Open Sans', sans-serif;  */
+/* 	font-variant: small-caps; */
 }
 /*---custom styling end---*/
