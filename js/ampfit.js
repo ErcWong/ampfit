@@ -1,7 +1,11 @@
 function loadHeaderAndFooter(page) {
+	if (page != 'Home') {
 	$('header').load('/ampfit/header.html', function() {
 		$('li:contains(' + page + ')').first().addClass('active');
-	});
+		});
+	} else {
+		$('li:contains(' + page + ')',document.body).first().addClass('active');
+	}
 	$('footer').load('/ampfit/footer.html');
 }
 
@@ -179,4 +183,73 @@ function setupOnPanelHover() {
 	}, function() {
 		$(this).removeClass('flip');
 	});
+}
+
+function animateHeader(){
+		var docElem = document.documentElement,
+			header = $("header",document.body).find('.navbar-fixed-top');
+			didScroll = false,
+			animateOn = $(window).height()/4;
+			changeHeaderOn = $(window).height() - header.height();
+
+		function init() {
+			window.addEventListener( 'scroll', function( event ) {
+				if( !didScroll ) {
+					didScroll = true;
+					setTimeout( scrollPage, 250 );
+				}
+			}, false );
+		}
+
+		function scrollPage() {
+			var sy = scrollY();
+			if ( sy >= changeHeaderOn ) {
+				header.addClass('navbar-fixed-top-solid' );
+			}
+			else {
+				header.removeClass('navbar-fixed-top-solid' );
+			}
+			didScroll = false;
+		}
+
+		function scrollY() {
+			return window.pageYOffset || docElem.scrollTop;
+		}
+	
+		init();
+    	scrollAnimation("#header-logo", animateOn, "height-shrink-fin");
+    	scrollAnimation("#myCarousel", animateOn, "fade-out-fin")
+}
+
+function scrollAnimation(element, pos, fin){
+	var docElem = document.documentElement,
+		header = $("body").find(element),
+		didScroll = false,
+		changeHeaderOn = pos;
+	
+	function init() {
+		window.addEventListener( 'scroll', function( event ) {
+			if( !didScroll ) {
+				didScroll = true;
+				setTimeout( scrollPage, 250 );
+			}
+		}, false );
+	}
+
+	function scrollPage() {
+		var sy = scrollY();
+		if ( sy >= changeHeaderOn ) {
+			header.addClass(fin);
+		}
+		else {
+			header.removeClass(fin);
+		}
+		didScroll = false;
+	}
+
+	function scrollY() {
+		return window.pageYOffset || docElem.scrollTop;
+	}
+
+	init();
 }

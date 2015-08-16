@@ -41,15 +41,17 @@
     ================================================== -->
     <background-wrapper>
     	<background>
-            <div class="" style="background-color:black; width: 100%; position: fixed; top: 135px; height: 72px; border-bottom:1px solid #ddd; z-index:20;">
-            </div>
+            <div style="background-color:black; width: 100%; position: fixed; top: 64px; height: 62px; z-index:20;"></div>
+<!--             <div class="" style="background-color:black; width: 100%; position: fixed; top: 125px; border-bottom:1px solid #9E1D20; z-index:30;"></div> -->
 	   		<div class="container container-body marketing">
 				<!-- START THE FEATURETTES -->
-				<ul class="nav nav-tabs navbar-fixed-top" style="background:black; top: 140px; 
+				<ul class="nav nav-tabs navbar-fixed-top" style="background:black; top: 64px; border-bottom: 0px; 
 		            z-index: 20; padding-top: 20px; width: 100%; max-width: 1140px; height: auto; left: auto; right: auto">
-					<li role="presentation"><a href="#whatweteach" onclick="loadTrainingTab('/ampfit/training/tabs/what_we_teach.html', this);">What We Teach</a></li>
+					<li role="presentation">
+                        <a href="#whatweteach" class="body-tabs" onclick="loadTrainingTab('/ampfit/training/tabs/what_we_teach.html', this);">What We Teach</a>
+                        </li>
 					<li role="presentation" class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Group <span class="caret"></span></a>
+						<a class="dropdown-toggle body-tabs" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Group <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li role="presentation"><a href="#principles" onclick="loadTrainingTab('/ampfit/training/tabs/group/principles.html', this);">Getting Started</a></li>
 							<li role="presentation"><a href="#group-training" onclick="loadTrainingTab('/ampfit/training/tabs/group/group-training.html', this);">Group Training</a></li>
@@ -59,7 +61,7 @@
 						</ul>
 					</li>
 					<li role="presentation" class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Private <span class="caret"></span></a>
+						<a class="dropdown-toggle body-tabs" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Private <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li role="presentation"><a href="#one-on-one" onclick="loadTrainingTab('/ampfit/training/tabs/private/one-on-one.html', this);">One On One</a></li>
 							<li role="presentation"><a href="#small-group" onclick="loadTrainingTab('/ampfit/training/tabs/private/small-group.html', this);">Small Group</a></li>
@@ -67,7 +69,7 @@
 						</ul>
 					</li>
 					<li role="presentation" class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Weightlifting Club <span class="caret"></span></a>
+						<a class="dropdown-toggle body-tabs" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Weightlifting Club <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
 							<li role="presentation"><a href="#lifts" onclick="loadTrainingTab('/ampfit/training/tabs/weightlifting/weightlifting.html', this);">The Lifts</a></li>
 							<li role="presentation"><a href="#weightlifting-schedule" onclick="loadTrainingTab('/ampfit/training/tabs/schedule.html', this);">Schedule</a></li>
@@ -75,7 +77,7 @@
 						</ul>
 					</li>
 				</ul>
-				<div id="training-tab" style="height: auto; margin-top: 37px">
+				<div id="training-tab" style="height: auto; margin-top: 36px">
 					<div id="training-tab-content" style="width: auto"></div>
 				</div>
 				<!-- /END THE FEATURETTES -->
