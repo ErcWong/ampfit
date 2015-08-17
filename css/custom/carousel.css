@@ -1,5 +1,45 @@
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
+#nav-bar {
+/* 	padding-top: 25px; */
+ 	background-color: rgba(0,0,0,0);
+}
+
+.nav-bar-animate {
+	padding-top: 0px !important;
+	background-color: rgba(0,0,0,1) !important;
+	border-bottom: 1px solid #9E1D20;
+}
+
+.animate {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.fade-in-init {
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade-in-fin {
+	opacity: 1 !important;
+	border: 1px solid white;
+}
+
+.fade-out-init {
+	-webkit-transition: opacity 0.5s ease-in;
+	-o-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
+}
+.fade-out-fin {
+	opacity: 0 !important;
+}
+
 /* Mobile */
 @media (max-width : 767px) {
 	.header-padding {
@@ -21,7 +61,7 @@
 	}
 	
 	#nav-bar {
-		position: static;
+		position: fixed;
 		padding-top: 50px;
 	}
 	
@@ -75,14 +115,31 @@
 	}
 	
 	/** animation **/
+	.animate {
+		-webkit-transition: all 0.5s linear;
+		-moz-transition: all 0.5s linear;
+		-o-transition: all 0.5s linear;
+		-ms-transition: all 0.5s linear;
+		transition: all 0.5s linear;
+	}
+	
+	.nav-bar-animate {
+		padding-top: 50px !important;
+		background-color: rgba(0,0,0,1) !important;
+		border-bottom: 1px solid #9E1D20;
+	}
+	.nav-amp-content-animate {
+		padding-top: 0px !important;
+	}
 	.zoom-in-init {
 		background-size: 250px 100px !important;
     	background-position: 50% 100%;
     	margin-top: -25px !important;
 	}
 	.zoom-in-fin {
-	    background-position: 50% 100%;
-	    margin-top: -25px !important;
+		background-size: 220px 90px !important;
+	    background-position: center center !important;
+    	margin-top: -90px !important;
 	}
 	/*folio*/
 	#posts .post p {
@@ -224,46 +281,6 @@
 
 .navbar-wrapper .navbar .container {
 	width: auto;
-}
-
-#nav-bar {
-/* 	padding-top: 25px; */
- 	background-color: rgba(0,0,0,0);
-}
-
-.nav-bar-animate {
-	padding-top: 0px !important;
-	background-color: rgba(0,0,0,1) !important;
-	border-bottom: 1px solid #9E1D20;
-}
-
-.animate {
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
-}
-
-.fade-in-init {
-	opacity: 0;
-	transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
-}
-
-.fade-in-fin {
-	opacity: 1 !important;
-	border: 1px solid white;
-}
-
-.fade-out-init {
-	-webkit-transition: opacity 0.5s ease-in;
-	-o-transition: opacity 0.5s ease-in;
-	transition: opacity 0.5s ease-in;
-}
-.fade-out-fin {
-	opacity: 0 !important;
 }
 
 /* CUSTOMIZE THE CAROUSEL
