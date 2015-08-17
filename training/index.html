@@ -39,13 +39,13 @@
 	
 	<!-- Marketing messaging and featurettes
     ================================================== -->
-    <background-wrapper>
-    	<background>
-            <div style="background-color:black; width: 100%; position: fixed; top: 64px; height: 62px; z-index:20;"></div>
+    <div id="background-wrapper">
+        <div id="background">
+            <div id="nav-tab-bg" style="background-color:black; width: 100%; position: fixed; top: 64px; height: 62px; z-index:20;"></div>
 <!--             <div class="" style="background-color:black; width: 100%; position: fixed; top: 125px; border-bottom:1px solid #9E1D20; z-index:30;"></div> -->
 	   		<div class="container container-body marketing">
 				<!-- START THE FEATURETTES -->
-				<ul class="nav nav-tabs navbar-fixed-top" style="background:black; top: 64px; border-bottom: 0px; 
+				<ul id="navtab" class="nav nav-tabs navbar-fixed-top" style="background:black; top: 64px; border-bottom: 0px; 
 		            z-index: 20; padding-top: 20px; width: 100%; max-width: 1140px; height: auto; left: auto; right: auto">
 					<li role="presentation">
                         <a href="#whatweteach" class="body-tabs" onclick="loadTrainingTab('/ampfit/training/tabs/what_we_teach.html', this);">What We Teach</a>
@@ -83,9 +83,8 @@
 				<!-- /END THE FEATURETTES -->
 				<footer></footer>
 			</div>
-		</background>
-	</background-wrapper>
-
+		</div>
+	</div>
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -102,6 +101,9 @@
 			loadInitialTrainingTab();
 			loadNiceScroll('body', 20, 100, 60);
 		});
+		$(window).load(function() {
+        	collapseMenuOnScroll();
+        });
 		$(window).bind('popstate', function(event){
 		    var url = null;
 

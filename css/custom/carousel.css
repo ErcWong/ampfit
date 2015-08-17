@@ -1,32 +1,107 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-body {
-/* 	padding-bottom: 20px; */
-/* 	color: #5a5a5a; */
-/* 	background-color: #222; */
-	background-color: black;
-}
-
-.container-body {
-	margin-top: 90px;
-}
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
+/* Mobile */
 @media (max-width : 767px) {
+	.header-padding {
+		margin-top: 120px !important;
+	}
+	
+	.nav {
+		float: none !important;
+		margin-top: 0px !important;
+	}
+	
 	.navbar-toggle  {
 		background-color: black;
-		margin-left: 85%;
-		z-index: 21;
+		position: fixed;
+		z-index: 23;
 		opacity: 1;
+		top: 10px;
+    	margin-left: 20px;
+	}
+	
+	#nav-bar {
+		position: static;
+		padding-top: 50px;
+	}
+	
+	#nav-bar-pages {
+		position: relative;
+	}
+	
+	#nav-social-btns {
+	   margin: 0 auto;
+	   width: 265px;
+    }
+    
+   	#navbar {
+		position: fixed;
+	    max-height: 190px;
+		width: 100%;
+	    padding-top: 50px;
+	    top: 0;
+	    left: 0;
+	    background-color: rgba(0,0,0,0.9);
+	}
+	
+	#navtab {
+		position:relative !important;
+		top: 0px !important;
+	}
+	
+	#nav-tab-bg {
+	    visibility: hidden;
+	}
+	
+	.navbar-logo {
+		position: absolute;
+		margin-top: 20px;
+		padding-top: 0px !important;
+		left: 20px;
+		width: 280px !important;
+		height: 100px !important;
+	}
+	
+	.nav-tabs>li {
+		float: none !important;
+	}
+	
+	.navbar-wrapper {
+	    z-index: 21 !important;
+	}
+	
+	#training-tab {
+		margin-top: 0 !important;
+	}
+	
+	/** animation **/
+	.zoom-in-init {
+		background-size: 250px 100px !important;
+    	background-position: 50% 100%;
+    	margin-top: -25px !important;
+	}
+	.zoom-in-fin {
+	    background-position: 50% 100%;
+	    margin-top: -25px !important;
+	}
+	/*folio*/
+	#posts .post p {
+		font-size: 14px !important;
+	}
+
+	/* CUSTOMIZE IG ------------------------------ */
+	/* Prevents excess space on mobiles */
+	.ig-feed {
+		overflow: hidden;
 	}
 }
 
 /* tablets */
 @media ( max-width : 991px) and (min-width: 768px) {
+	#nav-bar {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
+	}
 	.container {
 		width: 100%;
 	}
@@ -36,7 +111,11 @@ body {
 }
 
 /* custom nav-bar appearance */
-@media ( max-width : 862px) and (min-width: 768px) {
+@media (max-width : 862px) and (min-width: 768px) {
+	#nav-bar {
+		padding-top: 25px;
+	 	background-color: rgba(0,0,0,0);
+	}
 	.navbar-toggle {
 			display: inline;
 			background-color: rgba(0, 0, 0, 0.2);
@@ -65,10 +144,53 @@ body {
 	}
 }
 
+/* desktops */
+@media ( min-width : 1024px) {
+	#nav-bar {
+		padding-top: 25px;
+	 	background-color: rgba(0,0,0,0);
+	}
+	.zoom-in-init {
+	    background-size: 50% !important;
+   		background-position: 50% 50%;
+    	margin-top: -25px !important;
+	}
+	.zoom-in-fin {
+		background-size: 100% 100% !important;
+		background-position: 50% 100%;
+	    margin-top: -38px !important;
+	}
+	
+	.carousel-inner h1 {
+		font-size: 45px;
+	}
+	.carousel-crop {
+		max-height: 100%;
+	}
+	.carousel-crop>img {
+		max-height: 100%;
+		width: auto;
+	}
+	.testimonial-img-crop {
+		width: auto;
+		height: 225px;
+		overflow: hidden
+	}
+	.testimonial-img-crop>img {
+		height: 100%;
+		width: auto !important;
+		display: block;
+	}
+	.btn-testimonial {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+
 .navbar-nav {
 	margin-top: 30px !important;
-}
-.navbar-fixed-top{
 }
 
 .navbar-wrapper {
@@ -103,25 +225,23 @@ body {
 	width: auto;
 }
 
-.navbar-fixed-top {
-	 background-color: rgba(0,0,0,0);
-	-webkit-transition: background-color 1000ms linear;
-	-moz-transition: background-color 1000ms linear;
-	-o-transition: background-color 1000ms linear;
-	-ms-transition: background-color 1000ms linear;
-	transition: background-color 1000ms linear;
+#nav-bar {
+/* 	padding-top: 25px; */
+ 	background-color: rgba(0,0,0,0);
 }
 
-.navbar-fixed-top, .animate {
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	transition: all 0.3s;
+.nav-bar-animate {
+	padding-top: 0px !important;
+	background-color: rgba(0,0,0,1) !important;
+	border-bottom: 1px solid #9E1D20;
 }
 
-.navbar-fixed-top.navbar-fixed-top-solid {
-	background-color: rgba(0,0,0,1);
+.animate {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
 }
 
 .fade-in-init {
@@ -145,9 +265,6 @@ body {
 	opacity: 0 !important;
 }
 
-.height-shrink-fin {
-	margin: -38px 0 0 0 !important;
-}
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -207,6 +324,10 @@ body {
 
 /* tablets */
 @media ( max-width : 991px) and (min-width: 768px) {
+	#nav-bar {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
+	}
 	.carousel-inner h1 {
 		font-size: 45px;
 	}
@@ -221,6 +342,10 @@ body {
 
 /* laptops */
 @media ( max-width : 1023px) and (min-width: 992px) {
+	#nav-bar {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
+	}
 	.carousel-inner h1 {
 		font-size: 45px;
 	}
@@ -234,35 +359,6 @@ body {
 	.testimonial-img-crop {
 		width: auto;
 		height: 175px;
-		overflow: hidden
-	}
-	.testimonial-img-crop>img {
-		height: 100%;
-		width: auto !important;
-		display: block;
-	}
-	.btn-testimonial {
-		width: 100%;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-}
-
-/* desktops */
-@media ( min-width : 1024px) {
-	.carousel-inner h1 {
-		font-size: 45px;
-	}
-	.carousel-crop {
-		max-height: 100%;
-	}
-	.carousel-crop>img {
-		max-height: 100%;
-		width: auto;
-	}
-	.testimonial-img-crop {
-		width: auto;
-		height: 225px;
 		overflow: hidden
 	}
 	.testimonial-img-crop>img {
@@ -313,7 +409,7 @@ body {
 }
 
 .carousel-fade .carousel-control {
-	z-index: 22;
+	z-index: 20;
 }
 
 /*
@@ -389,47 +485,12 @@ body {
 .header-padding {
 		padding-top: 140px !important;
 	}
-/* Mobile */
-@media ( max-width : 767px) {
-	/* CUSTOMIZE NAVBAR ------------------------------ */
-	.nav {
-		float: none !important;
-		margin-top: 0px !important;
-	}
-	div#navbar {
-		width: 100%;
-		margin-top: 90px;
-		position: absolute;
-		background-color: black;
-	}
-	.navbar-fixed-top {
-		position: static;
-		z-index:1;
-	}
-	.navbar-wrapper {
-	}
-	.navbar-logo {
-		position: absolute;
-		margin-top: 20px;
-		padding-top: 0px !important;
-		left: 20px;
-		width: 280px !important;
-		height: 100px !important;
-	}
-	.header-padding {
-		margin-top: 120px !important;
-	}
-	/* CUSTOMIZE IG ------------------------------ */
-	/* Prevents excess space on mobiles */
-	.ig-feed {
-		overflow: hidden;
-	}
-}
-
 @media ( min-width : 768px) {
-	/* Navbar positioning foo */
-	.navbar-wrapper {
+	#nav-bar {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
 	}
+	/* Navbar positioning foo */
 	.navbar-wrapper .container {
 		padding-right: 15px;
 		padding-left: 15px;
@@ -724,7 +785,7 @@ ul.nav.nav-pills {
 .btn-social{
 	background-image: none !important;
 	background-color: rgba(0,0,0,0) !important;
-	margin-right: 10px;
+	margin: 0 5px;
 }
 
 .body-tabs {
