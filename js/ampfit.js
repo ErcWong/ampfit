@@ -203,13 +203,10 @@ function setupOnPanelHover() {
 }
 
 function animateHeader() {
-	var docElem = document.documentElement, 
-		header = $("header", document.body).find('.navbar-fixed-top');
-	didScroll = false, animateOn = $(window).height() / 4;
-	var animateOn = $(window).height() / 4;
-	addAnimationToElement("body", "#nav-bar", 1, "nav-bar-animate");
-	addAnimationToElement("body", "#header-logo", 1, "zoom-in-fin");
-	addAnimationToElement("body", "#nav-amp-content", 1, "nav-amp-content-animate");
+	var animateOn = $(window).height() / 10;
+	addAnimationToElement("body", "#nav-bar", animateOn, "nav-bar-animate");
+	addAnimationToElement("body", "#header-logo", animateOn, "zoom-in-fin");
+	addAnimationToElement("body", "#nav-amp-content", animateOn, "nav-amp-content-animate");
 //	addAnimationToElement("body", "#myCarousel", animateOn, "fade-out-fin");
 }
 
