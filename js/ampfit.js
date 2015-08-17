@@ -1,11 +1,11 @@
 function loadHeaderAndFooter(page) {
 	var html = '';
-	
+
 	if (page == 'Home') {
 		html = 'home';
 	}
-	
-	$('header').load('/ampfit/header'+ html + '.html', function() {
+
+	$('header').load('/ampfit/header' + html + '.html', function() {
 		$('li:contains(' + page + ')').first().addClass('active');
 	});
 	$('footer').load('/ampfit/footer.html');
@@ -42,6 +42,30 @@ function resizeNiceScroll(div) {
 	$(div).getNiceScroll().resize();
 	$('html,body').scrollTop(0);
 }
+
+function waitForImages() {
+	function imageLoaded() {
+		// function to invoke for loaded image
+		// decrement the counter
+		if(!this.complete){
+			$(this).hide();
+		}
+		counter--;
+		if (counter === 0) {
+			resizeNiceScroll('body');
+		}
+	}
+	var images = $('img');
+	var counter = images.length; // initialize the counter
+
+	images.each(function() {
+		if (this.complete) {
+			imageLoaded.call(this);
+		} else {
+			$(this).one('load', imageLoaded);
+		}
+	});
+};
 
 function justifyGalleryLayout() {
 	if ($(window).width() > 414) {
@@ -89,7 +113,6 @@ function loadTrainingTab(uri, tab, anchor) {
 		$(tab).parents('li[role=presentation]').find('a.dropdown-toggle').css(
 				'color', '#9E1D20');
 	}
-	resizeNiceScroll('html');
 }
 
 function loadTestimonials(page) {
@@ -207,20 +230,18 @@ function setupOnPanelHover() {
 function animateHeader() {
 	var docElem = document.documentElement, 
 		header = $("header", document.body).find('.navbar-fixed-top');
-	didScroll = false, animateOn = $(window).height() / 4;
-//	changeHeaderOn = $(window).height() - header.height();
-	var animateOn = $(window).height() / 4;
+		didScroll = false, 
+		animateOn = $(window).height() / 4;
+		
 	addAnimationToElement("body", "#nav-bar", animateOn, "nav-bar-animate");
 	addAnimationToElement("body", "#header-logo", animateOn, "zoom-in-fin");
 	addAnimationToElement("body", "#myCarousel", animateOn, "fade-out-fin");
 }
 
 function addAnimationToElement(div, element, pos, fin) {
-	var docElem = document.documentElement,
-		header = $(div, docElem).find(element), 
-		didScroll = false, 
-		changeHeaderOn = pos;
-		
+	var docElem = document.documentElement, header = $(div, docElem).find(
+			element), didScroll = false, changeHeaderOn = pos;
+
 	function init() {
 		window.addEventListener('scroll', function(event) {
 			if (!didScroll) {
@@ -247,27 +268,27 @@ function addAnimationToElement(div, element, pos, fin) {
 	init();
 }
 
-function collapseMenuOnScroll(){
-	var docElem = document.documentElement,
+function collapseMenuOnScroll() {
+	var docElem = document.documentElement, 
 		menu = $('body', docElem).find('#navbar'), 
 		didScroll = false;
-	
+
 	function init() {
 		window.addEventListener('scroll', function(event) {
 			if (!didScroll) {
 				menu.collapse({
-					  toggle: false
-					})
+					toggle : false
+				})
 				didScroll = true;
 				setTimeout(collapseMenu, 350);
 			}
 		}, false);
 	}
-	
+
 	function collapseMenu() {
 		menu.collapse('hide');
-	    didScroll = false;
+		didScroll = false;
 	}
-	
+
 	init();
 }

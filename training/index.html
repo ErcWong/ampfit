@@ -22,6 +22,7 @@
 	<![endif]-->
 
 	<!-- Custom styles for this template -->
+	<link rel="icon" type="image/png" href="/img/favicon.png" />
 	<link rel="stylesheet" href="/ampfit/css/custom/carousel.css">
     <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
     <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
@@ -100,6 +101,7 @@
 			loadHeaderAndFooter('Training');
 			loadInitialTrainingTab();
 			loadNiceScroll('body', 20, 100, 60);
+			waitForImages();
 		});
 		$(window).load(function() {
         	collapseMenuOnScroll();
