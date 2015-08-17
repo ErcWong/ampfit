@@ -1,10 +1,5 @@
 function loadHeaderAndFooter(page) {
-	var html = '';
-	
-	if (page == 'Home') {
-		html = 'home';
-	}
-	
+	var html = (page=='Home' ? 'home':'');
 	$('header').load('/ampfit/header'+ html + '.html', function() {
 		$('li:contains(' + page + ')').first().addClass('active');
 	});
@@ -40,7 +35,7 @@ function loadNiceScroll(section, zidx, speed, mousestep) {
 
 function resizeNiceScroll(div) {
 	$(div).getNiceScroll().resize();
-	$('html,body').scrollTop(0);
+	$(div).scrollTop(0);
 }
 
 function justifyGalleryLayout() {
@@ -190,6 +185,9 @@ function setupOnFolioHover() {
 
 						});
 			});
+	$("img").error(function () {
+		  $(this).unbind("error").attr({"src": "", "style":"height:440px; color:black"});
+	});
 }
 
 function setupOnPanelHover() {
@@ -208,7 +206,6 @@ function animateHeader() {
 	var docElem = document.documentElement, 
 		header = $("header", document.body).find('.navbar-fixed-top');
 	didScroll = false, animateOn = $(window).height() / 4;
-//	changeHeaderOn = $(window).height() - header.height();
 	var animateOn = $(window).height() / 4;
 	addAnimationToElement("body", "#nav-bar", animateOn, "nav-bar-animate");
 	addAnimationToElement("body", "#header-logo", animateOn, "zoom-in-fin");
