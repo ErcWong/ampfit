@@ -154,6 +154,7 @@
 	    background-size: 50% !important;
    		background-position: 50% 50%;
     	margin-top: -25px !important;
+    	-webkit-background-size: 50% !important;
 	}
 	.zoom-in-fin {
 		background-size: 100% 100% !important;
