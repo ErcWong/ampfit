@@ -1,32 +1,107 @@
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-body {
-	padding-bottom: 40px;
-	color: #5a5a5a;
-	background-color: #222;
-}
-
-.container-body {
-	margin-top: 170px;
-}
-
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
-
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
+/* Mobile */
 @media (max-width : 767px) {
+	.header-padding {
+		margin-top: 120px !important;
+	}
+	
+	.nav {
+		float: none !important;
+		margin-top: 0px !important;
+	}
+	
 	.navbar-toggle  {
 		background-color: black;
-/* 		position: fixed !important; */
-		margin-left: 85%;
-		z-index: 21;
+		position: fixed;
+		z-index: 23;
 		opacity: 1;
+		top: 10px;
+    	margin-left: 20px;
+	}
+	
+	#nav-bar {
+		position: static;
+		padding-top: 50px;
+	}
+	
+	#nav-bar-pages {
+		position: relative;
+	}
+	
+	#nav-social-btns {
+	   margin: 0 auto;
+	   width: 265px;
+    }
+    
+   	#navbar {
+		position: fixed;
+	    max-height: 190px;
+		width: 100%;
+	    padding-top: 50px;
+	    top: 0;
+	    left: 0;
+	    background-color: rgba(0,0,0,0.9);
+	}
+	
+	#navtab {
+		position:relative !important;
+		top: 0px !important;
+	}
+	
+	#nav-tab-bg {
+	    visibility: hidden;
+	}
+	
+	.navbar-logo {
+		position: absolute;
+		margin-top: 20px;
+		padding-top: 0px !important;
+		left: 20px;
+		width: 280px !important;
+		height: 100px !important;
+	}
+	
+	.nav-tabs>li {
+		float: none !important;
+	}
+	
+	.navbar-wrapper {
+	    z-index: 21 !important;
+	}
+	
+	#training-tab {
+		margin-top: 0 !important;
+	}
+	
+	/** animation **/
+	.zoom-in-init {
+		background-size: 250px 100px !important;
+    	background-position: 50% 100%;
+    	margin-top: -25px !important;
+	}
+	.zoom-in-fin {
+	    background-position: 50% 100%;
+	    margin-top: -25px !important;
+	}
+	/*folio*/
+	#posts .post p {
+		font-size: 14px !important;
+	}
+
+	/* CUSTOMIZE IG ------------------------------ */
+	/* Prevents excess space on mobiles */
+	.ig-feed {
+		overflow: hidden;
 	}
 }
 
 /* tablets */
 @media ( max-width : 991px) and (min-width: 768px) {
+	#nav-bar {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
+	}
 	.container {
 		width: 100%;
 	}
@@ -36,7 +111,11 @@ body {
 }
 
 /* custom nav-bar appearance */
-@media ( max-width : 862px) and (min-width: 768px) {
+@media (max-width : 862px) and (min-width: 768px) {
+	#nav-bar {
+		padding-top: 25px;
+	 	background-color: rgba(0,0,0,0);
+	}
 	.navbar-toggle {
 			display: inline;
 			background-color: rgba(0, 0, 0, 0.2);
@@ -65,11 +144,53 @@ body {
 	}
 }
 
-.navbar-nav {
-	margin-top: 0 !important;
+/* desktops */
+@media ( min-width : 1024px) {
+	#nav-bar {
+		padding-top: 25px;
+	 	background-color: rgba(0,0,0,0);
+	}
+	.zoom-in-init {
+	    background-size: 50% !important;
+   		background-position: 50% 50%;
+    	margin-top: -25px !important;
+	}
+	.zoom-in-fin {
+		background-size: 100% 100% !important;
+		background-position: 50% 100%;
+	    margin-top: -38px !important;
+	}
+	
+	.carousel-inner h1 {
+		font-size: 45px;
+	}
+	.carousel-crop {
+		max-height: 100%;
+	}
+	.carousel-crop>img {
+		max-height: 100%;
+		width: auto;
+	}
+	.testimonial-img-crop {
+		width: auto;
+		height: 225px;
+		overflow: hidden
+	}
+	.testimonial-img-crop>img {
+		height: 100%;
+		width: auto !important;
+		display: block;
+	}
+	.btn-testimonial {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
-.navbar-fixed-top{
-	height: 140px;
+
+
+.navbar-nav {
+	margin-top: 30px !important;
 }
 
 .navbar-wrapper {
@@ -78,6 +199,15 @@ body {
 	right: 0;
 	left: 0;
 	z-index: 20;
+}
+
+.navbar-nav>li>a {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.nav>li>a{
+	padding: 0 10px 0 10px;	
 }
 
 /* Flip around the padding for proper display in narrow viewports */
@@ -95,27 +225,84 @@ body {
 	width: auto;
 }
 
+#nav-bar {
+/* 	padding-top: 25px; */
+ 	background-color: rgba(0,0,0,0);
+}
+
+.nav-bar-animate {
+	padding-top: 0px !important;
+	background-color: rgba(0,0,0,1) !important;
+	border-bottom: 1px solid #9E1D20;
+}
+
+.animate {
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+.fade-in-init {
+	opacity: 0;
+	transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade-in-fin {
+	opacity: 1 !important;
+	border: 1px solid white;
+}
+
+.fade-out-init {
+	-webkit-transition: opacity 0.5s ease-in;
+	-o-transition: opacity 0.5s ease-in;
+	transition: opacity 0.5s ease-in;
+}
+.fade-out-fin {
+	opacity: 0 !important;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
-	margin-bottom: 60px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-	z-index: 10;
+/* The three styles help aligns any div in the center */
+.div-center-in {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto; 
+	width: 100%;
+	padding: 0;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
 }
-/* Custom text positioning for slide 2 */
-.carousel-caption-2 {
-	height: 225px;
-	padding-right: 380px;
-	margin-left: -130px;
-	margin-bottom: 60px;
+
+.div-center-mid {
+	display: table-cell; 
+	vertical-align: middle;
+}
+
+.div-center-out {
+	top: 0;
+	width: 100%; 
+	height: 100%; 
+	position: absolute; 
+	display: table;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
+	height: 100%;
 	background-color: #000;
 }
 
@@ -133,13 +320,14 @@ body {
 		min-width: 190%;
 		margin-left: -30%;
 	}
-	.carousel-caption {
-		padding-bottom: 15% !important;
-	}
 }
 
 /* tablets */
 @media ( max-width : 991px) and (min-width: 768px) {
+	#nav-bar {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
+	}
 	.carousel-inner h1 {
 		font-size: 45px;
 	}
@@ -154,6 +342,10 @@ body {
 
 /* laptops */
 @media ( max-width : 1023px) and (min-width: 992px) {
+	#nav-bar {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
+	}
 	.carousel-inner h1 {
 		font-size: 45px;
 	}
@@ -181,37 +373,14 @@ body {
 	}
 }
 
-/* desktops */
-@media ( min-width : 1024px) {
-	.carousel-inner h1 {
-		font-size: 45px;
-	}
-	.carousel-crop {
-		max-height: 500px;
-	}
-	.carousel-crop>img {
-		max-height: 500px;
-		width: auto;
-	}
-	div.carousel-caption {
-		padding-bottom: 10% !important;
-	}
-	.testimonial-img-crop {
-		width: auto;
-		height: 225px;
-		overflow: hidden
-	}
-	.testimonial-img-crop>img {
-		height: 100%;
-		width: auto !important;
-		display: block;
-	}
-	.btn-testimonial {
-		width: 100%;
-		padding-left: 0px;
-		padding-right: 0px;
-	}
+.testimonial-img-crop{
+	border-radius: 0px !important;	
 }
+
+.btn-testimonial{
+	border-radius: 0px !important;
+}
+
 /*
   Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
   CSS from:       http://codepen.io/transportedman/pen/NPWRGq
@@ -240,7 +409,7 @@ body {
 }
 
 .carousel-fade .carousel-control {
-	z-index: 2;
+	z-index: 20;
 }
 
 /*
@@ -313,54 +482,15 @@ body {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-
-/* Mobile */
-
-@media ( max-width : 767px) {
-	
-}
-@media ( max-width : 767px) {
-	/* CUSTOMIZE NAVBAR ------------------------------ */
-	.nav {
-		float: none !important;
-		margin-top: 0px !important;
+.header-padding {
+		padding-top: 140px !important;
 	}
-	div#navbar {
-		width: 100%;
-		margin-top: 90px;
-		position: absolute;
-		background-color: black;
-	}
-	.navbar-fixed-top {
-		position: static;
-		z-index:1;
-	}
-	.navbar-wrapper {
-		height: 120px;
-	}
-	.navbar-logo {
-		position: absolute;
-		margin-top: 20px;
-		padding-top: 0px !important;
-		left: 20px;
-		width: 280px !important;
-		height: 100px !important;
-	}
-	.header-padding {
-		margin-top: 120px !important;
-	}
-	/* CUSTOMIZE IG ------------------------------ */
-	/* Prevents excess space on mobiles */
-	.ig-feed {
-		overflow: hidden;
-	}
-}
-
 @media ( min-width : 768px) {
-	/* Navbar positioning foo */
-	.navbar-wrapper {
-		margin-top: 20px;
+	#nav-bar {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
 	}
+	/* Navbar positioning foo */
 	.navbar-wrapper .container {
 		padding-right: 15px;
 		padding-left: 15px;
@@ -400,17 +530,44 @@ body {
 /* CUSTOM
 -------------------------------------------------- */
 ul.nav li a {
-	font-size: 18px;
-	color: #9d9d9d;
+	color: rgba(255,255,255,0.5);
 }
 
-.jumbotron {
-	background-image: url('/ampfit/img/amp/yummyowen.jpg');
-	background-attachment: fixed;
-	background-size: cover;
-	min-height: 400px;
-	margin-top: 0px;
-	margin-bottom: 8px;
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .dropdown-menu>.active>a {
+	color: #555;
+    cursor: default;
+    background-color: #9D9D9D;
+    border: 2px solid #ddd;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	color: #555;
+    cursor: default;
+    border: 1px solid #ddd;
+}
+
+.nav-tabs>li>a:hover{
+	color: #9E1D20;
+}
+
+.navbar-nav > li > a {
+	font-size: 18px;
+/* 	color: #9d9d9d; */
+/* 	color: rgba(0,0,0,0.5); */
+}
+
+navbar-nav>li.active>a{
+	color: rgba(255,255,255,1) !important;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: rgba(255,255,255,0.5);
+	background-color: rgba(255, 255, 255,0) !important;
+}
+
+.navbar-nav>li.active, .navbar-nav>li:hover> a {
+	color: rgba(0,0,0, 0.5);
+	opacity: 1;
 }
 
 hr.ampsep {
@@ -567,8 +724,9 @@ hr.ampsep:after {
 
 .amp-header-divider {
 	position: fixed;
-	z-index: 10;
-	margin: -30px 0px 20px 0px !important;
+	z-index: 21;
+/* 	margin: -30px 0px 20px 0px !important; */
+	top: 28px;
 	width: 100%;
 }
 
@@ -590,11 +748,46 @@ hr.ampsep:after {
 }
 
 @media (min-width: 768px) {
-.anchor {
+	.anchor {
 		display: block;
 		height: 140px; 
 		margin-top: -150px;
 		margin-bottom: 10px;
 		visibility: hidden;
 	}
+	
+	.anchor-training {
+		display: block;
+		height: 160px; 
+		margin-top: -130px;
+		margin-bottom: 30px;
+		visibility: hidden;
+	}
+}
+
+ul.nav.nav-pills {
+	text-align: right;
+	
+}
+
+.nav-pills>li {
+	float: none;
+	display: inline-block;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Social buttons general look */
+.btn-social{
+	background-image: none !important;
+	background-color: rgba(0,0,0,0) !important;
+	margin: 0 5px;
+}
+
+.body-tabs {
+	padding: 10px 15px !important;
 }

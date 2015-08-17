@@ -18,6 +18,10 @@ body {
     font-size: 90% !important;
 }
 
+.text-bright {
+	color: #FFFFFF !important;
+}
+
 .text-light {
 	color: #C7C7C7 !important;
 }
@@ -42,12 +46,8 @@ body {
 	font-family: 'Raleway', sans-serif !important;
 }
 
-.navbar-inverse .navbar-nav>li>a {
-	color: #4F4F4F;
-}
-
-.navbar-nav>li, .active {
-	opacity: 0.8;
+underline{
+	text-decoration: underline;
 }
 
 .carousel-inner h1 {
@@ -57,12 +57,15 @@ body {
 	opacity: 0.8;
 }
 
-.carousel-indicators li, .active {
+.carousel-indicators>li {
 	opacity: 0.45;
+}
+.carousel-indicators>li.active {
+	opacity: 1;
 }
 
 p {
-	font-size: 21px;
+	font-size: 15px;
 	line-height: 150%;
 }
 
@@ -108,11 +111,11 @@ h2 {
 
 /*table stuff */
 th {
-	font-size: 19px;
-	color: white;
+	font-size: 15px;
+	color: #C7C7C7;
 }
 
 td {
-	font-size: 15px;
-	color: #C7C7C7;
+	font-size: 14px;
+	color: #868585;
 }

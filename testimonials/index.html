@@ -25,24 +25,28 @@
 	<link rel="stylesheet" href="/ampfit/css/custom/carousel.css">
     <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
     <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/jumbotron.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/desktop.css">
+	<link rel="stylesheet" href="/ampfit/css/folio.css">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Michroma|Open+Sans:300,400">
 </head>
 
 <!-- NAVBAR
 ================================================== -->
 <body>
-    <header></header>
+    <header id="top"></header>
 	<hr class="featurette-divider amp-top amp-header-divider">
-
-	<div class="container container-body marketing">
-		<!-- START THE FEATURETTES -->
-		<div id="testimonial-block" class="container marketing"></div>
-        <hr class="featurette-divider amp-top amp-header-divider">
-        <hr class="featurette-divider amp-top">
-        <!-- /END THE FEATURETTES -->
-        <footer></footer>
-    </div>
-    
+	<div id="background-wrapper">
+        <div id="background">
+			<div class="container container-body marketing">
+				<!-- START THE FEATURETTES -->
+				<div id="testimonial-block" class="container marketing"></div>
+		        <hr class="featurette-divider amp-top amp-header-divider">
+		        <!-- /END THE FEATURETTES -->
+		        <footer></footer>
+    		</div>
+		</div>
+	</div> 
     <!-- Modal -->
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog" style="padding-top: 5%">
@@ -56,15 +60,15 @@
 				</div>
 				<div class="modal-body" style="background-color: black; padding: 0">
 					<div id="testimonial_modal" class="wrapper">
-						  <img id="testimonial_img" class="col-md-12">
-						  <div class="overlay" class="col-md-4">
-						    <p id="testimonial" class="testimonials"></p>
-						      </div>
-                        <div class="modal-footer col-md-12" style="background-color: black; border-top-color:red">
-	            </div>
+                        <img id="testimonial_img" class="col-md-12">
+                        <div class="overlay" class="col-md-4">
+					       <p id="testimonial" class="testimonials"></p>
+						</div>
+                        <div class="modal-footer col-md-12" style="background-color: black; border-top-color:red"></div>
 					</div>
 				</div>
 			</div>
+		</div>
 	</div>
 
     <!-- Bootstrap core JavaScript
@@ -76,32 +80,14 @@
 	<!-- Custom js for this template -->
     <script src="/ampfit/js/ampfit.js"></script>
     <script src="/ampfit/js/jquery.nicescroll.min.js"></script>
+    <script src="/ampfit/js/jquery.nicescroll.plus.min.js"></script>
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Testimonials');
+            loadNiceScroll('body', 100, 60);
             loadTestimonials('Testimonials');
-            $("body").niceScroll({
-           		zindex: 20,
-               	scrollspeed: 100,
-               	mousescrollstep: 60
-       		});
+            justifyTestimonialLayout();
         });
-        if($(window).width() > 759 ){
-            $('#testimonial_modal').addClass('wrapper');
-            $('#testimonial_modal').removeClass('container marketing');
-        }else{
-            $('#testimonial_modal').addClass('container marketing');
-            $('#testimonial_modal').removeClass('wrapper');
-        }
-        $(window).on('resize', function() {
-            if($(window).width() > 759 ){
-                $('#testimonial_modal').addClass('wrapper');
-                $('#testimonial_modal').removeClass('container marketing');
-            }else{
-                $('#testimonial_modal').addClass('container marketing');
-                $('#testimonial_modal').removeClass('wrapper');
-            }
-        })
     </script>
 </body>
 </html>
