@@ -229,7 +229,7 @@ function animateHeader() {
 	var docElem = document.documentElement, 
 		header = $("header", document.body).find('.navbar-fixed-top');
 		didScroll = false, 
-		animateOn = $(window).height() / 4;
+		animateOn = $(window).height() / 10;
 		
 	addAnimationToElement("body", "#nav-bar", animateOn, "nav-bar-animate");
 	addAnimationToElement("body", "#header-logo", animateOn, "zoom-in-fin");
