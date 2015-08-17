@@ -1,11 +1,6 @@
 function loadHeaderAndFooter(page) {
-	var html = '';
-
-	if (page == 'Home') {
-		html = 'home';
-	}
-
-	$('header').load('/ampfit/header' + html + '.html', function() {
+	var html = (page=='Home' ? 'home':'');
+	$('header').load('/ampfit/header'+ html + '.html', function() {
 		$('li:contains(' + page + ')').first().addClass('active');
 	});
 	$('footer').load('/ampfit/footer.html');
@@ -40,7 +35,7 @@ function loadNiceScroll(section, zidx, speed, mousestep) {
 
 function resizeNiceScroll(div) {
 	$(div).getNiceScroll().resize();
-	$('html,body').scrollTop(0);
+	$(div).scrollTop(0);
 }
 
 function waitForImages() {
@@ -213,6 +208,9 @@ function setupOnFolioHover() {
 
 						});
 			});
+	$("img").error(function () {
+		  $(this).unbind("error").attr({"src": "", "style":"height:440px; color:black"});
+	});
 }
 
 function setupOnPanelHover() {
