@@ -172,18 +172,18 @@
     
     <!-- YouTube Modal -->
     
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="div-center-out">
-		<div class="div-center-mid">
-			<div class="div-center-in">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-body">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
+		<div class="div-center-out">
+			<div class="div-center-mid">
+				<div class="div-center-in">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-body">
 			            		<div class="embed-responsive embed-responsive-16by9 ">
-			                		<iframe width="560" height="315" src="https://www.youtube.com/embed/1-CONCY_WE8" frameborder="0" allowfullscreen></iframe>
+			                		<iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/1-CONCY_WE8?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 			            		</div>
-			            </div>
-			        </div>
+			           		</div>
+			       	 	</div>
 			        </div>
 				</div>
 			</div>
@@ -201,11 +201,13 @@
     <script src="/ampfit/js/pongstagr.am.min.js"></script>
     <script src="/ampfit/js/jquery.nicescroll.min.js"></script>
     <script src="/ampfit/js/jquery.nicescroll.plus.min.js"></script>
+    <script src="/ampfit/js/ytplayer.js"></script>
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Home');
             loadNiceScroll('body', 20, 100, $(window).height()/25);
             loadPongstgram();
+            loadModalFunctions();
             <!--loadTwitter();-->
 		});
         $(window).load(function() {
@@ -217,5 +219,4 @@
         });
     </script>
 </body>
-
 </html>
