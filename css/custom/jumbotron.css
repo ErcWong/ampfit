@@ -25,6 +25,13 @@
     height: 100px;
 }
 
+@media (max-width: 768px) {
+	#header-logo-pages {
+		background-size: 220px 90px !important;
+	    background-position: center center !important;
+	    margin-top: -40px !important;
+	}
+}
 @media (min-width: 1024px) {
 	#header-logo-pages {
     	margin-top: -38px !important;
@@ -89,13 +96,13 @@
 
 #weightlifting-jerk {
 	background-image: url('/ampfit/img/amp/training/weightlifting/jerk.jpg');
-	background-position: center center;
+	background-position: center 72%;
 	min-height: 400px;
 }
 
 #weightlifting-snatch {
 	background-image: url('/ampfit/img/amp/training/weightlifting/snatch.jpg');
-	background-position: center 75%;
+	background-position: 39% 75%;
 	min-height: 400px;
 }
 

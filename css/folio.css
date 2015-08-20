@@ -70,7 +70,7 @@
 	padding: 2em;
 	color: #fff;
 	text-transform: uppercase;
-/* 	font-size: 1.25em; */
+	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
@@ -129,15 +129,15 @@
 }
 
 /*---custom styling---*/
-
-
 .post-content h2, h3 {
 	color: white;
 }
 
 p#folio_p {
+}
 
-/* 	font-size: medium !important; */
+#posts .post {
+	border: 1px solid white;
 }
 
 /* Responsive css */
@@ -147,7 +147,7 @@ p#folio_p {
 	}
 }
 
-@media ( max-width : 991px) and (min-width: 600px) {
+@media (max-width : 1199px) and (min-width: 600px) {
 	#posts .post {
 		width: 50%;
 	}
@@ -156,7 +156,5 @@ p#folio_p {
 .post-content > p {
 	font-size: medium !important;
 	text-transform: none;
-	/* 	font-family: 'Open Sans', sans-serif;  */
-/* 	font-variant: small-caps; */
 }
 /*---custom styling end---*/
