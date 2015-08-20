@@ -108,6 +108,7 @@ function loadTrainingTab(uri, tab, anchor) {
 		$(tab).parents('li[role=presentation]').find('a.dropdown-toggle').css(
 				'color', '#9E1D20');
 	}
+	resizeNiceScroll('body');
 }
 
 function loadTestimonials(page) {
