@@ -50,14 +50,6 @@ underline{
 	text-decoration: underline;
 }
 
-.navbar-inverse .navbar-nav>li>a {
-	color: #4F4F4F;
-}
-
-.navbar-nav>li, .active {
-	opacity: 0.8;
-}
-
 .carousel-inner h1 {
 	font-size: 60px;
 	font-variant: small-caps;
@@ -65,8 +57,11 @@ underline{
 	opacity: 0.8;
 }
 
-.carousel-indicators li, .active {
+.carousel-indicators>li {
 	opacity: 0.45;
+}
+.carousel-indicators>li.active {
+	opacity: 1;
 }
 
 p {

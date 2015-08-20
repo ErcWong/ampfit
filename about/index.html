@@ -22,6 +22,7 @@
 	<![endif]-->
 
     <!-- Custom styles for this template -->
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
     <link rel="stylesheet" href="/ampfit/css/custom/carousel.css">
     <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
     <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
@@ -35,12 +36,14 @@
 <!-- NAVBAR
 ================================================== -->
 <body>
-    <header></header>
+    <header id="top"></header>
     <hr class="featurette-divider amp-top amp-header-divider">
     
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div id="background-wrapper">
+        <div id="background">
     <div class="container container-body marketing">
    		<!-- START THE FEATURETTES -->
         <div class="row featurette">
@@ -69,8 +72,7 @@
             </div>
         </div>
 
-        <hr class="featurette-divider amp-top">
-
+        <hr id="trainers" class="featurette-divider amp-top">
         <div class="row featurette">
             <div class="col-md-4">
                 <h2 class="text-bright" style="margin: 0;">AMP Trainers</h2>
@@ -120,9 +122,7 @@
             </div>
         </div>
 		
-        <hr class="featurette-divider amp-top">
-
-        <span class="anchor" id="facility-gallery"></span>
+        <hr id="facility-gallery" class="featurette-divider amp-top">
         <h2 class="text-bright" style="margin-top: 0px">The Facility</h2>
         <div id="mygallery">
             <a href="/ampfit/img/amp/gallery/01.jpg" data-lightbox="gallery"  data-title="The stage">
@@ -172,6 +172,8 @@
         <!-- /END THE FEATURETTES -->
         <footer></footer>
     </div>
+    </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -188,9 +190,12 @@
     <script>
         $(document).ready(function() {
         	loadHeaderAndFooter('About');
-        	loadNiceScroll('html', 20, 100, 60);
+        	loadNiceScroll('html', 20, 100, $(window).height()/25);
         	justifyGalleryLayout();
 		});
+       	$(window).load(function(){
+       		loadPage();
+       	});
     </script>
 </body>
 </html>
