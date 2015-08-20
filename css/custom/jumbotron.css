@@ -104,6 +104,11 @@
 	background-position: center 72%;
 	min-height: 400px;
 }
+@media (min-width: 1024px) {
+	#weightlifting-jerk {
+    	background-position: center center;
+    }
+}
 
 #weightlifting-snatch {
 	background-image: url('/ampfit/img/amp/training/weightlifting/snatch.jpg');
