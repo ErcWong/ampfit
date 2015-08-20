@@ -189,44 +189,6 @@
 		overflow: hidden;
 	}
 }
-
-/* custom nav-bar appearance */
-@media (max-width : 862px) and (min-width: 768px) {
-	.navbar-nav {
-		margin-top: 0px !important;
-	}
-	#nav-bar {
-		padding-top: 25px;
-	 	background-color: rgba(0,0,0,0);
-	}
-	.navbar-toggle {
-/* 			display: inline; */
-/* 			background-color: rgba(0, 0, 0, 0.2); */
-/* 			position: fixed; */
-/* 			margin-left: 90%; */
-/* 			margin-top: 80px; */
-		}
-/* 	.navbar-collapse.collapse{ */
-/* 		display: none !important; */
-/* 	} */
-/* 	.navbar-collapse.collapse.in{ */
-/* 		display:block !important; */
-/* 		visibility: visible; */
-/* 	} */
-/* 	div#navbar { */
-/* 		width: 100%; */
-/* 		margin-top: 130px; */
-/* 		margin-left: -15px; */
-/* 		position: absolute; */
-/* 		background-color: black; */
-/* 	} */
-	.navbar-nav {
-		width: 100%;
-	  	float: right !important;
-	 	margin: 0 !important;
-	}
-}
-
 /* tablets */
 @media ( max-width : 1023px) and (min-width: 768px) {
 	.amp-header-divider {
@@ -263,6 +225,15 @@
 	}
 	.nav-link {
 		font-size: 14px !important;
+	}
+	.zoom-in-init {
+	    background-size: 50% !important;
+   		background-position: 50% 50%;
+    	-webkit-background-size:100% 100% !important;
+	}
+	.zoom-in-fin {
+		background-size: 100% 100% !important;
+	    background-position: 50% 100%;
 	}
 }
 

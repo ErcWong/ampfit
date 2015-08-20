@@ -32,6 +32,11 @@
 	    margin-top: -40px !important;
 	}
 }
+@media (min-width: 767px) {
+	#header-logo {
+		background-size: 165px 68px;
+	}
+}
 @media (min-width: 1024px) {
 	#header-logo-pages {
     	margin-top: -38px !important;
