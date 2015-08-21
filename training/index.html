@@ -23,7 +23,7 @@
 
     <!-- Custom styles for this template -->
     <link rel="icon" type="image/ico" href="/ampfit/img/favicon.ico" />
-    <link rel="stylesheet" href="/ampfit/css/custom/carousel.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/carousel.min.css">
     <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
     <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
     <link rel="stylesheet" href="/ampfit/css/custom/jumbotron.min.css">
@@ -132,6 +132,7 @@
             // Update the contents of the page with whatever url was stored in the state.
             $.get(url, function(data) {
                 loadInitialTrainingTab();
+                resizeNiceScroll('body');
             });
         });
     </script>
