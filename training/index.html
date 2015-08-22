@@ -110,7 +110,7 @@
 
     <!-- Custom js for this template -->
     <script src="/ampfit/js/ampfit.js"></script>
-    <script src="/ampfit/js/jquery.nicescroll.min.js"></script>
+    <!--     <script src="/ampfit/js/jquery.nicescroll.min.js"></script> -->
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Training');
@@ -120,7 +120,6 @@
         });
         $(window).load(function() {
             collapseMenuOnScroll();
-            resizeNiceScroll('body');
         });
         $(window).bind('popstate', function(event) {
             var url = null;
