@@ -22,45 +22,45 @@ function loadPage() {
 	}
 }
 
-function loadNiceScroll(section, zidx, speed, mousestep) {
-	$(section).niceScroll({
-		styler : "fb",
-		zindex : zidx,
-		scrollspeed : speed,
-		mousescrollstep : mousestep,
-		cursorborder : '0px solid #fff',
-		boxzoom : true,
-	});
-}
+//function loadNiceScroll(section, zidx, speed, mousestep) {
+//	$(section).niceScroll({
+//		styler : "fb",
+//		zindex : zidx,
+//		scrollspeed : speed,
+//		mousescrollstep : mousestep,
+//		cursorborder : '0px solid #fff',
+//		boxzoom : true,
+//	});
+//}
 
-function resizeNiceScroll(div) {
-	$(div).getNiceScroll().resize();
-	$(div).scrollTop(0);
-}
+//function resizeNiceScroll(div) {
+//	$(div).getNiceScroll().resize();
+//	$(div).scrollTop(0);
+//}
 
-function waitForImages() {
-	function imageLoaded() {
-		// function to invoke for loaded image
-		// decrement the counter
-		if(!this.complete){
-			$(this).hide();
-		}
-		counter--;
-		if (counter === 0) {
-			resizeNiceScroll('body');
-		}
-	}
-	var images = $('img');
-	var counter = images.length; // initialize the counter
-
-	images.each(function() {
-		if (this.complete) {
-			imageLoaded.call(this);
-		} else {
-			$(this).one('load', imageLoaded);
-		}
-	});
-};
+//function waitForImages() {
+//	function imageLoaded() {
+//		// function to invoke for loaded image
+//		// decrement the counter
+//		if(!this.complete){
+//			$(this).hide();
+//		}
+//		counter--;
+//		if (counter === 0) {
+//			resizeNiceScroll('body');
+//		}
+//	}
+//	var images = $('img');
+//	var counter = images.length; // initialize the counter
+//
+//	images.each(function() {
+//		if (this.complete) {
+//			imageLoaded.call(this);
+//		} else {
+//			$(this).one('load', imageLoaded);
+//		}
+//	});
+//};
 
 function justifyGalleryLayout() {
 	if ($(window).width() > 414) {
@@ -108,7 +108,7 @@ function loadTrainingTab(uri, tab, anchor) {
 		$(tab).parents('li[role=presentation]').find('a.dropdown-toggle').css(
 				'color', '#9E1D20');
 	}
-	resizeNiceScroll('body');
+//	resizeNiceScroll('body');
 }
 
 function loadTestimonials(page) {

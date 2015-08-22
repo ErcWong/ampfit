@@ -115,8 +115,8 @@
         $(document).ready(function() {
             loadHeaderAndFooter('Training');
             loadInitialTrainingTab();
-            loadNiceScroll('body', 20, 100, 60);
-            waitForImages();
+//             loadNiceScroll('body', 20, 100, 60);
+//             waitForImages();
         });
         $(window).load(function() {
             collapseMenuOnScroll();
@@ -132,7 +132,6 @@
             // Update the contents of the page with whatever url was stored in the state.
             $.get(url, function(data) {
                 loadInitialTrainingTab();
-                resizeNiceScroll('body');
             });
         });
     </script>
