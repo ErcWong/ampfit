@@ -38,6 +38,30 @@ function resizeNiceScroll(div) {
 	$(div).scrollTop(0);
 }
 
+function waitForImages() {
+	function imageLoaded() {
+		// function to invoke for loaded image
+		// decrement the counter
+		if(!this.complete){
+			$(this).hide();
+		}
+		counter--;
+		if (counter === 0) {
+			resizeNiceScroll('body');
+		}
+	}
+	var images = $('img');
+	var counter = images.length; // initialize the counter
+
+	images.each(function() {
+		if (this.complete) {
+			imageLoaded.call(this);
+		} else {
+			$(this).one('load', imageLoaded);
+		}
+	});
+};
+
 function justifyGalleryLayout() {
 	if ($(window).width() > 414) {
 		$("#mygallery").justifiedGallery({
@@ -84,7 +108,7 @@ function loadTrainingTab(uri, tab, anchor) {
 		$(tab).parents('li[role=presentation]').find('a.dropdown-toggle').css(
 				'color', '#9E1D20');
 	}
-	resizeNiceScroll('html');
+	resizeNiceScroll('body');
 }
 
 function loadTestimonials(page) {
@@ -203,22 +227,17 @@ function setupOnPanelHover() {
 }
 
 function animateHeader() {
-	var docElem = document.documentElement, 
-		header = $("header", document.body).find('.navbar-fixed-top');
-	didScroll = false, animateOn = $(window).height() / 4;
-	var animateOn = $(window).height() / 4;
-	addAnimationToElement("body", "#nav-bar", 1, "nav-bar-animate");
-	addAnimationToElement("body", "#header-logo", 1, "zoom-in-fin");
-	addAnimationToElement("body", "#nav-amp-content", 1, "nav-amp-content-animate");
-//	addAnimationToElement("body", "#myCarousel", animateOn, "fade-out-fin");
+	var animateOn = $(window).height() / 10;
+		
+	addAnimationToElement("body", "#nav-bar", animateOn, "nav-bar-animate");
+	addAnimationToElement("body", "#nav-amp-content", animateOn, "nav-amp-content-animate");
+	addAnimationToElement("body", "#header-logo", animateOn, "zoom-in-fin");
 }
 
 function addAnimationToElement(div, element, pos, fin) {
-	var docElem = document.documentElement,
-		header = $(div, docElem).find(element), 
-		didScroll = false, 
-		changeHeaderOn = pos;
-		
+	var docElem = document.documentElement, header = $(div, docElem).find(
+			element), didScroll = false, changeHeaderOn = pos;
+
 	function init() {
 		window.addEventListener('scroll', function(event) {
 			if (!didScroll) {
@@ -245,27 +264,27 @@ function addAnimationToElement(div, element, pos, fin) {
 	init();
 }
 
-function collapseMenuOnScroll(){
-	var docElem = document.documentElement,
+function collapseMenuOnScroll() {
+	var docElem = document.documentElement, 
 		menu = $('body', docElem).find('#navbar'), 
 		didScroll = false;
-	
+
 	function init() {
 		window.addEventListener('scroll', function(event) {
 			if (!didScroll) {
 				menu.collapse({
-					  toggle: false
-					})
+					toggle : false
+				})
 				didScroll = true;
 				setTimeout(collapseMenu, 350);
 			}
 		}, false);
 	}
-	
+
 	function collapseMenu() {
 		menu.collapse('hide');
-	    didScroll = false;
+		didScroll = false;
 	}
-	
+
 	init();
 }
