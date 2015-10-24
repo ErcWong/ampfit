@@ -68,6 +68,24 @@
 .navbar-fixed-top {
     position: relative;
 }
+.nav-tabs>li.active>a {
+    color: #9E1D20 !important;
+}
+.nav-tabs>li>a{
+    color: rgb(157, 157, 157);
+}
+.nav-tabs>li>a:hover, .nav-tabs>.open>a, .nav-tabs>.open>a:focus, .nav-tabs>.open>a:hover{
+    border-color: #9E1D20;
+}
+.nav-tabs>li>.dropdown-menu>.active>a {
+    background-color: #9E1D20;
+}
+.nav-tabs>li>.dropdown-menu {
+    background-color: #181818
+}
+.nav-tabs>li>.dropdown-menu>li>a {
+    color: #d2d2d2
+}
 #navbar-tabs {
     position: fixed;
     max-height: 290px;

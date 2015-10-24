@@ -767,32 +767,6 @@ hr.ampsep:after {
 #testimonial-img.col-md-12, #testimonial-modal.container {
 	padding: 0px !important;
 }
-@media (max-width: 767px){
-	.anchor {
-		display: block;
-		height: 256px; /*same height as header*/
-		margin-top: -256px; /*same height as header*/
-		visibility: hidden;
-	}
-}
-
-@media (min-width: 768px) {
-	.anchor {
-		display: block;
-		height: 140px;
-		margin-top: -150px;
-		margin-bottom: 10px;
-		visibility: hidden;
-	}
-
-	.anchor-training {
-		display: block;
-		height: 160px;
-		margin-top: -130px;
-		margin-bottom: 30px;
-		visibility: hidden;
-	}
-}
 
 ul.nav.nav-pills {
 	text-align: right;
@@ -815,8 +789,4 @@ ul.nav.nav-pills {
 	background-image: none !important;
 	background-color: rgba(0,0,0,0) !important;
 	margin: 0 5px;
-}
-
-.body-tabs {
-	padding: 10px 15px !important;
 }

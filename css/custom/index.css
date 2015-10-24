@@ -41,15 +41,6 @@ a {
     height: 140px;
     overflow: hidden
 }
-.dropdown-menu {
-    background-color: #181818
-}
-.dropdown-menu>li>a {
-    color: #d2d2d2
-}
-.dropdown-menu>.divider {
-    background-color: red !important;
-}
 .featurette-divider {
     margin: 35px 0
 }

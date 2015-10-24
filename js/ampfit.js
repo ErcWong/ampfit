@@ -10,7 +10,7 @@ function scrollToTag(target) {
 	var jump = target;
 	var new_position = $(jump, top.document).offset();
 	$('html,body').stop(true, true).animate({
-		scrollTop : new_position.top - 63
+		scrollTop : new_position.top - 150
 	}, 500);
 	return false;
 }
@@ -56,8 +56,10 @@ function loadTrainingTab(uri, tab, anchor) {
 		setupOnFolioHover();
 
 		if (anchor != null) {
-			$('#' + anchor)[0].scrollIntoView();
+			//$('#' + anchor)[0].scrollIntoView();
+			scrollToTag('#' + anchor);
 		}
+
 	});
 
 	$('ul.nav-tabs li.active').removeClass('active');
@@ -191,7 +193,7 @@ function animateHeader() {
 		
 	addAnimationToElement("body", "#nav-bar", animateOn, "nav-bar-animate");
 	addAnimationToElement("body", "#nav-amp-content", animateOn, "nav-amp-content-animate");
-	addAnimationToElement("body", "#header-logo", animateOn, "zoom-in-fin");
+	addAnimationToElement("body", "#header-logo-pages", animateOn, "zoom-in-fin");
 }
 
 function addAnimationToElement(div, element, pos, fin) {
