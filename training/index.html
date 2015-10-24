@@ -23,12 +23,11 @@
 
     <!-- Custom styles for this template -->
     <link rel="icon" type="image/ico" href="/ampfit/img/favicon.ico" />
-    <link rel="stylesheet" href="/ampfit/css/custom/carousel.min.css">
-    <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/index.css">
     <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
-    <link rel="stylesheet" href="/ampfit/css/custom/jumbotron.min.css">
-    <link rel="stylesheet" href="/ampfit/css/custom/desktop.min.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/jumbotron.css">
     <link rel="stylesheet" href="/ampfit/css/custom/folio.min.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/mobile.css">
     <link href='http://fonts.googleapis.com/css?family=Michroma|Open+Sans'
     rel='stylesheet' type='text/css'>
 </head>
@@ -38,18 +37,17 @@
 
 <body>
     <header id="top"></header>
-    <hr class="featurette-divider amp-top amp-header-divider">
+    <hr class="featurette-divider amp-red amp-header-divider">
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <div id="background-wrapper">
         <div id="background">
-            <div id="nav-tab-bg" style="background-color:black; width: 100%; position: fixed; top: 62px; height: 63px; z-index:20;"></div>
+            <div id="nav-tab-bg" class="navbar-fixed-top" style="background-color:black; width: 100%; z-index:5;"></div>
             <!--             <div class="" style="background-color:black; width: 100%; position: fixed; top: 125px; border-bottom:1px solid #9E1D20; z-index:30;"></div> -->
             <div class="container container-body marketing">
                 <!-- START THE FEATURETTES -->
-                <ul id="navtab" class="nav nav-tabs navbar-fixed-top" style="background:black; top: 62px; border-bottom: 0px; 
-		            z-index: 20; padding-top: 20px; width: 100%; max-width: 1140px; height: auto; left: auto; right: auto">
+                <ul id="navbar-training" class="nav nav-tabs navbar-fixed-top">
                     <li role="presentation">
                         <a href="#whatweteach" class="body-tabs" onclick="loadTrainingTab('/ampfit/training/tabs/what_we_teach.html', this);">What We Teach</a>
                     </li>
@@ -94,7 +92,7 @@
                         </ul>
                     </li>
                 </ul>
-                <div id="training-tab" style="height: auto; margin-top: 35px">
+                <div id="training-tab" style="height: auto">
                     <div id="training-tab-content" style="width: auto"></div>
                 </div>
                 <!-- /END THE FEATURETTES -->
@@ -107,16 +105,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="/ampfit/js/bootstrap.min.js"></script>
-
     <!-- Custom js for this template -->
     <script src="/ampfit/js/ampfit.js"></script>
-    <!--     <script src="/ampfit/js/jquery.nicescroll.min.js"></script> -->
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Training');
             loadInitialTrainingTab();
-//             loadNiceScroll('body', 20, 100, 60);
-//             waitForImages();
         });
         $(window).load(function() {
             collapseMenuOnScroll();
@@ -127,10 +121,10 @@
                 url = event.state.url;
             }
             else {
-                url = './index.html'; // or whatever your initial url was
+                url = './index.html'; // initial url
             }
-            // Update the contents of the page with whatever url was stored in the state.
-            $.get(url, function(data) {
+            // Update the contents of the page with url was stored in the state.
+            $.get(url, function() {
                 loadInitialTrainingTab();
             });
         });

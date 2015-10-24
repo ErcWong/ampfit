@@ -23,10 +23,11 @@
 
     <!-- Custom styles for this template -->
     <link rel="icon" type="image/ico" href="/ampfit/img/favicon.ico" />
-    <link rel="stylesheet" href="/ampfit/css/custom/carousel.min.css">
-    <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
+    <!--<link rel="stylesheet" href="/ampfit/css/custom/carousel.css">-->
+    <link rel="stylesheet" href="/ampfit/css/custom/index.css">
     <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
-    <link rel="stylesheet" href="/ampfit/css/custom/jumbotron.min.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/jumbotron.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/mobile.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Michroma|Open+Sans:300,400">
 </head>
 
@@ -35,23 +36,28 @@
 
 <body>
     <header id="top"></header>
-    <hr class="featurette-divider amp-top amp-header-divider">
+    <hr class="featurette-divider amp-red amp-header-divider">
 
     <!-- Marketing messaging and featurettes
     ================================================== -->
-    <div class="container container-body marketing">
-        <!-- START THE FEATURETTES -->
-        <h2 class="text-bright" style="margin-top: 0">Schedule</h2><br>
-        <div class="row">
-            <div id="gcalendar" class="embed-responsive embed-responsive-16by9">
-                <iframe src="gcalendar.html" style="border-width:0 " width="800" height="600"></iframe>
+    <div id="background-wrapper">
+        <div id="background">
+            <div class="container container-body marketing">
+                <!-- START THE FEATURETTES -->
+                <h2 class="text-bright" style="margin-top: 0">Schedule</h2>
+                <div class="row">
+                    <div id="gcalendar" class="embed-responsive embed-responsive-16by9 container">
+                        <iframe src="gcalendar.html" style="border-width:0" width="800"
+                                height="600"></iframe>
+                    </div>
+                </div>
+                <a class="btn btn-danger btn-ig pull-right"
+                    href="https://www.google.com/calendar/render?cid=alwaysmakingprogress%40gmail.com"
+                    style="margin: -18px 0 0 0; font-size: 12px; position: relative; padding: 0 10px">add to Google Calendar</a>
+                <!-- /END THE FEATURETTES -->
+                <footer></footer>
             </div>
         </div>
-        <a class="btn btn-danger btn-ig pull-right" 
-            href="https://www.google.com/calendar/render?cid=alwaysmakingprogress%40gmail.com"
-            style="margin: -18px 0 0 0; font-size: 12px; position: relative; padding: 0 10px">add to Google Calendar</a>
-        <!-- /END THE FEATURETTES -->
-        <footer></footer>
     </div>
 
     <!-- Bootstrap core JavaScript
@@ -65,6 +71,9 @@
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Schedule');
+        });
+        $(window).load(function() {
+            collapseMenuOnScroll();
         });
     </script>
 </body>

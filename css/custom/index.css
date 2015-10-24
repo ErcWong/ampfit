@@ -1,29 +1,21 @@
+/** Gradient background **/
 body,
 html {
-    height: 100%
-}
-#background-wrapper,
-body,
-html {
+    height: 100%;
     width: 100%;
     background-color: #000
-}
-.btn-default,
-.btn-ig {
-    font-variant: small-caps
 }
 body {
     padding-right: 0!important
 }
 #background-wrapper {
+    background-color: #000;
+    width: 100%;
     min-height: 100%;
     display: block;
-    padding-bottom: 40px;
     overflow: hidden
 }
 #background {
-    margin-top: -140px;
-    padding-top: 140px;
     display: block;
     background: -moz-linear-gradient(top, rgba(38, 38, 38, 0) 22%, rgba(38, 38, 38, .75) 45%, rgba(38, 38, 38, .77) 48%, rgba(38, 38, 38, .77) 52%, rgba(38, 38, 38, .75) 55%, rgba(0, 0, 0, 0) 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(18%, rgba(38, 38, 38, 0)), color-stop(45%, rgba(38, 38, 38, .75)), color-stop(48%, rgba(38, 38, 38, .77)), color-stop(52%, rgba(38, 38, 38, .77)), color-stop(55%, rgba(38, 38, 38, .75)), color-stop(100%, rgba(0, 0, 0, 0)));
@@ -33,6 +25,10 @@ body {
     background: linear-gradient(to bottom, rgba(38, 38, 38, 0) 22%, rgba(38, 38, 38, .75) 45%, rgba(38, 38, 38, .77) 48%, rgba(38, 38, 38, .77) 52%, rgba(38, 38, 38, .75) 55%, rgba(0, 0, 0, 0) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00262626', endColorstr='#00000000', GradientType=0)
 }
+footer {
+    padding-bottom: 40px;
+}
+/**top tag is used for anchoring **/
 top #top {
     display: block;
     visibility: hidden
@@ -52,7 +48,7 @@ a {
     color: #d2d2d2
 }
 .dropdown-menu>.divider {
-    background-color: red!important
+    background-color: red !important;
 }
 .featurette-divider {
     margin: 35px 0
@@ -79,12 +75,15 @@ a {
     background-color: rgba(0, 0, 0, .25);
     color: #fff
 }
+.btn-default, .btn-danger,
+.btn-ig, .btn-primary {
+    font-variant: small-caps
+}
 .btn-danger,
 .btn-primary {
     background-color: rgba(158, 29, 32, 0);
     border-color: rgba(158, 29, 32, .5);
     border-width: 2px;
-    font-variant: small-caps
 }
 .btn-default {
     color: #868585;
@@ -106,24 +105,6 @@ a {
     max-height: 110%!important;
     min-height: 0!important
 }
-@media (max-width: 991px) {
-    .post>img {
-        margin-left: -30;
-        width: 100%
-    }
-}
 .caption {
     padding: 5px 0 0!important;
-}
-.modal-backdrop {
-    z-index: 5;
-}
-.modal-dialog {
-    z-index: 6;
-}
-.modal-open {
-    overflow: hidden!important;
-}
-.modal {
-	padding-right: 0 !important;
 }

@@ -19,24 +19,23 @@
 	<![endif]-->
     <!-- Custom styles for this template -->
     <link rel="icon" type="image/ico" href="/ampfit/img/favicon.ico" />
-    <link rel="stylesheet" href="/ampfit/css/custom/carousel.min.css">
-    <link rel="stylesheet" href="/ampfit/css/custom/index.min.css">
-    <link rel="stylesheet" href="/ampfit/css/custom/font.min.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/index.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/font.css">
     <link rel="stylesheet" href="/ampfit/css/custom/jumbotron.css">
+    <link rel="stylesheet" href="/ampfit/css/custom/mobile.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Michroma|Open+Sans:300,400"> </head>
 <!-- NAVBAR
 ================================================== -->
 
 <body>
     <header id="top"></header>
-    <hr class="featurette-divider amp-top amp-header-divider">
+    <hr class="featurette-divider amp-red amp-header-divider">
     <div id="background-wrapper">
         <div id="background">
             <div class="container container-body marketing">
                 <!-- START THE FEATURETTES -->
                 <h2 class="text-bright" style="margin-top: 0">Testimonials</h2><br>
                 <div id="testimonial-block" class="container" style="width: 100%; margin: 0; padding: 0"></div>
-                <hr class="featurette-divider amp-top amp-header-divider">
                 <!-- /END THE FEATURETTES -->
                 <footer></footer>
             </div>
@@ -45,16 +44,19 @@
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
     aria-hidden="true">
+        <div class="div-center-out">
+            <div class="div-center-mid">
+                <div class="div-center-in">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header headings" style="color: white; background-color: black; border-bottom-color:red">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span> </button>
-                    <h4 id="testimonial_title" class="modal-title text-light" style="text-align: center;"></h4> </div>
+                    <h4 id="testimonial-title" class="modal-title text-light" style="text-align: center;"></h4> </div>
                 <div class="modal-body" style="background-color: black; padding: 0">
-                    <div id="testimonial_modal" class="wrapper">
-                        <img id="testimonial_img" class="col-md-12">
-                        <div class="overlay" class="col-md-4">
+                    <div id="testimonial-modal" class="wrapper">
+                        <img id="testimonial-img" class="col-md-12">
+                        <div class="overlay col-md-4">
                             <p id="testimonial" class="testimonials"></p>
                         </div>
                         <div class="modal-footer col-md-12" style="background-color: black; border-top-color:red"></div>
@@ -62,6 +64,9 @@
                 </div>
             </div>
         </div>
+                    </div>
+                </div>
+            </div>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -70,13 +75,14 @@
     <script src="/ampfit/js/bootstrap.min.js"></script>
     <!-- Custom js for this template -->
     <script src="/ampfit/js/ampfit.js"></script>
-<!--     <script src="/ampfit/js/jquery.nicescroll.min.js"></script> -->
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Testimonials');
-//             loadNiceScroll('body', 100, 60);
             loadTestimonials('Testimonials');
             justifyTestimonialLayout();
+        });
+        $(window).load(function() {
+            collapseMenuOnScroll();
         });
     </script>
 </body>

@@ -28,7 +28,7 @@ function justifyGalleryLayout() {
 			rowHeight : 250,
 			fixedHeight : false,
 			lastRow : 'justify',
-			margins : 3,
+			margins : 2,
 		});
 	} else {
 		$("#mygallery").justifiedGallery({
@@ -76,17 +76,17 @@ function loadTestimonials(page) {
 
 function loadTestimonial(name) {
 	$('#testimonial').load('/ampfit/testimonials/testimony/' + name + '.txt');
-	$('#testimonial_title').text($('#' + name + '_title').text());
+	$('#testimonial-title').text($('#' + name + '-title').text());
 
 	var tmp = '/ampfit/img/amp/testimonials/' + name + '.jpg';
 
 	var result = doesFileExist(tmp);
 
 	if (result) {
-		$('#testimonial_img').attr('src',
+		$('#testimonial-img').attr('src',
 				'/ampfit/img/amp/testimonials/' + name + '.jpg');
 	} else {
-		$('#testimonial_img').attr('src',
+		$('#testimonial-img').attr('src',
 				'/ampfit/img/amp/testimonials/default.jpg');
 	}
 }
@@ -120,19 +120,19 @@ function loadTwitter() {
 
 function justifyTestimonialLayout() {
 	if ($(window).width() > 759) {
-		$('#testimonial_modal').addClass('wrapper');
-		$('#testimonial_modal').removeClass('container marketing');
+		$('#testimonial-modal').addClass('wrapper');
+		$('#testimonial-modal').removeClass('container marketing');
 	} else {
-		$('#testimonial_modal').addClass('container marketing');
-		$('#testimonial_modal').removeClass('wrapper');
+		$('#testimonial-modal').addClass('container marketing');
+		$('#testimonial-modal').removeClass('wrapper');
 	}
 	$(window).on('resize', function() {
 		if ($(window).width() > 759) {
-			$('#testimonial_modal').addClass('wrapper');
-			$('#testimonial_modal').removeClass('container marketing');
+			$('#testimonial-modal').addClass('wrapper');
+			$('#testimonial-modal').removeClass('container marketing');
 		} else {
-			$('#testimonial_modal').addClass('container marketing');
-			$('#testimonial_modal').removeClass('wrapper');
+			$('#testimonial-modal').addClass('container marketing');
+			$('#testimonial-modal').removeClass('wrapper');
 		}
 	})
 }
@@ -226,7 +226,7 @@ function addAnimationToElement(div, element, pos, fin) {
 
 function collapseMenuOnScroll() {
 	var docElem = document.documentElement, 
-		menu = $('body', docElem).find('#navbar'), 
+		menu = $('body', docElem).find('#navbar-tabs'),
 		didScroll = false;
 
 	function init() {

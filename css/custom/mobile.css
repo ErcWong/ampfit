@@ -1,0 +1,333 @@
+.animate {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.amp-red {
+    color: #9E1D20;
+
+    border-color: #9E1D20;
+}
+.amp-red-bg{
+    background-color: #9E1D20 !important;
+}
+.amp-blk{
+    /*color: #0C0C0C;*/
+    /*background-color: #0C0C0C;*/
+    /*border-color: #0C0C0C;*/
+    color: #000000;
+    background-color: #000000;
+    border-color: #000000;
+}
+.amp-header-divider {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    z-index: 15;
+}
+/* The three styles help aligns any div in the center */
+.div-center-in {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.div-center-mid {
+    display: table-cell;
+    vertical-align: middle;
+}
+.div-center-out {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: table;
+}
+/** Nav styling **/
+.nav {
+    float: none;
+    margin-top: 0px !important;
+}
+.navbar-nav {
+    float: left;
+}
+.navbar-toggle {
+    background-color: black;
+    position: fixed;
+    opacity: 1;
+    top: 10px;
+    margin-left: 20px;
+}
+.navbar-fixed-top {
+    position: relative;
+}
+#navbar-tabs {
+    position: fixed;
+    max-height: 290px;
+    width: 100%;
+    padding-top: 50px;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,1);
+    overflow: hidden;
+    z-index: 1;
+}
+#navbar-social {
+    margin: 60px auto 0;
+    width: 265px;
+}
+#navbar-wrapper {
+    background-color: black;
+}
+#navbar-training {
+    background:black;
+    border-bottom: 0;
+    z-index: 5;
+    width: 100%;
+    max-width: 1140px;
+    height: auto;
+    left: auto;
+    right: auto
+}
+.btn-social {
+    background-image: none;
+    background-color: rgba(0,0,0,0) !important;
+    margin: 0 5px;
+}
+
+@media (min-width: 768px) {
+    .amp-header-divider {
+        position: fixed !important;
+        top: -20px;
+        margin-top: 120px;
+    }
+    #background-wrapper {
+        margin-top: 0;
+        padding-top: 120px;
+    }
+    .navbar-fixed-top {
+        position: fixed;
+    }
+    .nav {
+        float: right !important;
+    }
+    .nav>li>a {
+        position: relative;
+        display: block;
+        padding: 10px 8px;
+    }
+    #navbar-social {
+        position: relative;
+        right: -30px;
+        float: right;
+        margin: -20px auto 0;
+        z-index: 1;
+    }
+    #navbar-social-btns {
+        z-index: 10;
+    }
+    #navbar-tabs {
+        position: relative;
+        top: 50px;
+        left: -15px;
+        margin-top: 0;
+        padding: 0;
+        width: 550px;
+    }
+    #nav-tab-bg {
+        top: 100px;
+        height: 60px;
+    }
+    #navbar-training {
+        max-width: 720px;
+        top: 120px;
+        border-bottom: 1px solid white;
+    }
+    #training-tab {
+        margin-top: 41px;
+    }
+}
+@media (min-width:992px) {
+    .amp-header-divider {
+        position: fixed !important;
+        margin-top: 76px;
+    }
+    #background-wrapper {
+        /*margin-top: 75px;*/
+        padding-top: 75px;
+    }
+    .btn-social {
+        margin: 0 1px;
+    }
+    #navbar-tabs {
+        top: 15px;
+        left: -30px;
+    }
+    #navbar-social {
+        width: 225px;
+        right: -190px;
+    }
+    #nav-tab-bg {
+        top: 56px;
+        height: 59px;
+    }
+    #navbar-training {
+        max-width: 940px;
+        top: 75px;
+    }
+}
+@media (min-width:1200px) {
+    .amp-header-divider {
+        position: fixed !important;
+        margin-top: 82px;
+    }
+    #background-wrapper {
+        /*margin-top: 85px;*/
+        margin-top: 0;
+        padding-top: 85px;
+    }
+    .btn-social {
+        margin: 0 5px;
+    }
+    .navbar-header {
+        height: 62px;
+    }
+    .nav>li>a {
+        padding: 10px 15px;
+    }
+    #navbar-tabs {
+        width: 628px;
+        left: 25px;
+    }
+    #navbar-social {
+        width: 265px;
+        right: -230px;
+    }
+    #navbar-training {
+        max-width: 1140px;
+        top: 85px;
+    }
+    #nav-tab-bg {
+        top: 63px;
+        height: 62px;
+    }
+}
+
+/** Styling enhancements **/
+.jumbo-right-column {
+    border-right: 1px solid #4F4F4F;
+    border-left: 1px solid #4f4f4f;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.jumbo-left-column {
+    border-right: 1px solid #4f4f4f;
+    border-left: 1px solid #4f4f4f;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .left-column {
+        border-left: 1px solid #4f4f4f;
+        margin-right: -15px;
+        margin-left: -15px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .center-column {
+        border-right: 1px solid #4F4F4F;
+        margin-right: -15px;
+        padding-right: 15px;
+    }
+    .right-column {
+        border-left: 1px solid #4f4f4f;
+        border-right: 1px solid #4F4F4F;
+        margin-right: -15px;
+        margin-left: -16px;
+        padding-right: 15px;
+        padding-left: 16px;
+    }
+    .jumbo-right-column {
+        border-right: 1px solid #4F4F4F;
+        border-left: 1px solid #4f4f4f;
+        margin-right: -15px;
+        margin-left: -1px;
+        padding-right: 15px;
+        padding-left: 16px;
+    }
+    .jumbo-left-column {
+        border-right: 1px solid #4f4f4f;
+        border-left: 1px solid #4f4f4f;
+        margin-right: 0px;
+        margin-left: -15px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+/** Modal Styling **/
+.modal {
+    padding-right: 0 !important;
+}
+.modal-backdrop {
+    z-index: 5;
+}
+.modal-dialog {
+    z-index: 6;
+}
+@media ( min-width : 768px) {
+    .modal-dialog {
+        width: 800px;
+        margin: 30px auto;
+    }
+}
+/** Testimonial Styling **/
+.testimonials {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #868585;
+    text-indent: 20px;
+    margin: 5px;
+}
+.testimonial-btn {
+    font-family: 'Michroma', sans-serif;
+    width: 100%
+}
+.testimonial-lbl {
+    font-size: 30px;
+}
+.testimonial-wrapper {
+    background-color: #000000;
+}
+#testimonial-img {
+    max-width: 200%;
+}
+@media (min-width:768px) {
+    .testimonial-lbl {
+
+    }
+}
+@media (min-width:992px) {
+    .testimonial-lbl {
+        font-size: 15px;
+    }
+}
+@media (min-width:1200px) {
+    .testimonial-btn {
+        padding: 10px 0;
+    }
+    .testimonial-lbl {
+        font-size: 24px;
+    }
+}

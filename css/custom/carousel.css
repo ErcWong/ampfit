@@ -27,7 +27,7 @@
 }
 
 .nav>li>a{
-	padding: 0 10px 0 10px;	
+	padding: 0 10px 0 10px;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
@@ -58,7 +58,7 @@
 .animate {
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
 }
@@ -125,10 +125,13 @@
 		position: fixed;
 		padding-top: 50px;
 	}
-	#nav-bar-pages {
+	#navbar-pages {
 		position: relative;
+        width: auto;
+        background-color: black;
+        padding: 0;
 	}
-	#nav-social-btns {
+	#navbar-social {
 	   margin: 0 auto;
 	   width: 265px;
     }
@@ -329,31 +332,6 @@
 .carousel-indicators>li.active {
 	opacity: 1;
 }
-/* The three styles help aligns any div in the center */
-.div-center-in {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto; 
-	width: 100%;
-	padding: 0;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-}
-
-.div-center-mid {
-	display: table-cell; 
-	vertical-align: middle;
-}
-
-.div-center-out {
-	top: 0;
-	width: 100%; 
-	height: 100%; 
-	position: absolute; 
-	display: table;
-}
 
 /* Declare heights because of positioning of img element */
 .carousel .item {
@@ -429,7 +407,7 @@
 }
 
 .testimonial-img-crop{
-	border-radius: 0px !important;	
+	border-radius: 0px !important;
 }
 
 .btn-testimonial{
@@ -594,7 +572,7 @@ ul.nav li a {
 	color: rgba(255,255,255,0.5);
 }
 
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .dropdown-menu>.active>a, 
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .dropdown-menu>.active>a,
 .nav-tabs>li.active>a:hover {
 	color: #555;
     cursor: default;
@@ -775,10 +753,6 @@ hr.ampsep:after {
 	background-color: #9E1D20;
 }
 
-.amp-top {
-	border-top: 1px solid #9E1D20;
-}
-
 @media ( max-width : 768px) {
 	.amp-header-divider {
 		position: static !important;
@@ -790,7 +764,7 @@ hr.ampsep:after {
 	border-color: #9E1D20;
 }
 
-#testimonial_img.col-md-12, #testimonial_modal.container {
+#testimonial-img.col-md-12, #testimonial-modal.container {
 	padding: 0px !important;
 }
 @media (max-width: 767px){
@@ -805,15 +779,15 @@ hr.ampsep:after {
 @media (min-width: 768px) {
 	.anchor {
 		display: block;
-		height: 140px; 
+		height: 140px;
 		margin-top: -150px;
 		margin-bottom: 10px;
 		visibility: hidden;
 	}
-	
+
 	.anchor-training {
 		display: block;
-		height: 160px; 
+		height: 160px;
 		margin-top: -130px;
 		margin-bottom: 30px;
 		visibility: hidden;
@@ -822,7 +796,7 @@ hr.ampsep:after {
 
 ul.nav.nav-pills {
 	text-align: right;
-	
+
 }
 
 .nav-pills>li {
