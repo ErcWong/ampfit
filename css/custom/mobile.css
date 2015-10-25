@@ -86,6 +86,11 @@
 .nav-tabs>li>.dropdown-menu>li>a {
     color: #d2d2d2
 }
+#navbar-home {
+	position: fixed;
+	width: auto;
+	border-bottom: 1px solid rgba(0,0,0,0);
+}
 #navbar-tabs {
     position: fixed;
     max-height: 290px;
@@ -184,6 +189,10 @@
     .btn-social {
         margin: 0 1px;
     }
+    #navbar-home {
+		padding-top: 25px;
+ 		background-color: rgba(0,0,0,0);
+	}
     #navbar-tabs {
         top: 15px;
         left: -30px;

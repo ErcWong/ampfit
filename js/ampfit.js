@@ -191,7 +191,7 @@ function animateHeader() {
 	var animateOn = $(window).height() / 10;
 	animateOn = 1;
 		
-	addAnimationToElement("body", "#nav-bar", animateOn, "nav-bar-animate");
+	addAnimationToElement("body", "#navbar-home", animateOn, "navbar-home-animate");
 	addAnimationToElement("body", "#nav-amp-content", animateOn, "nav-amp-content-animate");
 	addAnimationToElement("body", "#header-logo-pages", animateOn, "zoom-in-fin");
 }
