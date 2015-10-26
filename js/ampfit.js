@@ -193,6 +193,7 @@ function animateHeader() {
 		
 	addAnimationToElement("body", "#navbar-home", animateOn, "navbar-home-animate");
 	addAnimationToElement("body", "#nav-amp-content", animateOn, "nav-amp-content-animate");
+	addAnimationToElement("body", "#header-divider-home", animateOn, "header-divider-home-fin");
 	addAnimationToElement("body", "#header-logo-pages", animateOn, "zoom-in-fin");
 }
 

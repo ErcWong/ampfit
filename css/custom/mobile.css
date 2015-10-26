@@ -1,9 +1,9 @@
 .animate {
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    -moz-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    -o-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    -ms-transition:all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
 }
 .amp-red {
     color: #9E1D20;
@@ -53,7 +53,7 @@
 /** Nav styling **/
 .nav {
     float: none;
-    margin-top: 0px !important;
+    margin-top: 0 !important;
 }
 .navbar-nav {
     float: left;
@@ -86,10 +86,15 @@
 .nav-tabs>li>.dropdown-menu>li>a {
     color: #d2d2d2
 }
+#navbar-collapse-btn {
+    z-index: 1030;
+}
 #navbar-home {
 	position: fixed;
+    height: 138px;
 	width: auto;
 	border-bottom: 1px solid rgba(0,0,0,0);
+    background-color: #000000;
 }
 #navbar-tabs {
     position: fixed;
@@ -103,7 +108,7 @@
     z-index: 1;
 }
 #navbar-social {
-    margin: 60px auto 0;
+    margin: 0 auto;
     width: 265px;
 }
 #navbar-wrapper {
@@ -132,8 +137,11 @@
         margin-top: 120px;
     }
     #background-wrapper {
-        margin-top: 0;
         padding-top: 120px;
+    }
+    #header-divider-home{
+        border-color: #9E1D20;
+        margin-top: 121px;
     }
     .navbar-fixed-top {
         position: fixed;
@@ -145,6 +153,9 @@
         position: relative;
         display: block;
         padding: 10px 8px;
+    }
+    #navbar-home {
+        height: 101px;
     }
     #navbar-social {
         position: relative;
@@ -183,15 +194,25 @@
         margin-top: 76px;
     }
     #background-wrapper {
-        /*margin-top: 75px;*/
         padding-top: 75px;
     }
     .btn-social {
         margin: 0 1px;
     }
+    #header-divider-home{
+        border-color: rgba(0,0,0,0);
+        margin-top: 101px;
+    }
+    .header-divider-home-fin {
+        border-color: #9E1D20 !important;
+        margin-top: 76px !important;
+    }
+    .navbar-home-animate {
+        margin-top: -25px;
+    }
     #navbar-home {
+        height: 81px;
 		padding-top: 25px;
- 		background-color: rgba(0,0,0,0);
 	}
     #navbar-tabs {
         top: 15px;
@@ -216,18 +237,25 @@
         margin-top: 82px;
     }
     #background-wrapper {
-        /*margin-top: 85px;*/
-        margin-top: 0;
         padding-top: 85px;
     }
     .btn-social {
         margin: 0 5px;
+    }
+    #header-divider-home{
+        margin-top: 106px;
+    }
+    .header-divider-home-fin {
+        margin-top: 82px !important;
     }
     .navbar-header {
         height: 62px;
     }
     .nav>li>a {
         padding: 10px 15px;
+    }
+    #navbar-home{
+        height: 87px;
     }
     #navbar-tabs {
         width: 628px;
@@ -297,7 +325,7 @@
     .jumbo-left-column {
         border-right: 1px solid #4f4f4f;
         border-left: 1px solid #4f4f4f;
-        margin-right: 0px;
+        margin-right: 0;
         margin-left: -15px;
         padding-right: 15px;
         padding-left: 15px;

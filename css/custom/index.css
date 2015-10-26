@@ -37,9 +37,10 @@ a {
     color: #9E1D20
 }
 .col-lg-4>.crop {
-    width: auto;
-    height: 140px;
-    overflow: hidden
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 50%;
 }
 .featurette-divider {
     margin: 35px 0
