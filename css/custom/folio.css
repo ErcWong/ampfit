@@ -131,14 +131,19 @@
 .post-content h2, h3 {
 	color: white;
 }
-#posts .post p {
-	font-size: 0.9em;
-	text-transform: none;
-}
 #posts .post {
 	border: 1px solid white;
 }
+#posts .post p {
+	font-size: 0.6em;
+	text-transform: none;
+}
 /* Responsive css */
+@media (min-width: 500px){
+	#posts .post p {
+		font-size: 0.9em;
+	}
+}
 @media (min-width: 768px) {
 	#posts .post {
 		width: 50%;
