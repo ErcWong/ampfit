@@ -8,9 +8,13 @@ function loadHeaderAndFooter(page) {
 
 function scrollToTag(target) {
 	var jump = target;
+	var headerOffset = 150;
+	if (target == "#facility-gallery") {
+		headerOffset = 50;
+	}
 	var new_position = $(jump, top.document).offset();
 	$('html,body').stop(true, true).animate({
-		scrollTop : new_position.top - 150
+		scrollTop : new_position.top - headerOffset
 	}, 500);
 	return false;
 }
@@ -28,14 +32,14 @@ function justifyGalleryLayout() {
 			rowHeight : 250,
 			fixedHeight : false,
 			lastRow : 'justify',
-			margins : 2,
+			margins : 2
 		});
 	} else {
 		$("#mygallery").justifiedGallery({
 			rowHeight : 150,
 			fixedHeight : false,
 			lastRow : 'justify',
-			margins : 3,
+			margins : 3
 		});
 	}
 }
@@ -192,7 +196,6 @@ function animateHeader() {
 	animateOn = 1;
 		
 	addAnimationToElement("body", "#navbar-home", animateOn, "navbar-home-animate");
-	addAnimationToElement("body", "#nav-amp-content", animateOn, "nav-amp-content-animate");
 	addAnimationToElement("body", "#header-divider-home", animateOn, "header-divider-home-fin");
 	addAnimationToElement("body", "#header-logo-pages", animateOn, "zoom-in-fin");
 }

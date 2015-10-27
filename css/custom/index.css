@@ -29,12 +29,27 @@ footer {
     padding-bottom: 40px;
 }
 /**top tag is used for anchoring **/
-top #top {
+#top {
     display: block;
-    visibility: hidden
 }
 a {
     color: #9E1D20
+}
+.amp-red {
+    color: #9E1D20;
+
+    border-color: #9E1D20;
+}
+.amp-red-bg{
+    background-color: #9E1D20 !important;
+}
+.amp-blk{
+    /*color: #0C0C0C;*/
+    /*background-color: #0C0C0C;*/
+    /*border-color: #0C0C0C;*/
+    color: #000000;
+    background-color: #000000;
+    border-color: #000000;
 }
 .col-lg-4>.crop {
     width: 100%;
@@ -42,30 +57,24 @@ a {
     overflow: hidden;
     padding-bottom: 50%;
 }
+/* Featurettes Styling
+-------------------------------------------------- */
 .featurette-divider {
-    margin: 35px 0
+    margin: 50px 0
 }
-.wrapper {
-    display: inline-block;
-    position: relative
+.featurette-heading {
+    color: #FFFFFF;
+    font-family: 'Michroma', sans-serif;
+    font-variant: small-caps;
+    letter-spacing: 5px;
+    font-size: 24px;
 }
-.post>img,
-.wrapper .overlay {
-    position: absolute;
-    top: 0;
-    left: 0
-}
-.wrapper img {
-    display: block;
-    max-width: 100%
-}
-.wrapper .overlay {
-    margin-left: 39%;
-    margin-right: auto;
-    width: 61%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .25);
-    color: #fff
+/* Social Buttons Styling
+-------------------------------------------------- */
+.btn-social {
+    background-image: none;
+    background-color: rgba(0,0,0,0) !important;
+    margin: 0 5px;
 }
 .btn-default, .btn-danger,
 .btn-ig, .btn-primary {
@@ -97,6 +106,20 @@ a {
     max-height: 110%!important;
     min-height: 0!important
 }
-.caption {
-    padding: 5px 0 0!important;
+/* CUSTOMIZE IG
+-------------------------------------------------- */
+.ig-feed {
+    overflow: hidden;
+}
+.thumbnail {
+    background-color: rgba(21, 21, 21, 0.8);
+}
+
+.thumbnail>strong, .thumbnail>span:not(i) {
+    color: #868585;
+}
+@media (min-width: 768px) {
+    .ig-feed {
+        overflow: visible;
+    }
 }

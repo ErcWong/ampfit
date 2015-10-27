@@ -27,12 +27,12 @@
 }
 
 #posts {
-	max-width: 1200px;
+	max-width: 1170px;
 	margin: 0 auto;
 }
 
 #posts .post {
-	width: 33.3333333%;
+	width: 100%;
 	float: left;
 	height: auto;
 	overflow: hidden;
@@ -41,8 +41,7 @@
 	position: relative;
 	z-index: 1;
 	display: inline-block;
-	/* green tint: #2e5d5a */
-	background: #000000;
+	background: #000000; /* green tint: #2e5d5a */
 }
 
 #posts .post img {
@@ -132,29 +131,33 @@
 .post-content h2, h3 {
 	color: white;
 }
-
-p#folio_p {
+#posts .post p {
+	font-size: 0.9em;
+	text-transform: none;
 }
-
 #posts .post {
 	border: 1px solid white;
 }
-
 /* Responsive css */
-@media screen and (max-width: 600px) {
-	#posts .post {
-		width: 100%;
-	}
-}
-
-@media (max-width : 1199px) and (min-width: 600px) {
+@media (min-width: 768px) {
 	#posts .post {
 		width: 50%;
 	}
+	#posts .post p {
+		font-size: 0.9em;
+	}
 }
-
-.post-content > p {
-	font-size: medium !important;
-	text-transform: none;
+@media (min-width: 992px) {
+	#posts .post {
+		width: 33.3333333%;
+	}
+	#posts .post p {
+		font-size: 0.7em;
+	}
+}
+@media (min-width: 1200px) {
+	#posts .post p {
+		font-size: 0.9em;
+	}
 }
 /*---custom styling end---*/
