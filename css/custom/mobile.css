@@ -6,7 +6,7 @@
     transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
 }
 .amp-header-divider {
-    border-color: black !important;
+    border-color: #9E1D20 !important;
     position: relative;
     width: 100%;
     margin-top: 0;
