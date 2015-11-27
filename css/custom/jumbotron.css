@@ -3,7 +3,7 @@
 	height: 100%;
 	background: black no-repeat;
 	background-size: cover;
-	border-radius: 5px !important;
+	border-radius: 0 !important;
 	margin: 0 0 0;
 	padding: 0 !important;
 }
