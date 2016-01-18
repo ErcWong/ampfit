@@ -356,13 +356,15 @@
 }
 .testimonial-btn {
     font-family: 'Michroma', sans-serif;
-    width: 100%
+    width: 100%;
+    border-radius: 0;
 }
 .testimonial-lbl {
     font-size: 30px;
 }
 .testimonial-wrapper {
     background-color: #000000;
+    border-radius: 0;
 }
 .testimonial-wrapper .caption {
     padding: 5px 0 0!important;
