@@ -414,3 +414,14 @@
         letter-spacing: 2px;
     }
 }
+
+/** maintains Aspect Ratio of a div **/
+.embed-responsive-gcal{
+  padding-bottom: 75%;
+}
+
+@media (min-width: 768px) {
+    .embed-responsive-gcal{
+      padding-bottom: 56.25%;
+    }
+}

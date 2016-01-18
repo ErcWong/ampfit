@@ -512,7 +512,8 @@
     cursor: pointer
 }
 .header {
-    width: 1140px;
+    width: 1x;
+    min-width: 100%;
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
@@ -859,12 +860,12 @@ td.te-t {
 }
 .st-bg-today,
 .st-bg-td-first {
-    background: #fff7d7;
+    background: #9d9d9d;
     border-left: 1px solid #9E1D20;
     border-right: 1px solid #9E1D20
 }
 .st-bg-td-last {
-    background: #fff7d7;
+    background: #9d9d9d;
     border-left: 1px solid #9E1D20
 }
 .bg-exists .st-bg-td-first,
@@ -1206,7 +1207,7 @@ img.agenda-web-content {
 .wk-weektop {
 	width: 100%;
     table-layout: fixed;
-    background-color: #5a5a5a;
+    background-color: #000000;
     overflow: hidden;
     font-size: 11px;
     line-height: 14px;
@@ -1228,9 +1229,10 @@ table.wk-weektop> tbody >tr.wk-daynames> th{
     padding: 1px;
 }
 .wk-dummyth {
+    width: 0 !important;
     vertical-align: top;
-    background-color: #5a5a5a;
-    padding: 0
+    background-color: #000000;
+    padding: 0;
 }
 .wk-allday {
     background-color: #fff;
@@ -1354,7 +1356,7 @@ body.ie .tg-mainwrapper {
     cursor: default
 }
 .tg-today {
-    background-color: #fff7d7
+    background-color: #9d9d9d
 }
 .bg-exists .tg-today {
     background-color: #eee;
