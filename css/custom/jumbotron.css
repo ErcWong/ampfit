@@ -1,160 +1,160 @@
 .jumbotron {
-	width: 100%;
-	height: 100%;
-	background: black no-repeat;
-	background-size: cover;
-	border-radius: 0 !important;
-	margin: 0 0 0;
-	padding: 0 !important;
+  width: 100%;
+  height: 100%;
+  background: black no-repeat;
+  background-size: cover;
+  border-radius: 0 !important;
+  margin: 0 0 0;
+  padding: 0 !important;
 }
 
 #header-logo-pages {
-	position: relative;
-	background-image: url('/ampfit/img/amplogo.png');
+  position: relative;
+  background-image: url('../../img/amplogo.png');
     background-color: black;
     background-size: 100% 100%;
-	width: 220px;
-	height: 100px;
+  width: 220px;
+  height: 100px;
     margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-	#header-logo-pages {
-		position: relative;
-		width: 175px;
-		height: 80px;
-		left: -15px;
-		margin-top: 15px;
-		z-index: 1;
-	}
+  #header-logo-pages {
+    position: relative;
+    width: 175px;
+    height: 80px;
+    left: -15px;
+    margin-top: 15px;
+    z-index: 1;
+  }
 }
 @media (min-width: 992px) {
-	#header-logo-pages {
-		margin-top: -25px !important;
+  #header-logo-pages {
+    margin-top: -25px !important;
     }
 }
 @media (min-width: 1200px) {
-	#header-logo-pages {
-		height: 118px;
-		width: 260px;
-		margin-top: -56px !important;
-		left: -15px;
-	}
-	.zoom-in-init {
-		background-size: 175px 80px !important;
-		background-position: 50% 35px;
-	}
-	.zoom-in-fin {
-		background-size: 264px 120px !important;
-		background-position: 0;
-	}
+  #header-logo-pages {
+    height: 118px;
+    width: 260px;
+    margin-top: -56px !important;
+    left: -15px;
+  }
+  .zoom-in-init {
+    background-size: 175px 80px !important;
+    background-position: 50% 35px;
+  }
+  .zoom-in-fin {
+    background-size: 264px 120px !important;
+    background-position: 0;
+  }
 }
 
 #about-methodology {
-	background-image: url('/ampfit/img/amp/about/amp_methodology.jpg');
-	min-height: 360px;
-	margin-top: 50px;
-	margin-bottom: 0;
+  background-image: url('../../img/amp/about/amp_methodology.jpg');
+  min-height: 360px;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 
 #about-trainer-owen {
-	background-image: url('/ampfit/img/amp/about/trainer_owen.jpg');
-	background-position: center top;
-	min-height: 400px;
-	margin-bottom: 20px;
+  background-image: url('../../img/amp/about/trainer_owen.jpg');
+  background-position: center top;
+  min-height: 400px;
+  margin-bottom: 20px;
 }
 
 #group-lifting-principles {
-	background-image: url('/ampfit/img/amp/training/group/lifting_principles.jpg');
-	background-position: 75% top;
-	min-height: 830px;
-	margin-top: 20px;
+  background-image: url('../../img/amp/training/group/lifting_principles.jpg');
+  background-position: 75% top;
+  min-height: 830px;
+  margin-top: 20px;
 }
 
 #group-sweat-saturday {
-	background-image: url('/ampfit/img/amp/training/group/sweat_saturday.jpg');
+  background-image: url('../../img/amp/training/group/sweat_saturday.jpg');
     background-position: 15% 50%;
     min-height: 360px;
     margin-top: 20px;
 }
 
 #group-training {
-	background-image: url('/ampfit/img/amp/training/group/group_training.jpg');
-	background-position: 98% 84%;
+  background-image: url('../../img/amp/training/group/group_training.jpg');
+  background-position: 98% 84%;
     min-height: 475px;
-	margin-top: 20px;
+  margin-top: 20px;
 }
 
 #private-one {
-	background-image: url('/ampfit/img/amp/training/private/one_on_one.jpg');
-	background-position: 100% 27%;
-	background-size: cover;
-	min-height: 330px;
-	margin-top: 20px;
+  background-image: url('../../img/amp/training/private/one_on_one.jpg');
+  background-position: 100% 27%;
+  background-size: cover;
+  min-height: 330px;
+  margin-top: 20px;
 }
 
 #private-small-group {
-	background-image: url('/ampfit/img/amp/training/private/small_group.jpg');
-	background-position: 80% 0%;
-	min-height: 330px;
-	margin-top: 20px;
+  background-image: url('../../img/amp/training/private/small_group.jpg');
+  background-position: 80% 0%;
+  min-height: 330px;
+  margin-top: 20px;
 }
 
 #weightlifting-jumbo {
-	background-image: url('/ampfit/img/amp/training/weightlifting/membership.jpg');
-	background-position: 50% 60%;
-	min-height: 500px;
+  background-image: url('../../img/amp/training/weightlifting/membership.jpg');
+  background-position: 50% 60%;
+  min-height: 500px;
 }
 
 #weightlifting-jerk {
-	background-image: url('/ampfit/img/amp/training/weightlifting/jerk.jpg');
-	background-position: center 72%;
-	min-height: 400px;
+  background-image: url('../../img/amp/training/weightlifting/jerk.jpg');
+  background-position: center 72%;
+  min-height: 400px;
 }
 @media (min-width: 1024px) {
-	#weightlifting-jerk {
-    	background-position: center center;
+  #weightlifting-jerk {
+      background-position: center center;
     }
 }
 
 #weightlifting-snatch {
-	background-image: url('/ampfit/img/amp/training/weightlifting/snatch.jpg');
-	background-position: 39% 75%;
-	min-height: 400px;
+  background-image: url('../../img/amp/training/weightlifting/snatch.jpg');
+  background-position: 39% 75%;
+  min-height: 400px;
 }
 
 .blur{
-	-webkit-filter: blur(2px);
-	-moz-filter: blur(2px);
-	-o-filter: blur(2px);
-	-ms-filter: blur(2px);
-	filter: blur(2px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 
 .slider {
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: black;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
 }
 
 #slider-1{
-	background-image:url('/ampfit/img/amp/slider_1.jpg');
-	background-position: 75% 25%;
+  background-image:url('../../img/amp/slider_1.jpg');
+  background-position: 75% 25%;
 }
 
 #slider-2{
-	background-image:url('/ampfit/img/amp/slider_2.jpg');
-	background-position: center top;
+  background-image:url('../../img/amp/slider_2.jpg');
+  background-position: center top;
 }
 
 #slider-3{
-	background-image:url('/ampfit/img/amp/slider_3.jpg');
-	background-position: center center;
-	-webkit-filter: blur(4px);
-	-moz-filter: blur(4px);
-	-o-filter: blur(4px);
-	-ms-filter: blur(4px);
-	filter: blur(4px);
+  background-image:url('../../img/amp/slider_3.jpg');
+  background-position: center center;
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
 }

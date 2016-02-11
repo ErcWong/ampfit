@@ -419,7 +419,7 @@
 
 /** maintains Aspect Ratio of a div **/
 .embed-responsive-gcal{
-  padding-bottom: 75%;
+  padding-bottom: 100%;
 }
 
 @media (min-width: 768px) {
