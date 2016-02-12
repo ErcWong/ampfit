@@ -2,7 +2,7 @@ function loadModalFunctions() {
 	$('#myModal').on('shown.bs.modal', function() {
 		$("#myCarousel").carousel('pause');
 	})
-
+	
 	$('#myModal').on('hidden.bs.modal', function () {
 		$("#myCarousel").carousel('cycle');
 		callPlayer('player', 'pauseVideo');
