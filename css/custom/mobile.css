@@ -85,7 +85,7 @@
 }
 #navbar-tabs {
     position: fixed;
-    max-height: 290px;
+    /*max-height: 290px;*/
     width: 100%;
     padding-top: 50px;
     top: 0;
@@ -130,10 +130,13 @@
         border-color: #9E1D20;
         margin-top: 120px;
     }
+    .nav>li {
+        font-size: 13px;
+    }
     .nav>li>a {
         position: relative;
         display: block;
-        padding: 10px 8px;
+        padding: 10px 7px;
     }
     .navbar-fixed-top {
         position: fixed;
@@ -244,8 +247,11 @@
     .header-divider-home-fin {
         margin-top: 82px !important;
     }
+    .nav>li {
+        font-size: 14px;
+    }
     .nav>li>a {
-        padding: 10px 15px;
+        padding: 10px 9px;
     }
     .navbar-header {
         height: 62px;
@@ -258,7 +264,7 @@
     }
     #navbar-tabs {
         width: 628px;
-        left: 25px;
+        left: 0;
     }
     #navbar-social {
         width: 265px;
