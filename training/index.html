@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../css/custom/index.min.css">
     <link rel="stylesheet" href="../css/custom/jumbotron.min.css">
     <link rel="stylesheet" href="../css/custom/mobile.min.css">
+    <link rel="stylesheet" href="../css/custom/index.wht.min.css">
     <link href='http://fonts.googleapis.com/css?family=Michroma|Open+Sans'
     rel='stylesheet' type='text/css'>
 </head>
@@ -41,9 +42,12 @@
     <div id="background-wrapper">
         <div id="background">
             <div id="nav-tab-bg" class="navbar-fixed-top" style="background-color:black; width: 100%; z-index:5;"></div>
-            <div class="container container-body marketing">
+            <div class="container container-body marketing" style="width: 100%">
                 <!-- START THE FEATURETTES -->
                 <ul id="navbar-training" class="nav nav-tabs navbar-fixed-top">
+                    <!--<li role="presentation">-->
+                        <!--<a href="#about" class="" onclick="loadTrainingTab('tabs/about.html', this);">About</a>-->
+                    <!--</li>-->
                     <li role="presentation">
                         <a href="#whatweteach" class=""
                            onclick="loadTrainingTab('tabs/what_we_teach.html', this, 'posts');">What
@@ -92,7 +96,7 @@
                         </ul>
                     </li>
                 </ul>
-                <div id="training-tab" class="container row" style="height: auto">
+                <div id="training-tab" class="container row" style="height: auto; width: 100%; margin: 41px 0 0;">
                     <div id="training-tab-content" style="width: auto"></div>
                 </div>
                 <!-- /END THE FEATURETTES -->
@@ -111,6 +115,7 @@
         $(document).ready(function() {
             loadHeaderAndFooter('Training');
             loadInitialTrainingTab();
+            <!--modalFullscreen();-->
         });
         $(window).load(function() {
             collapseMenuOnScroll();
