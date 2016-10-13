@@ -1,0 +1,28 @@
+html, body, #background, #background-wrapper {
+   background: white;
+}
+
+#header-logo-pages {
+    background-color: white;
+}
+
+.navbar-header, #navbar-home, #navbar-pages, #navbar-tabs, #nav-tab-bg, #navbar-training {
+    background-color: white !important;
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+    color: white;
+    background-color: #B7B7B7;
+}
+
+h2, .featurette-heading {
+    color: #B7B7B7
+}
+
+.text-bright {
+    color: black !important;
+}
+
+.btn-instagram, .btn-youtube, .btn-twitter, .btn-google-plus, .btn-facebook {
+    color: #B7B7B7;
+}
