@@ -30,7 +30,12 @@ h2, .featurette-heading {
 }
 
 .btn-instagram, .btn-youtube, .btn-twitter, .btn-google-plus, .btn-facebook {
-    color: #B7B7B7;
+    color: #9E1D20;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+}
+
+.fa:hover, .btn-social:hover {
+    color:#000 !important;
 }
 
 .carousel .item, #myCarousel {
