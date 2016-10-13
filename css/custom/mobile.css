@@ -2,17 +2,16 @@
     -webkit-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
     -moz-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
     -o-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
-    -ms-transition:all 0.2s cubic-bezier(0.4, 0, 1, 1);
-    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    -ms-transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1)
 }
 .amp-header-divider {
     border-color: #9E1D20 !important;
     position: relative;
     width: 100%;
     margin-top: 0;
-    z-index: 15;
+    z-index: 15
 }
-/* The three styles help aligns any div in the center */
 .div-center-in {
     position: relative;
     margin-left: auto;
@@ -22,50 +21,53 @@
     top: 0;
     right: 0;
     left: 0;
-    bottom: 0;
+    bottom: 0
 }
 .div-center-mid {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: middle
 }
 .div-center-out {
     top: 0;
     width: 100%;
     height: 100%;
     position: absolute;
-    display: table;
+    display: table
 }
-/** Nav styling **/
 .nav {
-    float: none;
+    float: none
 }
 .navbar-nav {
-    float: left;
+    float: left
 }
 .navbar-fixed-top {
-    position: relative;
+    position: relative
 }
-.navbar-header, .navbar-wrapper {
-    margin-top: 0;
+.navbar-header,
+.navbar-wrapper {
+    margin-top: 0
 }
 .navbar-toggle {
     background-color: black;
     position: fixed;
     opacity: 1;
     top: 10px;
-    margin-left: 20px;
+    margin-left: 20px
 }
 .nav-tabs>li.active>a {
-    color: #9E1D20 !important;
+    color: #9E1D20 !important
 }
-.nav-tabs>li>a{
-    color: rgb(157, 157, 157);
+.nav-tabs>li>a {
+    color: rgb(157, 157, 157)
 }
-.nav-tabs>li>a:hover, .nav-tabs>.open>a, .nav-tabs>.open>a:focus, .nav-tabs>.open>a:hover{
-    border-color: #9E1D20;
+.nav-tabs>li>a:hover,
+.nav-tabs>.open>a,
+.nav-tabs>.open>a:focus,
+.nav-tabs>.open>a:hover {
+    border-color: #9E1D20
 }
 .nav-tabs>li>.dropdown-menu>.active>a {
-    background-color: #9E1D20;
+    background-color: #9E1D20
 }
 .nav-tabs>li>.dropdown-menu {
     background-color: #181818
@@ -74,35 +76,34 @@
     color: #d2d2d2
 }
 #navbar-collapse-btn {
-    z-index: 1030;
+    z-index: 1030
 }
 #navbar-home {
-	position: fixed;
+    position: fixed;
     height: 138px;
-	width: auto;
-	border-bottom: 1px solid rgba(0,0,0,0);
-    background-color: #000000;
+    width: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    background-color: #000000
 }
 #navbar-tabs {
     position: fixed;
-    /*max-height: 290px;*/
     width: 100%;
     padding-top: 50px;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,1);
+    background-color: rgba(0, 0, 0, 1);
     overflow: hidden;
-    z-index: 1;
+    z-index: 1
 }
 #navbar-social {
     margin: 0 auto;
-    width: 265px;
+    width: 265px
 }
 #navbar-wrapper {
-    background-color: black;
+    background-color: black
 }
 #navbar-training {
-    background:black;
+    background: black;
     border-bottom: 0;
     z-index: 5;
     width: 100%;
@@ -113,49 +114,49 @@
 }
 .btn-social {
     background-image: none;
-    background-color: rgba(0,0,0,0) !important;
-    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0) !important;
+    margin: 0 5px
 }
-
 @media (min-width: 768px) {
     .amp-header-divider {
         position: fixed !important;
         top: -20px;
-        margin-top: 120px;
+        margin-top: 120px
     }
     #background-wrapper {
-        padding-top: 120px;
+        padding-top: 120px
     }
-    #header-divider-home{
+    #header-divider-home {
         border-color: #9E1D20;
-        margin-top: 120px;
+        margin-top: 120px
     }
     .nav>li {
-        font-size: 13px;
+        font-size: 13px
     }
     .nav>li>a {
         position: relative;
         display: block;
-        padding: 10px 7px;
+        padding: 10px 7px
     }
     .navbar-fixed-top {
-        position: fixed;
+        position: fixed
     }
-    .navbar-header, .navbar-wrapper {
-        /*margin-top: 80px;*/
+    .navbar-nav {
+        float: right
     }
-    #navbar-home, #navbar-pages {
-        height: 100px;
+    #navbar-home,
+    #navbar-pages {
+        height: 100px
     }
     #navbar-social {
         position: relative;
         right: -30px;
         float: right;
-        margin: -20px auto 0;
-        z-index: 1;
+        margin: -25px auto 0;
+        z-index: 1
     }
     #navbar-social-btns {
-        z-index: 10;
+        z-index: 10
     }
     #navbar-tabs {
         position: relative;
@@ -163,131 +164,122 @@
         left: -15px;
         margin-top: 0;
         padding: 0;
-        width: 550px;
+        width: 550px
     }
     #nav-tab-bg {
         top: 100px;
-        height: 60px;
+        height: 60px
     }
     #navbar-training {
         max-width: 720px;
-        top: 120px;
-        /*border-bottom: 1px solid white;*/
+        top: 120px
     }
     #training-tab {
-        margin-top: 41px;
+        margin-top: 41px
     }
 }
-@media (min-width:992px) {
+@media (min-width: 992px) {
     .amp-header-divider {
         position: fixed !important;
-        margin-top: 76px;
+        margin-top: 76px
     }
     #background-wrapper {
-        padding-top: 75px;
+        padding-top: 75px
     }
     .btn-social {
-        margin: 0 1px;
+        margin: 0 1px
     }
-    #header-divider-home{
-        border-color: rgba(0,0,0,0);
-        margin-top: 101px;
+    #header-divider-home {
+        border-color: rgba(0, 0, 0, 0);
+        margin-top: 101px
     }
     .header-divider-home-fin {
         border-color: #9E1D20 !important;
-        margin-top: 76px !important;
+        margin-top: 76px !important
     }
     .nav {
-        float: right !important;
-    }
-    .navbar-header, .navbar-wrapper {
-        /*margin-top: 80px;*/
+        float: right !important
     }
     .navbar-home-animate {
-        margin-top: -25px;
+        margin-top: -25px
     }
     #navbar-home {
         height: 81px;
-		padding-top: 25px;
-	}
+        padding-top: 25px
+    }
     #navbar-pages {
-        height: 62px;
+        height: 62px
     }
     #navbar-tabs {
         top: 15px;
-        left: -30px;
+        left: -30px
     }
     #navbar-social {
         width: 225px;
-        right: -190px;
+        right: -190px
     }
     #nav-tab-bg {
         top: 56px;
-        height: 59px;
+        height: 59px
     }
     #navbar-training {
         max-width: 940px;
-        top: 75px;
+        top: 75px
     }
 }
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
     .amp-header-divider {
         position: fixed !important;
-        margin-top: 82px;
+        margin-top: 82px
     }
     #background-wrapper {
-        padding-top: 85px;
+        padding-top: 85px
     }
     .btn-social {
-        margin: 0 5px;
+        margin: 0 5px
     }
-    #header-divider-home{
-        margin-top: 106px;
+    #header-divider-home {
+        margin-top: 106px
     }
     .header-divider-home-fin {
-        margin-top: 82px !important;
+        margin-top: 82px !important
     }
     .nav>li {
-        font-size: 14px;
+        font-size: 14px
     }
     .nav>li>a {
-        padding: 10px 9px;
+        padding: 10px 9px
     }
     .navbar-header {
-        height: 62px;
+        height: 62px
     }
-    .navbar-header, .navbar-wrapper {
-        /*margin-top: 80px;*/
-    }
-    #navbar-home{
-        height: 87px;
+    #navbar-home {
+        height: 87px
     }
     #navbar-tabs {
         width: 628px;
-        left: 0;
+        left: 0
     }
     #navbar-social {
         width: 265px;
-        right: -230px;
+        right: -230px
     }
     #navbar-training {
         max-width: 1140px;
-        top: 85px;
+        top: 85px
     }
     #nav-tab-bg {
         top: 63px;
-        height: 62px;
+        height: 62px
     }
 }
-
-/** Styling enhancements **/
 .jumbo-right-column {
     border-right: 1px solid #4F4F4F;
     border-left: 1px solid #4f4f4f;
     margin-right: -15px;
     margin-left: -15px;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 15px
 }
 .jumbo-left-column {
     border-right: 1px solid #4f4f4f;
@@ -295,21 +287,20 @@
     margin-right: -15px;
     margin-left: -15px;
     padding-right: 15px;
-    padding-left: 15px;
+    padding-left: 15px
 }
-
 @media (min-width: 768px) {
     .left-column {
         border-left: 1px solid #4f4f4f;
         margin-right: -15px;
         margin-left: -15px;
         padding-right: 15px;
-        padding-left: 15px;
+        padding-left: 15px
     }
     .center-column {
         border-right: 1px solid #4F4F4F;
         margin-right: -15px;
-        padding-right: 15px;
+        padding-right: 15px
     }
     .right-column {
         border-left: 1px solid #4f4f4f;
@@ -317,7 +308,7 @@
         margin-right: -15px;
         margin-left: -16px;
         padding-right: 15px;
-        padding-left: 16px;
+        padding-left: 16px
     }
     .jumbo-right-column {
         border-right: 1px solid #4F4F4F;
@@ -325,7 +316,7 @@
         margin-right: -15px;
         margin-left: -1px;
         padding-right: 15px;
-        padding-left: 16px;
+        padding-left: 16px
     }
     .jumbo-left-column {
         border-right: 1px solid #4f4f4f;
@@ -333,47 +324,45 @@
         margin-right: 0;
         margin-left: -15px;
         padding-right: 15px;
-        padding-left: 15px;
+        padding-left: 15px
     }
 }
-/** Modal Styling **/
 .modal {
-    padding-right: 0 !important;
+    padding-right: 0 !important
 }
 .modal-backdrop {
-    z-index: 5;
+    z-index: 5
 }
 .modal-dialog {
-    z-index: 6;
+    z-index: 6
 }
-@media ( min-width : 768px) {
+@media ( min-width: 768px) {
     .modal-dialog {
         width: 800px;
-        margin: 30px auto;
+        margin: 30px auto
     }
 }
-/** Testimonial Styling **/
 .testimonials {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     color: #868585;
     text-indent: 20px;
-    margin: 5px;
+    margin: 5px
 }
 .testimonial-btn {
     font-family: 'Michroma', sans-serif;
     width: 100%;
-    border-radius: 0;
+    border-radius: 0
 }
 .testimonial-lbl {
-    font-size: 30px;
+    font-size: 30px
 }
 .testimonial-wrapper {
     background-color: #000000;
-    border-radius: 0;
+    border-radius: 0
 }
 .testimonial-wrapper .caption {
-    padding: 5px 0 0!important;
+    padding: 5px 0 0 !important
 }
 .wrapper {
     display: inline-block;
@@ -398,38 +387,30 @@
     color: #fff
 }
 #testimonial-img {
-    max-width: 200%;
+    max-width: 200%
 }
 #testimonial-title {
-    letter-spacing: 5px;
+    letter-spacing: 5px
 }
-@media (min-width:768px) {
+@media (min-width: 992px) {
     .testimonial-lbl {
-
+        font-size: 15px
     }
 }
-@media (min-width:992px) {
-    .testimonial-lbl {
-        font-size: 15px;
-    }
-}
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
     .testimonial-btn {
-        padding: 10px 0;
+        padding: 10px 0
     }
     .testimonial-lbl {
         font-size: 20px;
-        letter-spacing: 2px;
+        letter-spacing: 2px
     }
 }
-
-/** maintains Aspect Ratio of a div **/
-.embed-responsive-gcal{
-  padding-bottom: 100%;
+.embed-responsive-gcal {
+    padding-bottom: 100%
 }
-
 @media (min-width: 768px) {
-    .embed-responsive-gcal{
-      padding-bottom: 56.25%;
+    .embed-responsive-gcal {
+        padding-bottom: 56.25%
     }
 }

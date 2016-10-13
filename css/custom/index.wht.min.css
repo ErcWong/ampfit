@@ -23,6 +23,16 @@ h2, .featurette-heading {
     color: black !important;
 }
 
+.btn-default {
+    color: white;
+    background-color: #B7B7B7;
+    border-color: #B7B7B7;
+}
+
 .btn-instagram, .btn-youtube, .btn-twitter, .btn-google-plus, .btn-facebook {
     color: #B7B7B7;
+}
+
+.carousel .item, #myCarousel {
+    background-color: transparent;
 }
