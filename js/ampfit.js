@@ -108,6 +108,16 @@ function loadPongstgram() {
     });
 }
 
+function loadInstafeed() {
+    var feed = new Instafeed({
+            userId: '295165979',
+            accessToken: '295165979.167035a.f95a0b3a5f54421f9fb59572756b3059',
+            get: 'user',
+            limit: 14
+        });
+    feed.run();
+}
+
 function loadTwitter() {
     ! function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
