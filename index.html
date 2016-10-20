@@ -28,8 +28,8 @@
     <link rel="stylesheet" href="css/custom/index.min.css">
     <link rel="stylesheet" href="css/custom/jumbotron.min.css">
     <link rel="stylesheet" href="css/custom/mobile.min.css">
-    <!--<link rel="stylesheet" href="css/pongstagr.am.min.css">-->
     <link rel="stylesheet" href="css/custom/index.wht.min.css">
+    <link rel="stylesheet" href="css/justifiedGallery.min.css">
     <link href='http://fonts.googleapis.com/css?family=Michroma|Open+Sans:300,400' rel='stylesheet'
     type='text/css'>
 </head>
@@ -154,15 +154,17 @@
                     </div>
                     <hr class="featurette-divider amp-red">
 
-                    <div class="row featurette ig-feed">
+                    <div class="featurette ig-feed">
                         <h2 class="featurette-heading">
                         Instagram Feed. <span class="text-muted text-half">Always.Making.Progress</span>
                     </h2>
                         <div id="instafeed"></div>
+                        <div id="mygallery" style="background-color: white">
                     </div>
 
                     <!-- /END THE FEATURETTES -->
                     <footer></footer>
+                    </div>
                 </div>
             </div>
         </div>
@@ -200,21 +202,39 @@
     <!-- Custom js for this template -->
     <script src="js/ampfit.js"></script>
     <script src="js/instafeed.min.js"></script>
+    <script src="js/jquery.justifiedGallery.min.js"></script>
     <script src="js/ytplayer.js"></script>
+    <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.js"></script>
     <script>
         $(document).ready(function() {
             loadHeaderAndFooter('Home');
             loadInstafeed();
             loadModalFunctions();
-            <!--loadTwitter();-->
         });
         $(window).load(function() {
             animateHeader();
             collapseMenuOnScroll();
+            $('#mygallery').imagesLoaded( function() {
+                justifyGalleryLayout();
+            })
+            .always( function( instance ) {
+                console.log('all images loaded');
+            })
+            .done( function( instance ) {
+                console.log('all images successfully loaded');
+            })
+            .fail( function() {
+                console.log('all images loaded, at least one is broken');
+            })
+            .progress( function( instance, image ) {
+                var result = image.isLoaded ? 'loaded' : 'broken';
+                console.log( 'image is ' + result + ' for ' + image.img.src );
+            });
         });
         $(window).on('beforeunload', function() {
             $(window).scrollTop(0);
         });
+
     </script>
 </body>
 

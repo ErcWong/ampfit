@@ -28,9 +28,10 @@ function loadPage() {
 }
 
 function justifyGalleryLayout() {
+    console.log('Justifying');
     if ($(window).width() > 414) {
         $("#mygallery").justifiedGallery({
-            rowHeight: 250,
+            rowHeight: 150,
             fixedHeight: false,
             lastRow: 'justify',
             margins: 2
@@ -113,7 +114,9 @@ function loadInstafeed() {
             userId: '295165979',
             accessToken: '295165979.167035a.f95a0b3a5f54421f9fb59572756b3059',
             get: 'user',
-            limit: 14
+            target: 'mygallery',
+            resolution: 'low_resolution',
+            template: '<a href="{{link}}" data-lightbox="gallery"> <img src="{{image}}" img-orientation="{{orientation}}" width="{{width}}" height="{{height}}"/></a>'
         });
     feed.run();
 }
