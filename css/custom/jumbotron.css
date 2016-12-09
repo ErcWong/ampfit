@@ -153,7 +153,7 @@
     background-color: black;
 }
 #slider-1 {
-    background-image: url('../../img/amp/ampfitgym_01.jpg');
+    background-image: url('../../img/amp/slider_01.jpg');
     background-position: 50% 30%;
     -webkit-filter: blur(4px);
     -moz-filter: blur(4px);
@@ -162,11 +162,11 @@
     filter: blur(4px);
 }
 #slider-2 {
-    background-image: url('../../img/amp/slider_2.jpg');
+    background-image: url('../../img/amp/slider_02.jpg');
     background-position: center top;
 }
 #slider-3 {
-    background-image: url('../../img/amp/ampfitentrance.jpg');
+    background-image: url('../../img/amp/slider_03.jpg');
     background-position: 35% 65%;
     -webkit-filter: blur(4px);
     -moz-filter: blur(4px);
