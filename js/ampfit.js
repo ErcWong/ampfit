@@ -1,6 +1,7 @@
 function loadHeaderAndFooter(page) {
     var html = (page == 'Home' ? 'home' : '');
     var path = (page == 'Home' ? '' : '../');
+    console.log(html + ':' + path + ':' + page);
     $('header').load(path + 'header' + html + '.html', function() {
         $('li:contains(' + page + ')').first().addClass('active');
     });
@@ -27,17 +28,25 @@ function loadPage() {
     }
 }
 
-function justifyGalleryLayout() {
-    console.log('Justifying');
+function setupCoursePage() {
+    $('.hover-label').flowtype({minFont: 15, maxFont: 30, fontRatio: 9});
+    $('.overlay').flowtype({minFont: 10, maxFont: 30, fontRatio: 20});
+    $(".overlay").click(function(){
+        window.location = $(this).find("a:first").attr("href");
+        return false;
+    });
+}
+
+function justifyGalleryLayout(gallery) {
     if ($(window).width() > 414) {
-        $("#mygallery").justifiedGallery({
+        $("#" + gallery).justifiedGallery({
             rowHeight: 150,
             fixedHeight: false,
             lastRow: 'justify',
             margins: 2
         });
     } else {
-        $("#mygallery").justifiedGallery({
+        $("#" + gallery).justifiedGallery({
             rowHeight: 150,
             fixedHeight: false,
             lastRow: 'justify',
@@ -109,18 +118,27 @@ function loadPongstgram() {
     });
 }
 
-function loadInstafeed() {
+function loadInstagram() {
     var feed = new Instafeed({
             userId: '295165979',
             accessToken: '295165979.167035a.f95a0b3a5f54421f9fb59572756b3059',
             get: 'user',
-            target: 'mygallery',
+            target: 'instafeed',
             resolution: 'low_resolution',
+            limit: '12',
             template: '<a href="{{link}}" data-lightbox="gallery"> <img src="{{image}}" img-orientation="{{orientation}}" width="{{width}}" height="{{height}}"/></a>'
         });
     feed.run();
 }
-
+function loadFacebookSDK() {
+    (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+}
 function loadTwitter() {
     ! function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
@@ -248,7 +266,7 @@ function addAnimationToElement(div, element, pos, fin) {
 
 function collapseMenuOnScroll() {
     var docElem = document.documentElement,
-        menu = $('body', docElem).find('#navbar-tabs'),
+        menu = $('body', docElem).find('#navbar-collapse'),
         didScroll = false;
 
     function init() {
@@ -296,4 +314,13 @@ function show(id) {
 function hide(id) {
     var ele = document.getElementById(id);
     ele.style.opacity = 0;
+}
+
+function activeTab(window) {
+     var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+     console.log(pgurl)
+     $("#nav ul li a").each(function(){
+          if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+          $(this).addClass("active");
+     })
 }

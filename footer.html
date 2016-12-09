@@ -1,20 +1,67 @@
 <hr class="featurette-divider amp-red">
-<p class="headings">
-    <a href="mailto:info@ampfit.ca">info@ampfit.ca</a>
-    <a href="https://goo.gl/maps/4rK2tC8dg152" target="_blank"><br>Unit 106 - 11800 River Rd
-    <br>Richmond BC, Canada V6X 1Z7
-    </a>
-    <a href="tel:1-604-377-6688"><br>(604) 377-6688</a>
-</p>
-<br>
+<div class="row">
+    <div class="col-xs-12 col-md-3">
+        <p class="headings">
+            <a href="mailto:info@ampfit.ca">info@ampfit.ca</a>
+            <a href="https://goo.gl/maps/4rK2tC8dg152" target="_blank"><br>Unit 106 - 11800 River Rd
+            <br>Richmond BC, Canada V6X 1Z7
+            </a>
+            <a href="tel:1-604-377-6688"><br>(604) 377-6688</a>
+        </p>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <ul class="list-unstyled">
+            <li><a href="./">home</a></li>
+            <li><a href="./about">about</a></li>
+            <li><a href="rates">rates</a></li>
+            <li><a href="schedule">schedule</a></li>
+            <li><a href="workshop">events & workshops</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-6 col-sm-3">
+        <ul class="list-unstyled">
+            <li><a href="training">training</a></li>
+            <li><a href="training/group-training.html">group</a></li>
+            <li><a href="training/private-training.html">private</a></li>
+            <li><a href="training/weightlifting-team.html">weightlifting team</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+        <ul class="list-unstyled">
+            <li><a href="training/101-strength-training.html">101 strength training</a></li>
+            <li><a href="training/101-barbell-lifting.html">101 barbell lifting</a></li>
+            <li><a href="training/101-olympic-weightlifting.html">101 olympic weightlifting</a></li>
+            <li><a href="training/201-kettlebell-skills.html">201 kettlebell skills</a></li>
+            <li><a href="training/301-double-kettlebells.html">301 double kettlebells</a></li>
+        </ul>
+    </div>
+</div>
 
-<p class="headings pull-right">
-    <a href="javascript:void(0)" onclick="scrollToTag('#top')">Back to top</a>
-</p>
-<p class="headings">
-    &copy; 2014 AMPFit, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
-</p>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="row">
+            <div class="col-xs-8">
+                <p class="headings">
+                    &copy; 2014 AMPFit, Corp. &middot; <a href="#">privacy</a> &middot; <a href="#">terms</a>
+                </p>
+            </div>
+            <div class="col-xs-4">
+                <p class="headings pull-right">
+                    <a href="javascript:void(0)" onclick="scrollToTag('#top')">Back to top</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
+<script>
+    if($("#navbar-pages").length == 1) {
+        $('footer ul li a').each(function () {
+            var href = $(this).attr('href');
+            $(this).attr('href', '../' + href);
+        });
+    }
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -23,5 +70,4 @@
 
   ga('create', 'UA-33668327-1', 'auto');
   ga('send', 'pageview');
-
 </script>

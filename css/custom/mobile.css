@@ -12,6 +12,14 @@
     margin-top: 0;
     z-index: 15
 }
+#body-home {
+    padding-top: 140px;
+}
+@media (min-width: 768px){
+    #body-home {
+        padding-top: 87px;
+    }
+}
 .div-center-in {
     position: relative;
     margin-left: auto;
@@ -35,10 +43,12 @@
     display: table
 }
 .nav {
-    float: none
+}
+.navbar {
+    margin-bottom: 0px;
 }
 .navbar-nav {
-    float: left
+    text-align: center
 }
 .navbar-fixed-top {
     position: relative
@@ -49,10 +59,13 @@
 }
 .navbar-toggle {
     background-color: black;
-    position: fixed;
+    position: absolute;
     opacity: 1;
-    top: 10px;
+    top: 85px;
     margin-left: 20px
+}
+#navbar-tabs {
+    padding-right: 0;
 }
 .nav-tabs>li.active>a {
     color: #9E1D20 !important
@@ -86,18 +99,15 @@
     background-color: #000000
 }
 #navbar-tabs {
-    position: fixed;
-    width: 100%;
-    padding-top: 50px;
-    top: 0;
-    left: 0;
     background-color: rgba(0, 0, 0, 1);
     overflow: hidden;
     z-index: 1
 }
+#navbar-tabs ul {
+
+}
 #navbar-social {
-    margin: 0 auto;
-    width: 265px
+    text-align: right;
 }
 #navbar-wrapper {
     background-color: black
@@ -124,7 +134,7 @@
         margin-top: 120px
     }
     #background-wrapper {
-        padding-top: 120px
+        padding-top: 0px
     }
     #header-divider-home {
         border-color: #9E1D20;
@@ -141,7 +151,7 @@
     .navbar-fixed-top {
         position: fixed
     }
-    .navbar-nav {
+    .navbar-nav-header {
         float: right
     }
     #navbar-home,
@@ -150,21 +160,17 @@
     }
     #navbar-social {
         position: relative;
-        right: -30px;
+        padding-top: 15px;
         float: right;
-        margin: -25px auto 0;
-        z-index: 1
+        width: 30%;
+        z-index: 1;
     }
     #navbar-social-btns {
         z-index: 10
     }
     #navbar-tabs {
-        position: relative;
-        top: 58px;
-        left: -15px;
-        margin-top: 0;
-        padding: 0;
-        width: 550px
+        width: 70%;
+        padding-top: 50px;
     }
     #nav-tab-bg {
         top: 100px;
@@ -184,7 +190,7 @@
         margin-top: 76px
     }
     #background-wrapper {
-        padding-top: 75px
+        padding-top: 0px
     }
     .btn-social {
         margin: 0 1px
@@ -198,7 +204,6 @@
         margin-top: 76px !important
     }
     .nav {
-        float: right !important
     }
     .navbar-home-animate {
         margin-top: -25px
@@ -211,12 +216,9 @@
         height: 62px
     }
     #navbar-tabs {
-        top: 15px;
-        left: -30px
+        padding-top: 15px;
     }
     #navbar-social {
-        width: 225px;
-        right: -190px
     }
     #nav-tab-bg {
         top: 56px;
@@ -233,7 +235,7 @@
         margin-top: 82px
     }
     #background-wrapper {
-        padding-top: 85px
+        padding-top: 0px
     }
     .btn-social {
         margin: 0 5px
@@ -245,7 +247,7 @@
         margin-top: 82px !important
     }
     .nav>li {
-        font-size: 14px
+        font-size: 17px
     }
     .nav>li>a {
         padding: 10px 9px
@@ -256,13 +258,7 @@
     #navbar-home {
         height: 87px
     }
-    #navbar-tabs {
-        width: 628px;
-        left: 0
-    }
     #navbar-social {
-        width: 265px;
-        right: -230px
     }
     #navbar-training {
         max-width: 1140px;
@@ -350,7 +346,7 @@
     margin: 5px
 }
 .testimonial-btn {
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Lato', sans-serif;
     width: 100%;
     border-radius: 0
 }
@@ -407,10 +403,10 @@
     }
 }
 .embed-responsive-gcal {
-    padding-bottom: 100%
+    padding-bottom: 100%;
 }
 @media (min-width: 768px) {
     .embed-responsive-gcal {
-        padding-bottom: 56.25%
+        padding-bottom: 100%
     }
 }

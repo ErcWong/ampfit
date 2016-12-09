@@ -391,7 +391,7 @@
 }
 .view-cap,
 .view-container-border {
-	color: white;
+	color: black;
     background-color: transparent
 }
 .view-container {
@@ -518,7 +518,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: transparent;
-    color: white;
+    color: black;
 }
 .header img {
     border: 0 none;
@@ -644,7 +644,7 @@
     cursor: pointer
 }
 .ui-rtsr-selected {
-    background-color: #222;
+    background-color: #eee;
     font-weight: bold
 }
 .ui-rtsr-name {
@@ -1118,7 +1118,8 @@ body.ie9 .st-bg-table {
     clear: none;
     white-space: nowrap;
     margin: 0;
-    overflow: hidden
+    overflow: hidden;
+    color: #9E1D20 !important
 }
 .agenda .title-wrapper {
     margin: 0 0 0 2.5em;
@@ -1515,5 +1516,5 @@ body.ie .tg-mainwrapper {
     padding: 1px 1px 2px 0
 }
 div#container.locale-en_gb.locale-en{
-    height: 100%;
+    height: 100% !important;
 }

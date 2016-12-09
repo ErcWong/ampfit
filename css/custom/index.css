@@ -1,13 +1,15 @@
 /** Gradient background **/
-body,
-html {
+
+body, html {
     height: 100%;
     width: 100%;
     background-color: #000
 }
+
 body {
-    padding-right: 0!important
+    padding-right: 0!important;
 }
+
 #background-wrapper {
     background-color: #000;
     width: 100%;
@@ -15,6 +17,7 @@ body {
     display: block;
     overflow: hidden
 }
+
 #background {
     display: block;
     background: -moz-linear-gradient(top, rgba(38, 38, 38, 0) 22%, rgba(38, 38, 38, .75) 45%, rgba(38, 38, 38, .77) 48%, rgba(38, 38, 38, .77) 52%, rgba(38, 38, 38, .75) 55%, rgba(0, 0, 0, 0) 100%);
@@ -25,24 +28,32 @@ body {
     background: linear-gradient(to bottom, rgba(38, 38, 38, 0) 22%, rgba(38, 38, 38, .75) 45%, rgba(38, 38, 38, .77) 48%, rgba(38, 38, 38, .77) 52%, rgba(38, 38, 38, .75) 55%, rgba(0, 0, 0, 0) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00262626', endColorstr='#00000000', GradientType=0)
 }
+
 footer {
     padding-bottom: 40px;
 }
+
+
 /**top tag is used for anchoring **/
+
 #top {
     display: block;
 }
+
 a {
     color: #9E1D20
 }
+
 .amp-red {
     color: #9E1D20;
     border-color: #9E1D20;
 }
-.amp-red-bg{
+
+.amp-red-bg {
     background-color: #9E1D20 !important;
 }
-.amp-blk{
+
+.amp-blk {
     /*color: #0C0C0C;*/
     /*background-color: #0C0C0C;*/
     /*border-color: #0C0C0C;*/
@@ -50,67 +61,83 @@ a {
     background-color: #000000;
     border-color: #000000;
 }
+
 .col-lg-4>.crop {
     width: 100%;
     height: 0;
     overflow: hidden;
     padding-bottom: 50%;
 }
+
+
 /* Featurettes Styling
 -------------------------------------------------- */
+
 .featurette-divider {
     border-color: #9E1D20;
-    margin: 50px 0;
+    margin: 40px 0;
 }
+
 .featurette-heading {
     color: #FFFFFF;
-    font-family: 'Michroma', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-variant: small-caps;
     letter-spacing: 5px;
-    font-size: 24px;
+    font-size: 30px;
 }
+
+
 /* Social Buttons Styling
 -------------------------------------------------- */
+
 .btn-social {
     background-image: none;
-    background-color: rgba(0,0,0,0) !important;
+    background-color: rgba(0, 0, 0, 0) !important;
     margin: 0 5px;
 }
-.btn-default, .btn-danger,
-.btn-ig, .btn-primary {
+
+.btn-default, .btn-danger, .btn-ig, .btn-primary {
     font-variant: small-caps
 }
-.btn-danger,
-.btn-primary {
+
+.btn-danger, .btn-primary {
     background-color: rgba(158, 29, 32, 0);
     border-color: rgba(158, 29, 32, .5);
     border-width: 2px;
 }
+
 .btn-default {
     color: #868585;
     background-color: #4F4F4F;
     border-color: #4F4F4F
 }
+
 .btn-ig {
     margin-right: 20px;
     background-color: #9E1D20!important;
     border-color: #9E1D20!important
 }
+
 .btn-success:hover {
     margin-right: 20px;
     background-color: #e77e80!important;
     border-color: #e77e80!important
 }
+
 .post>img {
     width: 115%!important;
     max-height: 110%!important;
     min-height: 0!important
 }
+
+
 /* CUSTOMIZE IG
 -------------------------------------------------- */
+
 .ig-feed {
     overflow: hidden;
 }
+
 .thumbnail {
     background-color: rgba(21, 21, 21, 0.8);
 }
@@ -118,64 +145,11 @@ a {
 .thumbnail>strong, .thumbnail>span:not(i) {
     color: #868585;
 }
+
 @media (min-width: 768px) {
     .ig-feed {
         overflow: visible;
     }
-}
-
-/* .modal-fullscreen */
-
-.modal-fullscreen {
-  background: transparent;
-}
-.modal-fullscreen .modal-content {
-  background: transparent;
-  border: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.modal-backdrop.modal-backdrop-fullscreen {
-  background: #ffffff;
-  background-size: cover;
-}
-.modal-backdrop.modal-backdrop-fullscreen.in {
-  opacity: 1;
-  filter: alpha(opacity=1);
-}
-/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
-
-.modal-fullscreen .modal-dialog {
-  margin: 0;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .modal-fullscreen .modal-dialog {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .modal-fullscreen .modal-dialog {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .modal-fullscreen .modal-dialog {
-     width: 1170px;
-  }
-}
-
-.fade {
-    opacity: 1;
-    transition: opacity .5s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out;
-    -webkit-transition: opacity .5s ease-in-out;
-}
-
-.fade:hover {
-    opacity: 0;
 }
 
 .layer {
@@ -186,6 +160,8 @@ a {
     -moz-transition: opacity 1s ease-in-out;
     -webkit-transition: opacity 1s ease-in-out;
 }
+
+
 /*
 .layer-img {
     width: 1170px;
@@ -200,16 +176,40 @@ a {
     background-size: cover;
 }
 
-#about1 {
+#header-button {
+    background-color: transparent;
+    font-size: 30px;
+    margin: 0;
+    padding: 9px 19px;
+    z-index: 10;
+}
+#training-nav {
+    float: none !important;
 }
 
-.about1-img {
-    background-image: url("../../img/amp/training/about1.jpg");
+#trainer-nav {
+    /*position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);*/
+    float: right;
+    z-index: 1;
+    /*border-bottom: 1px solid #eee;*/
 }
-
-#about2 {
+@media (min-width: 768px) {
+    body {
+        padding-top: 100px;
+    }
 }
-
-.about2-img {
-    background-image: url("../../img/amp/training/about2.jpg");
+@media (min-width: 992px) {
+    body {
+        padding-top: 70px;
+        padding-right: 0!important;
+    }
+    #trainer-nav {
+        position: absolute;
+        right: 0;
+        margin: 40px 0 20px;
+        transform: translateX(-5%);
+    }
 }
