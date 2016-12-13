@@ -155,11 +155,11 @@
 #slider-1 {
     background-image: url('../../img/amp/slider_01.jpg');
     background-position: 50% 30%;
-    -webkit-filter: blur(4px);
-    -moz-filter: blur(4px);
-    -o-filter: blur(4px);
-    -ms-filter: blur(4px);
-    filter: blur(4px);
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
 }
 #slider-2 {
     background-image: url('../../img/amp/slider_02.jpg');

@@ -23,9 +23,14 @@
     <link rel="stylesheet" href="../css/custom/jumbotron.css">
     <link rel="stylesheet" href="../css/custom/mobile.css">
     <link rel="stylesheet" href="../css/custom/index.wht.min.css">
+    <style>
+        .list-group a {
+            cursor: pointer;
+        }
+    </style>
 
     <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Lato:300|Open+Sans:300,400' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:300,400' rel='stylesheet'
           type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -57,12 +62,21 @@
     <div class="row">
     <!-- Content Row -->
         <div class="col-md-3">
-            <div class="list-group">
+            <ul class="list-group">
                 <a class="list-group-item list-group-item-action showSingle" target="intro-pkg" alt="introductory package">Introductory Packages</a>
                 <a class="list-group-item list-group-item-action showSingle" target="group-pkg" alt="group training">AMP Group Training</a>
                 <a class="list-group-item list-group-item-action showSingle" target="priv-pkg" alt="private training">AMP Private Training</a>
                 <a class="list-group-item list-group-item-action showSingle" target="dist-pkg" alt="distance training">AMP Distance Training</a>
-            </div>
+                <div id="events-list" class="list-group-item list-group-item-action showSingle" target="events-pkg" alt="events and workshops" style="cursor: pointer">
+                    Events and Workshops
+                    <ul id="events-item" class="list-unstyled">
+                        <li><a class="list-group-item-action showSingle2" target="sf-event" alt="SF">StrongFirst</a></li>
+                        <li><a class="list-group-item-action showSingle2" target="st-event">Strength Training 101</a></li>
+                        <li><a class="list-group-item-action showSingle2" target="ks-event">Kettlebell Skills 201</a></li>
+                        <li><a class="list-group-item-action showSingle2" target="bundle">Workshop Combo</a></li>
+                    </ul>
+                </div>
+            </ul>
         </div>
         <div class="col-md-9">
             <div id="intro-pkg" class="row targetDiv">
@@ -87,7 +101,7 @@
                             </div>
                             <ul class="list-group">
                                 <li class="list-group-item"><strong>1</strong> participant</li>
-                                <li class="list-group-item"><strong>1 private</strong> training session/week </li>
+                                <li class="list-group-item"><strong>4 private</strong> training session</li>
                                 <li class="list-group-item"><strong>$280</strong> total</li>
                                 <li class="list-group-item">
                                     <a href="http://store.ampfit.ca/item/amp-strength-training"
@@ -106,7 +120,7 @@
                             </div>
                             <ul class="list-group">
                                 <li class="list-group-item"><strong>1</strong> participant</li>
-                                <li class="list-group-item"><strong>4</strong> Sessions </li>
+                                <li class="list-group-item"><strong>4 private</strong> training session</li>
                                 <li class="list-group-item"><strong>$280</strong> total</li>
                                 <li class="list-group-item"><a href="http://store.ampfit.ca/item/amp-barbell-lifting"
                                                                class="btn btn-primary">sign up!</a>
@@ -125,7 +139,7 @@
                             </div>
                             <ul class="list-group">
                                 <li class="list-group-item"><strong>1</strong> participant</li>
-                                <li class="list-group-item"><strong>4</strong> Sessions </li>
+                                <li class="list-group-item"><strong>4 private</strong> training session</li>
                                 <li class="list-group-item"><strong>$280</strong> total</li>
                                 <li class="list-group-item"><a href="http://store.ampfit.ca/item/amp-olympic-lifting"
                                                                class="btn btn-primary">sign up!</a>
@@ -194,7 +208,7 @@
                     </div>
                 </form>
             </div>
-            <hr id="sep" class="targetDiv">
+            <!--<hr id="sep" class="targetDiv">-->
             <!-- group pkg section -->
             <div id="group-pkg" class="row targetDiv">
                 <div class="col-md-12">
@@ -281,137 +295,422 @@
             <div id="priv-pkg" class="row targetDiv">
                 <!-- Monthly pkgs -->
                 <div class="col-md-12">
-                    <h3 class="featurette-heading">Private Monthly Packages</h3>
+                    <select id="semi-select" class="form-control">
+                        <option value="semi1">1 participant</option>
+                        <option value="semi2">2-3 participants *All prices are per person*</option>
+                        <option value="semi3">4 participants *All prices are per person*</option>
+                    </select>
                 </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">4x / week</h3>
-                        </div>
-                        <div class="panel-body">
-                            <span class="price"><sup>$</sup>78<sup>00</sup></span>
-                            <span class="period">per session</span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>$1250</strong> per month</li>
-                            <li class="list-group-item">16 sessions</li>
-                        </ul>
+                <form name="semi1" id="semi1" style="display: none">
+                    <div class="col-md-12">
+                        <h3 class="featurette-heading">Private Monthly Packages</h3>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">3x / week</h3>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">4x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>78<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$1250</strong> per month</li>
+                                <li class="list-group-item">16 sessions</li>
+                            </ul>
                         </div>
-                        <div class="panel-body">
-                            <span class="price"><sup>$</sup>85<sup>00</sup></span>
-                            <span class="period">per session</span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>$1020</strong> per month</li>
-                            <li class="list-group-item">12 sessions</li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">2x / week</h3>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">3x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>85<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$1020</strong> per month</li>
+                                <li class="list-group-item">12 sessions</li>
+                            </ul>
                         </div>
-                        <div class="panel-body">
-                            <span class="price"><sup>$</sup>90<sup>00</sup></span>
-                            <span class="period">per session</span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>$720</strong> per month</li>
-                            <li class="list-group-item">8 sessions</li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">1x / week</h3>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">2x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>90<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$720</strong> per month</li>
+                                <li class="list-group-item">8 sessions</li>
+                            </ul>
                         </div>
-                        <div class="panel-body">
-                            <span class="price"><sup>$</sup>100<sup>00</sup></span>
-                            <span class="period">per session</span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>$400</strong> per month</li>
-                            <li class="list-group-item">4 sessions</li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <a href="http://store.ampfit.ca/item/private-training-monthly-packages"
-                   class="btn btn-primary" style="width: 100%">sign up for a monthly package!</a>
-                </div>
-                <!-- Session pkgs -->
-                <div class="col-md-12">
-                    <h3 class="featurette-heading">Private Session Packages</h3>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">1 sessions</h3>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">1x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>100<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$400</strong> per month</li>
+                                <li class="list-group-item">4 sessions</li>
+                            </ul>
                         </div>
-                        <div class="panel-body">
-                            <span class="price"><sup>$</sup>120<sup>00</sup></span>
-                            <span class="period">per session</span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>$120</strong> total</li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">12 sessions</h3>
-                        </div>
-                        <div class="panel-body">
-                            <span class="price"><sup>$</sup>110<sup>00</sup></span>
-                            <span class="period">per session</span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>$1320</strong> total</li>
-                        </ul>
+                    <div class="col-md-12">
+                        <a href="http://store.ampfit.ca/item/private-training-monthly-packages"
+                           class="btn btn-primary" style="width: 100%">sign up for a monthly package!</a>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">24 sessions</h3>
-                        </div>
-                        <div class="panel-body">
-                            <span class="price"><sup>$</sup>100<sup>00</sup></span>
-                            <span class="period">per session</span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>$2400</strong> total</li>
-                        </ul>
+                    <!-- Session pkgs -->
+                    <div class="col-md-12">
+                        <h3 class="featurette-heading">Private Session Packages</h3>
                     </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="panel panel-default text-center">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">36 sessions</h3>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">1 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>120<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$120</strong> total</li>
+                            </ul>
                         </div>
-                        <div class="panel-body">
-                            <span class="price"><sup>$</sup>90<sup>00</sup></span>
-                            <span class="period">per session</span>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item"><strong>$3240</strong> total</li>
-                        </ul>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <a href="http://store.ampfit.ca/item/private-training-session-packages"
-                                                   class="btn btn-primary" style="width: 100%">
-                        sign up for a session package!</a>
-                </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">12 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>110<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$1320</strong> total</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">24 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>100<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$2400</strong> total</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">36 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>90<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$3240</strong> total</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="http://store.ampfit.ca/item/private-training-session-packages"
+                           class="btn btn-primary" style="width: 100%">
+                            sign up for a session package!</a>
+                    </div>
+                </form>
+                <form name="semi2" id="semi2" style="display: none">
+                    <div class="col-md-12">
+                        <h3 class="featurette-heading">Semi-Private Monthly Packages
+                            <small>all prices are per person</small>
+                        </h3>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">4x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>55<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$880</strong> per month</li>
+                                <li class="list-group-item">16 sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">3x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>60<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$720</strong> per month</li>
+                                <li class="list-group-item">12 sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">2x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>65<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$520</strong> per month</li>
+                                <li class="list-group-item">8 sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">1x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>70<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$280</strong> per month</li>
+                                <li class="list-group-item">4 sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="http://store.ampfit.ca/item/private-training-monthly-packages"
+                           class="btn btn-primary" style="width: 100%">sign up for a monthly package!</a>
+                    </div>
+                    <!-- Session pkgs -->
+                    <div class="col-md-12">
+                        <h3 class="featurette-heading">Private Session Packages
+                            <small>all prices are per person</small>
+                        </h3>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">1 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>80<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$80</strong> /person</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">12 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>75<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$900</strong> /person</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">24 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>70<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$1680</strong> /person</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">36 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>65<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$2340</strong> /person</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="http://store.ampfit.ca/item/private-training-session-packages"
+                           class="btn btn-primary" style="width: 100%">
+                            sign up for a session package!</a>
+                    </div>
+                </form>
+                <form name="semi3" id="semi3" style="display: none">
+                    <div class="col-md-12">
+                        <h3 class="featurette-heading">Semi-Private Monthly Packages
+                            <small>all prices are per person</small>
+                        </h3>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">4x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>41<sup>25</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$660</strong> per month</li>
+                                <li class="list-group-item">16 sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">3x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>45<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$540</strong> per month</li>
+                                <li class="list-group-item">12 sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">2x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>48<sup>75</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$390</strong> per month</li>
+                                <li class="list-group-item">8 sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">1x / week</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>52<sup>50</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$210</strong> per month</li>
+                                <li class="list-group-item">4 sessions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="http://store.ampfit.ca/item/private-training-monthly-packages"
+                           class="btn btn-primary" style="width: 100%">sign up for a monthly package!</a>
+                    </div>
+                    <!-- Session pkgs -->
+                    <div class="col-md-12">
+                        <h3 class="featurette-heading">Private Session Packages
+                            <small>all prices per person</small>
+                        </h3>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">1 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>60<sup>00</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$60</strong> /person</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">12 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>56<sup>25</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$675</strong> /person</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">24 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>52<sup>50</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$1260</strong> /person</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">36 sessions</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>48<sup>75</sup></span>
+                                <span class="period">per session</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>$1755</strong> /person</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <a href="http://store.ampfit.ca/item/private-training-session-packages"
+                           class="btn btn-primary" style="width: 100%">
+                            sign up for a session package!</a>
+                    </div>
+                </form>
             </div>
             <!-- dist pkg section -->
             <div id="dist-pkg" class="row targetDiv">
@@ -453,6 +752,160 @@
                     </div>
                 </div>
             </div>
+            <!-- events and workshop section -->
+            <div id="events-pkg" class="row targetDiv">
+                <div class="col-md-12">
+                    <h3 class="featurette-heading">Events and Workshops</h3>
+                </div>
+                <div id="sf-event" class="col-md-3 targetDiv2">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">open to all<br><strong>StrongFirst</strong><br>open day</h3>
+                        </div>
+                        <div class="panel-body">
+                            <span class="price"><strong>FREE</strong></span>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">10am - 5pm</li>
+                            <li class="list-group-item"><strong>lunch provided</strong></li>
+                            <li class="list-group-item">
+                                <a href="https://www.eventbrite.ca/e/strongfirst-canada-open-day-tickets-29487712542"
+                                   class="btn btn-primary">register a spot!</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="st-event" class="col-md-12 targetDiv2">
+                    <div class="col-md-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong style="color:red">holiday special!</strong><br>AMP: <br>Strength Training 101<br>Workshop</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>99<sup>00</sup></span>
+                                <span class="period">per person</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>4</strong> hours </li>
+                                <li class="list-group-item"><a href="http://store.ampfit.ca/item/amp-strength-training-workshop-january-th"
+                                                               class="btn btn-primary">sign up!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong>early bird special!</strong><br>AMP: <br>Strength Training 101<br>Workshop</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>149<sup>00</sup></span>
+                                <span class="period">per person</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>4</strong> hours </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">AMP: <br>Strength Training 101<br>Workshop<br><br></h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>199<sup>00</sup></span>
+                                <span class="period">per person</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>4</strong> hours </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="ks-event" class="col-md-12 targetDiv2">
+                    <div class="col-md-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong>early bird special!</strong><br>AMP: <br>Kettlebell Skills 201<br>workshop</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>149<sup>00</sup></span>
+                                <span class="period">per person</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>4</strong> hours </li>
+                                <li class="list-group-item"><a href="http://store.ampfit.ca/item/amp-kettlebell-skills-workshop-january-nd"
+                                                               class="btn btn-primary">sign up!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">AMP: <br>Kettlebell Skills 201<br>workshop<br><br></h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>199<sup>00</sup></span>
+                                <span class="period">per person</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>4</strong> hours </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="bundle" class="col-md-12 targetDiv2">
+                    <div class="col-md-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong style="color:red">holiday special!</strong><br>AMP: <br>ST:101 & KS:201 <br>workshop combo</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>199<sup>00</sup></span>
+                                <span class="period">per person</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>4</strong> hours </li>
+                                <li class="list-group-item"><a href="http://store.ampfit.ca/item/amp-strength-training-kettlebell-skills-combo"
+                                                               class="btn btn-primary">sign up!</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong>early bird special!</strong><br>AMP: <br>ST:101 & KS:201 <br>workshop combo</h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>249<sup>00</sup></span>
+                                <span class="period">per person</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>4</strong> hours </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">AMP: <br>ST:101 & KS:201 <br>workshop combo<br><br></h3>
+                            </div>
+                            <div class="panel-body">
+                                <span class="price"><sup>$</sup>349<sup>00</sup></span>
+                                <span class="period">per person</span>
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong>4</strong> hours </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <a href="javascript:void(0)" onclick="scrollToTag('#top')"><i class="fa fa-arrow-up pull-right" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
     <!-- /.row -->
@@ -470,24 +923,45 @@
         $(document).ready(function() {
             loadHeaderAndFooter('RATES');
             $('.targetDiv').hide();
+            $('.targetDiv2').hide();
             $('#intro-pkg').show();
             $('#intro1').show();
+            $('#events-item').hide();
         });
         $(window).load(function() {
             collapseMenuOnScroll();
         });
 </script>
 <script>
-    $('.showSingle').click(function(){
+    $('.showSingle').click(function(e){
+        if($(this).attr('target') == 'priv-pkg'){
+            $('#semi1').show();
+        }
+        if ($(this).attr('target') == 'events-pkg'){
+            $('#events-item').show();
+            $('.targetDiv2').hide();
+            $('#sf-event').show();
+            <!--$('ul.events-item li.active').removeClass('active');-->
+        } else {
+            $('#events-item').hide();
+        };
         $('.targetDiv').hide();
         $('#' + $(this).attr('target')).show();
         <!--var targetDivs = $('.targetDiv');-->
         <!--var target = '#' + $(this).attr('target');-->
         <!--$('#sep').insertBefore(targetDivs.first());-->
         <!--$('#' + $(this).attr('target')).insertBefore('#sep');-->
-        <!--$('#subheading').text('RATES ' + $(this).attr('alt'));-->
+        $('#subheading').text('RATES - ' + $(this).attr('alt'));
+    });
+    $('.showSingle2').click(function(e){
+        $('.targetDiv2').hide();
+        $('#' + $(this).attr('target')).show();
+        e.stopPropagation();
     });
     $("#intro-select").on("change", function() {
+        $("#" + $(this).val()).show().siblings('form').hide();
+    });
+    $("#semi-select").on("change", function() {
         $("#" + $(this).val()).show().siblings('form').hide();
     })
 </script>
