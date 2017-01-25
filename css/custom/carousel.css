@@ -185,6 +185,7 @@ hr.ampsep:after {
 
 .panel {
 	margin: 0 auto;
+	min-height: 400px;
 	height: 100%;
 	position: relative;
 	/*-webkit-perspective: 600px;
