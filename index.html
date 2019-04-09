@@ -28,11 +28,11 @@
         .overlay {
             cursor: pointer;
         }
+
     </style>
 
     <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:300,400' rel='stylesheet'
-          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:300,400' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -62,7 +62,7 @@
                 <div class="div-center-out">
                     <div class="div-center-mid overlay">
                         <div class="carousel-caption div-center-in" style="transform: translate(0,50%)">
-                                <button type="button" class="btn btn-lg btn-danger active">
+                            <button type="button" class="btn btn-lg btn-danger active">
                                     <a href="./training" style="color: white">start here</a>
                                 </button>
                         </div>
@@ -75,8 +75,7 @@
                 <div class="div-center-out">
                     <div class="div-center-mid">
                         <div class="carousel-caption div-center-in">
-                            <button type="button" class="btn btn-lg btn-danger active" data-toggle="modal" data-target="#myModal"
-                                    style="transform: translate(0,50%)">
+                            <button type="button" class="btn btn-lg btn-danger active" data-toggle="modal" data-target="#myModal" style="transform: translate(0,50%)">
                                 click to watch video
                             </button>
                         </div>
@@ -88,8 +87,7 @@
                 <div class="div-center-out">
                     <div class="div-center-mid overlay">
                         <div class="carousel-caption div-center-in" style="transform: translate(0,50%)">
-                            <a class="btn btn-lg btn-danger active" href="about/#facility-gallery"
-                            role="button" style="text-shadow: 1px 1px 1px black">take a closer look</a>
+                            <a class="btn btn-lg btn-danger active" href="about/#facility-gallery" role="button" style="text-shadow: 1px 1px 1px black">take a closer look</a>
                         </div>
                     </div>
                 </div>
@@ -117,15 +115,13 @@
                         </div>
                         <div class="panel-body">
                             <p>
-                                Are you ready to prioritize your health?<br>
-                                Interested in AMP Group Training?<br>
+                                Are you ready to prioritize your health?<br> Interested in AMP Group Training?<br>
                             </p>
                             <div style="padding: 6px 0; text-align: center">
                                 <a href="http://store.ampfit.ca/item/amp-strength-training" class="btn btn-default" target="_blank">Sign up now!</a>
                             </div>
                             <p>
-                                Interested in learning how to use the Kettlebell or Barbell? Or do you want to learn about
-                                Olympic Weightlifting?
+                                Interested in learning how to use the Kettlebell or Barbell? Or do you want to learn about Olympic Weightlifting?
                             </p>
                             <div style="padding: 6px 0; text-align: center">
                                 <a class="btn btn-default" href="./training">Introductory Packages</a>
@@ -138,39 +134,61 @@
                 </div>
                 <div class="col-md-4">
                     <div class="panel panel-default">
-                        <div id="home-events-and-workshops" class="panel-heading">
-                            <h3 style="color: white; text-shadow: 1px 1px 1px black">
-                                <a href="workshop" style="color: white">upcoming events & workshops</a>
-                            </h3>
+                        <div id="home-private-training" class="panel-heading">
+                            <h3 style="color:white">private training</h3>
                         </div>
-                        <div class="panel-body" style="">
-                            <p><a href="workshop#sf-barbell-course">StrongFirst: Barbell Course</a><br><small>March 5th, 2017 &nbsp 9am - 6pm</small></p>
-                            <p>Whether you have no barbell experience or have been training with the bar for years and are finally ready to get strong, this course is for you.</p>
-                            <p>
-                                <a href="https://www.regonline.com/registration/Checkin.aspx?EventID=1948022" class="btn btn-default" target="_blank">register now!</a>
-                            </p>
-                            <p><a href="workshop#sf-kettlebell-course">StrongFirst: Kettlebell Course</a><br><small>March 26th, 2017 &nbsp 9am - 6pm</small></p>
-                            <p>The most fundamental and thoroughly in-depth kettlebell instruction available within a single day.</p>
-                            <p>
-                                <a href="https://www.regonline.com/registration/Checkin.aspx?EventID=1946702" class="btn btn-default" target="_blank">register now!</a>
-                            </p>
+                        <div class="panel-body">
+                            <p>AMPFit has two types of Private Training packages to help you meet your individual goals.
+                                <br><br> If you're able to dedicate an hour or more to training each week, then stay consistent and choose our Monthly Pacakge. <br><br> If your schedule cannot accommodate a weekly commitment, Session Packages are a better fit for you.</p>
+                            <a href="training/private-training.html" class="btn btn-default">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="panel panel-default">
-                        <div id="home-private-training" class="panel-heading">
-                            <h3 style="color:white">private training</h3>
+                        <div id="home-events-and-workshops" class="panel-heading">
+                            <h3 style="color: white; text-shadow: 1px 1px 1px black">
+                                <a href="workshop" style="color: white">Contact</a>
+                            </h3>
                         </div>
-                        <div class="panel-body">
-                            <p>AMPFit has two types of Private Training packages to help you meet your individual
-                                goals.<br><br>
-                                If you're able to dedicate an hour or more to training each week, then stay consistent
-                                and choose our Monthly Pacakge. <br><br>
-                                If your schedule cannot accommodate a weekly commitment,
-                                Session Packages are a better fit for you.</p>
-                            <a href="training/private-training.html" class="btn btn-default">Learn More</a>
-                        </div>
+                        <form class="formmail" action="./contact/formmail.php" method="post"><input type="hidden" name="required" value="name,email,comments" />
+                            <br /> Name:
+                            <br />
+                            <input name="name" size="30" maxlength="30" type="text" />
+                            <br /> E-mail Address:<br />
+                            <input name="email" size="30" maxlength="30" type="text" />
+                            <br /> Message:
+                            <br />
+                            <textarea name="comments" cols="30" rows="8"></textarea>
+                            <br />
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <img id="siimage" width="110px" height="38px" src="/contact/securimage_show.php?sid=<?php echo md5(time()) ?>" align="left" alt="" />
+                                    </td>
+                                    <td width="3"></td>
+                                    <td valign="top">
+                                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" id="SecurImage_as3" align="middle" height="19" width="19">
+        <param name="allowScriptAccess" value="sameDomain" />
+        <param name="allowFullScreen" value="false" />
+        <param name="movie" value="./contact/securimage_play.swf?audio=/contact/securimage_play.php&amp;bgColor1=#777&amp;bgColor2=#fff&amp;iconColor=#000&amp;roundedCorner=5" />
+        <param name="quality" value="high" />
+        <param name="bgcolor" value="#ffffff" />
+        <embed src="/contact/securimage_play.swf?audio=/contact/securimage_play.php" quality="high" bgcolor="#ffffff" name="SecurImage_as3" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="19" width="19" />
+    </object>
+                                        <br />
+                                        <a tabindex="-1" href="#" title="Refresh Image" onclick="document.getElementById('siimage').src = '/contact/securimage_show.php?sid=' + Math.random(); return false"><img src="/contact/images/refresh.gif" alt="Refresh Image" onclick="this.blur()" /></a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br /> Code:
+                            <br />
+                            <input name="code" size="12" type="text" />
+                            <br />
+                            <br />
+                            <input value="Send E-mail" name="submit" type="submit" />
+                            <input value="Clear" name="reset" type="reset" />
+                        </form>
                     </div>
                 </div>
             </section>
@@ -185,8 +203,7 @@
                     <!--<h1 style="color: white; text-shadow: 1px 1px 1px black">tools</h1>-->
                     <!--<hr class="star-primary">-->
                     <p class="text-center" style="margin:0 0 10%; font: italic 4em 'Lato',sans-serif; color: white; text-shadow: 1px 1px 2px white">
-                        Beauty lies in simplicity.<br><br>
-                        These are our tools of choice:
+                        Beauty lies in simplicity.<br><br> These are our tools of choice:
                     </p>
                 </div>
                 <div class="col-sm-4" style="padding: 10px">
@@ -236,12 +253,12 @@
                     </a>
                 </div>
                 <!--<div class="col-sm-3 col-sm-pull-0 col-md-3 col-md-pull-9 text-center">-->
-                    <!--&lt;!&ndash;<h1 style="color: white; text-shadow: 1px 1px 1px black">tools</h1>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<hr class="star-primary">&ndash;&gt;-->
-                    <!--<p class="text-center" style="margin-top:35%; font: italic 2em 'Lato',sans-serif; color: white; text-shadow: 1px 1px 2px white">-->
-                        <!--Beauty lies in simplicity.<br><br>-->
-                        <!--These are our tools of choice:-->
-                    <!--</p>-->
+                <!--&lt;!&ndash;<h1 style="color: white; text-shadow: 1px 1px 1px black">tools</h1>&ndash;&gt;-->
+                <!--&lt;!&ndash;<hr class="star-primary">&ndash;&gt;-->
+                <!--<p class="text-center" style="margin-top:35%; font: italic 2em 'Lato',sans-serif; color: white; text-shadow: 1px 1px 2px white">-->
+                <!--Beauty lies in simplicity.<br><br>-->
+                <!--These are our tools of choice:-->
+                <!--</p>-->
                 <!--</div>-->
             </div>
         </div>
@@ -266,6 +283,15 @@
         </div>
     </section>
 
+    <!-- /.row -->
+    <div id="contact" class="map" style="height: 400px">
+        <iframe width="100%" height="100%" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5214.587063739399!2d-123.0977491052656!3d49.19499095823042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548675a613fcddc1%3A0x537848f515bde100!2sAMPFit+%7C+Always+Making+Progress!5e0!3m2!1sen!2sca!4v1508094834659" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <br/>
+        <small>
+        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5214.587063739399!2d-123.0977491052656!3d49.19499095823042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548675a613fcddc1%3A0x537848f515bde100!2sAMPFit+%7C+Always+Making+Progress!5e0!3m2!1sen!2sca!4v1508094834659"></a>
+        </small>
+    </div>
+
     <div class="container" style="width: 100%; position: relative; background: white;">
         <div class="container">
             <div class="row">
@@ -276,8 +302,7 @@
     <!-- /.container -->
 
     <!-- YouTube Modal -->
-    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true" data-backdrop="true">
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="true">
         <div class="div-center-out">
             <div class="div-center-mid">
                 <div class="div-center-in">
@@ -285,8 +310,7 @@
                         <div class="modal-content">
                             <div class="modal-body">
                                 <div class="embed-responsive embed-responsive-16by9 ">
-                                    <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/1-CONCY_WE8?enablejsapi=1"
-                                    frameborder="0" allowfullscreen></iframe>
+                                    <iframe id="player" width="560" height="315" src="https://www.youtube.com/embed/1-CONCY_WE8?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
                                 </div>
                             </div>
                         </div>
@@ -312,7 +336,7 @@
         $(document).ready(function() {
             loadHeaderAndFooter('Home');
             loadInstagram();
-            $(".overlay").click(function(){
+            $(".overlay").click(function() {
                 window.location = $(this).find("a:first").attr("href");
                 return false;
             });
@@ -320,7 +344,7 @@
         $(window).load(function() {
             animateHeader();
             collapseMenuOnScroll();
-            $('#instafeed').imagesLoaded( function() {
+            $('#instafeed').imagesLoaded(function() {
                 justifyGalleryLayout('instafeed');
             });
         });
