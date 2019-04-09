@@ -1,62 +1,50 @@
-<div class="navbar-wrapper">
-    <div class="container navbar-container">
-        <nav id="navbar-home" class="animate navbar-inverse navbar-fixed-top" style="width: auto; border-bottom: 1px solid rgba(0,0,0,0);">
-            <div class="animate container">
-                <div class=" amp-blk navbar-header">
-                    <button id="navbar-collapse-btn" type="button" class="navbar-toggle collapsed"
-                            data-toggle="collapse"
-                    data-target="#navbar-tabs" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
+<nav id="navbar-home" class="animate navbar-fixed-top" style="width: auto; border-bottom: 1px solid rgba(0,0,0,0);">
+    <div class="animate container">
+        <div class="row">
+            <div class="amp-blk navbar-header col-sm-12">
+                <button id="header-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <i class="fa fa-bars" aria-hidden="true" style="color: black"></i>
+                </button>
+                <div class="row">
                     <div class="col-sm-3">
                         <a href=".">
                             <div id="header-logo-pages" class="animate jumbotron zoom-in-init"></div>
-                            <!--<img id="header-logo" src="img/ampfit_original.svg">-->
-                            <!--                            <img id="amplogo" class="navbar-logo animate" style="width: 305px; height: 120px; padding-top: 20px; display: inline; opacity:1;" src="/ampfit/img/amplogo.png"/> -->
                         </a>
                     </div>
                     <div class="col-sm-9">
-                        <div id="navbar-tabs" class="fadeOut navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <li><a class="nav-link" href=".">Home</a>
-                                </li>
-                                <li><a class="nav-link" href="about">About</a>
-                                </li>
-                                <li><a class="nav-link" href="training/#whatweteach"
-                                       onclick="loadTrainingTab('training/tabs/what_we_teach.html', this);">Training</a>
-                                </li>
-                                <li><a class="nav-link" href="http://store.ampfit.ca" target="_blank">Rates</a>
-                                </li>
-                                <li><a class="nav-link" href="blog">Blog</a>
-                                </li>
-                                <li><a class="nav-link" href="schedule">Schedule</a>
-                                </li>
-                                <li><a class="nav-link" href="testimonials">Reviews</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="navbar-social">
-                            <div id="navbar-social-btns" class="animate">
-                                <a class="btn btn-social btn-instagram" href="https://instagram.com/ampfit/"
-                                   target="_blank"><i class="fa fa-instagram"></i></a>
-                                <a class="btn btn-social btn-youtube" href="https://www.youtube.com/user/ampfitdotca"
-                                   target="_blank"><i class="fa fa-youtube"></i></a>
-                                <a class="btn btn-social btn-twitter" href="https://twitter.com/AMPfitdotca"
-                                   target="_blank"><i class="fa fa-twitter"></i></a>
-                                <a class="btn btn-social btn-google-plus" href="https://plus.google.com/109409638829559581331/"
-                                   target="_blank"><i class="fa fa-google-plus"></i></a>
-                                <a class="btn btn-social btn-facebook" href="https://www.facebook.com/ampfit"
-                                   target="_blank"><i class="fa fa-facebook"></i></a>
+                        <div class="row">
+                            <div id="navbar-tabs" class="col-xs-12 col-sm-8">
+                                <div id="navbar-collapse" class="fadeOut navbar-collapse collapse">
+                                    <ul class="nav navbar-nav navbar-nav-header">
+                                        <li><a class="nav-link" href="about">ABOUT</a>
+                                        </li>
+                                        <li><a class="nav-link" href="training/"
+                                               onclick="loadTrainingTab('./training/index.html', this);">TRAINING</a>
+                                        </li>
+                                        <li><a class="nav-link" href="rates">RATES</a>
+                                        </li>
+                                        <li><a class="nav-link" href="schedule">SCHEDULE</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="navbar-social" class="col-xs-12 col-sm-4">
+                                <div id="navbar-social-btns" class="animate">
+                                    <a class="btn btn-social btn-instagram" href="https://instagram.com/ampfit/"
+                                       target="_blank"><i class="fa fa-instagram"></i></a>
+                                    <a class="btn btn-social btn-youtube" href="https://www.youtube.com/user/ampfitdotca"
+                                       target="_blank"><i class="fa fa-youtube"></i></a>
+                                    <a class="btn btn-social btn-twitter" href="https://twitter.com/AMPfitdotca"
+                                       target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a class="btn btn-social btn-facebook" href="https://www.facebook.com/ampfit"
+                                       target="_blank"><i class="fa fa-facebook"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
     </div>
-</div>
-<!--<hr id="header-divider-home" class="animate amp-header-divider">-->
+</nav>

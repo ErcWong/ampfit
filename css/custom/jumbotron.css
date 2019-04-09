@@ -21,7 +21,6 @@
         position: relative;
         width: 175px;
         height: 80px;
-        left: -15px;
         margin-top: 15px;
         z-index: 1;
     }
@@ -36,7 +35,6 @@
         height: 118px;
         width: 260px;
         margin-top: -56px !important;
-        left: -15px;
     }
     .zoom-in-init {
         background-size: 175px 80px !important;
@@ -48,9 +46,9 @@
     }
 }
 #about-methodology {
-    background-image: url('../../img/amp/about/amp_methodology.jpg');
+    background-image: url('../../img/amp/about/amp_about_01.jpg');
+    background-position: center 50%;
     min-height: 360px;
-    margin-top: 50px;
     margin-bottom: 0;
 }
 #about-trainer-owen {
@@ -76,6 +74,36 @@
     background-position: 98% 84%;
     min-height: 475px;
     margin-top: 20px;
+}
+#home-getting-started {
+    background-image: url('../../img/amp/courses/strength/strength_500x300.jpg');
+    background-position: 98% 84%;
+    background-size: cover;
+}
+#home-events-and-workshops {
+    background-image: url('../../img/ampfitlogocircular_05.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#home-private-training {
+    background-image: url('../../img/amp/training/private/one_on_one.jpg');
+    background-position: 98% 70%;
+    background-size: cover;
+}
+#home-tools-bw{
+    background-image: url('../../img/amp/tools_bw.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+#home-tools-kb{
+    background-image: url('../../img/amp/tools_kb.jpg');
+    background-position: 98% 70%;
+    background-size: cover;
+}
+#home-tools-bb{
+    background-image: url('../../img/amp/tools_barbell.jpg');
+    background-position: 98% 70%;
+    background-size: cover;
 }
 #private-one {
     background-image: url('../../img/amp/training/private/one_on_one.jpg');
@@ -125,16 +153,21 @@
     background-color: black;
 }
 #slider-1 {
-    background-image: url('../../img/amp/slider_1.jpg');
-    background-position: 75% 25%;
+    background-image: url('../../img/amp/slider_01.jpg');
+    background-position: 50% 30%;
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
 }
 #slider-2 {
-    background-image: url('../../img/amp/slider_2.jpg');
+    background-image: url('../../img/amp/slider_02.jpg');
     background-position: center top;
 }
 #slider-3 {
-    background-image: url('../../img/amp/slider_3.jpg');
-    background-position: center center;
+    background-image: url('../../img/amp/slider_03.jpg');
+    background-position: 35% 65%;
     -webkit-filter: blur(4px);
     -moz-filter: blur(4px);
     -o-filter: blur(4px);

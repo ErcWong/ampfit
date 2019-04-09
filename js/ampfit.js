@@ -1,7 +1,8 @@
 function loadHeaderAndFooter(page) {
     var html = (page == 'Home' ? 'home' : '');
     var path = (page == 'Home' ? '' : '../');
-    $('header').load(path + 'header' + html + '.html', function() {
+    console.log(html + ':' + path + ':' + page);
+    $('header').load(path + 'header' + html + '.html', function () {
         $('li:contains(' + page + ')').first().addClass('active');
     });
     $('footer').load(path + 'footer.html');
@@ -27,17 +28,33 @@ function loadPage() {
     }
 }
 
-function justifyGalleryLayout() {
-    console.log('Justifying');
+function setupCoursePage() {
+    $('.hover-label').flowtype({
+        minFont: 15,
+        maxFont: 30,
+        fontRatio: 9
+    });
+    $('.overlay').flowtype({
+        minFont: 10,
+        maxFont: 30,
+        fontRatio: 20
+    });
+    $(".overlay").click(function () {
+        window.location = $(this).find("a:first").attr("href");
+        return false;
+    });
+}
+
+function justifyGalleryLayout(gallery) {
     if ($(window).width() > 414) {
-        $("#mygallery").justifiedGallery({
+        $("#" + gallery).justifiedGallery({
             rowHeight: 150,
             fixedHeight: false,
             lastRow: 'justify',
             margins: 2
         });
     } else {
-        $("#mygallery").justifiedGallery({
+        $("#" + gallery).justifiedGallery({
             rowHeight: 150,
             fixedHeight: false,
             lastRow: 'justify',
@@ -58,7 +75,7 @@ function loadInitialTrainingTab() {
 }
 
 function loadTrainingTab(uri, tab, anchor) {
-    $('#training-tab-content').load(uri, function() {
+    $('#training-tab-content').load(uri, function () {
         setupOnFolioHover();
 
         if (anchor != null) {
@@ -90,7 +107,7 @@ function loadTestimonial(name) {
 
     $('#testimonial-img').attr('src',
         '../img/amp/testimonials/' + name + '.jpg');
-    $("#testimonial-img").on("error", function() {
+    $("#testimonial-img").on("error", function () {
         $(this).attr('src', '../img/amp/testimonials/default.jpg');
     });
 }
@@ -102,27 +119,32 @@ function doesFileExist(urlToFile) {
     return xhr.status != "404";
 }
 
-function loadPongstgram() {
-    $('#instagram-feed').pongstgrm({
-        accessId: '295165979',
-        accessToken: '295165979.167035a.f95a0b3a5f54421f9fb59572756b3059'
-    });
-}
-
-function loadInstafeed() {
+function loadInstagram() {
     var feed = new Instafeed({
-            userId: '295165979',
-            accessToken: '295165979.167035a.f95a0b3a5f54421f9fb59572756b3059',
-            get: 'user',
-            target: 'mygallery',
-            resolution: 'low_resolution',
-            template: '<a href="{{link}}" data-lightbox="gallery"> <img src="{{image}}" img-orientation="{{orientation}}" width="{{width}}" height="{{height}}"/></a>'
-        });
+        userId: '295165979',
+        accessToken: '295165979.167035a.567c2ce761204319a6ae3a8641dadd1b',
+        get: 'user',
+        target: 'instafeed',
+        resolution: 'low_resolution',
+        limit: '12',
+        template: '<a href="{{link}}" data-lightbox="gallery"> <img src="{{image}}" img-orientation="{{orientation}}" width="{{width}}" height="{{height}}"/></a>'
+    });
     feed.run();
 }
 
+function loadFacebookSDK() {
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+}
+
 function loadTwitter() {
-    ! function(d, s, id) {
+    ! function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
             p = /^http:/
             .test(d.location) ? 'http' : 'https';
@@ -143,7 +165,7 @@ function justifyTestimonialLayout() {
         $('#testimonial-modal').addClass('container marketing');
         $('#testimonial-modal').removeClass('wrapper');
     }
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         if ($(window).width() > 759) {
             $('#testimonial-modal').addClass('wrapper');
             $('#testimonial-modal').removeClass('container marketing');
@@ -158,10 +180,10 @@ function setupOnFolioHover() {
     $('.hidden').css('display', 'none');
 
     $("#filter button").each(
-        function() {
+        function () {
             $(this).on(
                 "click",
-                function() {
+                function () {
                     var filter = $(this).attr('class');
                     if ($(this).attr('class') == 'all') {
                         $('.hidden').contents().appendTo('#posts')
@@ -180,11 +202,11 @@ function setupOnFolioHover() {
                         $(this).addClass('active');
                         $("#filter button").attr("disabled", false);
                         $(this).attr("disabled", true);
-                    };
+                    }
 
                 });
         });
-    $("img").error(function() {
+    $("img").error(function () {
         $(this).unbind("error").attr({
             "src": "",
             "style": "height:440px; color:black"
@@ -197,9 +219,9 @@ function setupOnPanelHover() {
     // although this can be done without JavaScript, we've attached these events
     // because it causes the hover to be triggered when the element is tapped on
     // a touch device
-    $('#filter').hover(function() {
+    $('#filter').hover(function () {
         $(this).addClass('flip');
-    }, function() {
+    }, function () {
         $(this).removeClass('flip');
     });
 }
@@ -221,7 +243,7 @@ function addAnimationToElement(div, element, pos, fin) {
         changeHeaderOn = pos;
 
     function init() {
-        window.addEventListener('scroll', function(event) {
+        window.addEventListener('scroll', function (event) {
             if (!didScroll) {
                 didScroll = true;
                 setTimeout(scrollPage, 250);
@@ -248,11 +270,11 @@ function addAnimationToElement(div, element, pos, fin) {
 
 function collapseMenuOnScroll() {
     var docElem = document.documentElement,
-        menu = $('body', docElem).find('#navbar-tabs'),
+        menu = $('body', docElem).find('#navbar-collapse'),
         didScroll = false;
 
     function init() {
-        window.addEventListener('scroll', function(event) {
+        window.addEventListener('scroll', function (event) {
             if (!didScroll) {
                 menu.collapse({
                     toggle: false
@@ -274,20 +296,20 @@ function collapseMenuOnScroll() {
 function modalFullscreen(obj) {
     $(".modal-fullscreen").off();
 
-    $(".modal-fullscreen").on('show.bs.modal', function() {
+    $(".modal-fullscreen").on('show.bs.modal', function () {
         var id = obj;
-        setTimeout(function() {
+        setTimeout(function () {
             $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
             $('.modal-backdrop-fullscreen').css("background-image", "url(../img/amp/training/" + id + "_f.jpg)");
         }, 0);
     });
-    $(".modal-fullscreen").on('hidden.bs.modal', function() {
+    $(".modal-fullscreen").on('hidden.bs.modal', function () {
         $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
     });
 }
 
 function show(id) {
-    setTimeout(function(){
+    setTimeout(function () {
         var ele = document.getElementById(id);
         ele.style.opacity = 1;
     })
@@ -296,4 +318,13 @@ function show(id) {
 function hide(id) {
     var ele = document.getElementById(id);
     ele.style.opacity = 0;
+}
+
+function activeTab(window) {
+    var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
+    console.log(pgurl)
+    $("#nav ul li a").each(function () {
+        if ($(this).attr("href") == pgurl || $(this).attr("href") == '')
+            $(this).addClass("active");
+    });
 }

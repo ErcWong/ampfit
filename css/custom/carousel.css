@@ -29,11 +29,17 @@
 }
 #carouselContainer {
     padding: 0;
-    margin-top: 138px;
 }
 #myCarousel {
-    background-color: black;
+    background-color: white;
     left: 0;
+    position: relative;
+   	height: 100%;
+}
+@media screen and (min-aspect-ratio: 13/9) and (min-width: 768px) {
+	#myCarousel {
+		height: 60%;
+	}
 }
 @media(min-width: 768px) {
     .carousel-caption p {
@@ -45,7 +51,6 @@
         font-size: 80px;
     }
     #carouselContainer {
-        margin-top: 101px;
         padding-bottom: 120px;
     }
 }
@@ -54,7 +59,6 @@
         font-size: 80px;
     }
     #carouselContainer {
-        margin-top: 81px;
         padding-bottom: 75px;
     }
 }
@@ -63,7 +67,6 @@
         font-size: 79px;
     }
     #carouselContainer {
-        margin-top: 87px;
         padding-bottom: 85px;
     }
 }
@@ -182,9 +185,10 @@ hr.ampsep:after {
 
 .panel {
 	margin: 0 auto;
-	height: 300px;
+	min-height: 400px;
+	height: 100%;
 	position: relative;
-	-webkit-perspective: 600px;
+	/*-webkit-perspective: 600px;
 	-moz-perspective: 600px;
 	background: -moz-linear-gradient(top, rgba(38, 38, 38, 0) 15%,
 		rgba(38, 38, 38, 0.82) 45%, rgba(38, 38, 38, 0.9) 48%,
@@ -213,7 +217,7 @@ hr.ampsep:after {
 		rgba(38, 38, 38, 0.9) 52%, rgba(38, 38, 38, 0.84) 55%,
 		rgba(0, 0, 0, 0) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00262626',
-		endColorstr='#00000000', GradientType=0);
+		endColorstr='#00000000', GradientType=0);*/
 	background-attachment: fixed;
 }
 

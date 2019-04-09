@@ -1,5 +1,5 @@
 html, body, #background, #background-wrapper {
-   background: white;
+   background: transparent;
 }
 
 #header-logo-pages {
@@ -10,13 +10,18 @@ html, body, #background, #background-wrapper {
     background-color: white !important;
 }
 
-.navbar-inverse .navbar-nav>.active>a {
-    color: white;
-    background-color: #B7B7B7;
+.navbar-nav>.active>a {
+    color: black;
+    text-decoration: underline;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #000000;
 }
 
 h2, .featurette-heading {
-    color: #B7B7B7
+    color: #B7B7B7;
+    color: #000000;
 }
 
 .text-bright {
@@ -24,9 +29,17 @@ h2, .featurette-heading {
 }
 
 .btn-default {
-    color: white;
+    color: black;
     background-color: #B7B7B7;
     border-color: #B7B7B7;
+}
+.btn-primary {
+    color: black;
+}
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: rgba(158, 29, 32, .5);
+    border-color: rgba(0, 0, 0, .25);
 }
 
 .btn-instagram, .btn-youtube, .btn-twitter, .btn-google-plus, .btn-facebook {
@@ -39,5 +52,14 @@ h2, .featurette-heading {
 }
 
 .carousel .item, #myCarousel {
-    background-color: transparent;
+    background-color: white;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #9E1D20;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    color: black;
 }
