@@ -37,3 +37,9 @@ target/
 *.war
 *.ear
 /target
+/build/
+/bower.json
+/bower_components/
+/.metadata/
+/.config.codekit3
+/node_modules/

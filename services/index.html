@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AMPFit - Group Training</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-social.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <!--<link href="css/modern-business.css" rel="stylesheet">-->
+    <link rel="icon" type="image/ico" href="../img/favicon.ico" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-horizon.css">
+    <link rel="stylesheet" href="../css/custom/carousel.css">
+    <link rel="stylesheet" href="../css/custom/font.css">
+    <link rel="stylesheet" href="../css/custom/index.css">
+    <link rel="stylesheet" href="../css/custom/jumbotron.css">
+    <link rel="stylesheet" href="../css/custom/mobile.css">
+    <link rel="stylesheet" href="../css/custom/index.wht.min.css">
+    <link rel="stylesheet" href="../css/custom/hover.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300|Open+Sans:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js?onload=onLoad&render=explicit' async defer></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header id="top"></header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+
+        <div class="row">
+            <div class="col-sm-12">
+                <ul id="trainer-nav" class="nav nav-pills" style="">
+                    <li class="nav-item active">
+                        <a class="nav-link" href=".">begin here</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="private-training.html">private / semi-private</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <h1 class="page-header" style="color:#777">Services
+                    <small>always making progress</small>
+                </h1>
+            </div>
+
+            <div class="col-sm-12">
+                <ol class="breadcrumb">
+                    <li><a href="/">home</a></li>
+                    <li>begin here</li>
+                </ol>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div id="accordion" class="panel-group col-md-3" role="tablist" aria-multiselectable="true">
+                <!--                <h3>classes</h3>-->
+                <div class="panel panel-primary " style="min-height: 0 !important; border-bottom-left-radius: 0; border-bottom-right-radius: 0">
+                    <div class="panel-heading" role="tab" id="headingOne" style="background-color:#9E1D20">
+                        <div class="panel-title">
+                            <a style="display: block" data-toggle="collapse" data-parent="#accordion" href="#begin-panel" aria-expanded="true" aria-controls="begin-panel">Begin Here</a>
+                        </div>
+                    </div>
+
+                    <div id="begin-panel" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <!--
+                        <div class="panel-body" style="font-size: 1.3em">
+                            <li><a href="javascript:void(0)" onclick="scrollToTag('#')">contact us</a></li>
+                            <li><a href="../services/101-strength-training.html" onclick="scrollToTag('#')">starter package</a></li>
+                        </div>
+-->
+                    </div>
+                </div>
+                <a href="../services/private-training.html" class="list-group-item">Private / Semi-Private Training</a>
+                <a href="faqs.html" class="list-group-item">Frequently Asked Questions</a>
+            </div>
+
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="home">home</div>
+                    <div role="tabpanel" class="tab-pane" id="profile">profile</div>
+                    <div role="tabpanel" class="tab-pane" id="messages">tabp</div>
+                    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                </div>
+
+            </div>
+
+            <div class="col-md-9">
+                <div id="begin-step-one" class="col-md-12">
+                    <h1>step 1.</h1>
+                    <p>
+                        Contact us at <a href="mailto:info@ampfit.ca">info@ampfit.ca</a>
+                    </p>
+                    <div class="col-md-9">
+                        <form class="formmail" action="./contact/formmail.php" method="post"><input type="hidden" name="required" value="name,email,comments" />
+                            <br /> Name:
+                            <br />
+                            <input name="name" size="30" maxlength="30" type="text" />
+                            <br /> E-mail Address:<br />
+                            <input name="email" size="30" maxlength="30" type="text" />
+                            <br /> Message:
+                            <br />
+                            <textarea name="comments" cols="30" rows="8"></textarea>
+                            <br />
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <img id="siimage" width="110px" height="38px" src="./contact/securimage_show.php?sid=<?php echo md5(time()) ?>" align="left" alt="" />
+                                    </td>
+                                    <td width="3"></td>
+                                    <td valign="top">
+                                        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" id="SecurImage_as3" align="middle" height="19" width="19">
+                                            <param name="allowScriptAccess" value="sameDomain" />
+                                            <param name="allowFullScreen" value="false" />
+                                            <param name="movie" value="./contact/securimage_play.swf?audio=/contact/securimage_play.php&amp;bgColor1=#777&amp;bgColor2=#fff&amp;iconColor=#000&amp;roundedCorner=5" />
+                                            <param name="quality" value="high" />
+                                            <param name="bgcolor" value="#ffffff" />
+                                            <embed src="./contact/securimage_play.swf?audio=./contact/securimage_play.php" quality="high" bgcolor="#ffffff" name="SecurImage_as3" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="19" width="19" />
+                                        </object>
+                                        <br />
+                                        <a tabindex="-1" href="#" title="Refresh Image" onclick="document.getElementById('siimage').src = './contact/securimage_show.php?sid=' + Math.random(); return false"><img src="./contact/images/refresh.gif" alt="Refresh Image" onclick="this.blur()" /></a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br /> Code:
+                            <br />
+                            <input name="code" size="12" type="text" />
+                            <br />
+                            <br />
+                            <input value="Send E-mail" name="submit" type="submit" />
+                            <input value="Clear" name="reset" type="reset" />
+                        </form>
+                    </div>
+                </div>
+                <div id="begin-step-two" class="col-md-12">
+                    <h1>step 2.</h1>
+                    <p>
+                        Schedule your <b>FREE</b> consultation
+                    </p>
+                </div>
+                <div id="begin-step-three" class="col-md-12">
+                    <h1>step 3.</h1>
+                    <p>
+                        Show up and start making progress
+                    </p>
+                </div>
+
+                <!--
+                <div id="nb" class="col-md-12" style="padding-bottom: 25px">
+                    <div style="text-align: center">
+                        <a class="" href="#" style="font-size: 2em">
+                                <b>AMP: NUTS &amp; BOLTS</b>
+                            </a>
+                    </div>
+                    <div width="100%" style="height: 300px; overflow: hidden">
+                        <img class="" width="100%" src="/img/amp/training/begin/nutsbolts_crop.jpg">
+                    </div>
+                    <div class="col-md-12" style="padding: 0">
+                        <h4 class="amp-red pull-right"><b>Tuesday/Thursday @7:00</b></h4>
+                        <h4 class="amp-red pull-left"><b>All levels</b></h4>
+                    </div>
+                    <div class="col-md-12">
+                        <p>Start and prepare your body and mind with AMP: Nuts and Bolts - The Essentials. Register for this course and learn how to regain control of your body, from head to toe.</p>
+                        <p>
+                            Drop-ins available.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div id="skill" class="col-md-12">
+                    <div style="text-align: center">
+                        <a class="" href="#" style="font-size: 2em">
+                                <b>AMP: SKILL CLASSES</b>
+                            </a>
+                    </div>
+                    <div width="100%" style="height: 300px; overflow: hidden">
+                        <img class="" width="100%" src="/img/amp/courses/strength/strength_03_dl_750x500.jpg">
+                    </div>
+                    <div class="col-md-12" style="padding: 0">
+                        <h4 class="amp-red pull-right"><a href="/schedule/"><b>Check Schedule</b></a></h4>
+                        <h4 class="amp-red pull-left"><b>All levels</b></h4>
+                    </div>
+                    <p>Swing. Goblet Squat. Turkish Get-up. Learn and practice these fundamentals to complement your training.</p>
+                </div>
+-->
+
+                <!--
+                <div id="begin-step-three" class="col-md-12">
+                    <h1>step 3.</h1>
+                    <p>
+                        Complete the four private sessions included with your AMP: Starter Package.<br>
+                                                If you feel ready, you may choose to challenge the AMP: Skills tests.
+                    </p>
+                </div>
+                <div id="begin-step-four" class="col-md-12">
+                    <h1>step 4.</h1>
+                    <p>
+                        Challenge the <a href="javascript:void(0)">AMP: Starter Skills Test.</a>
+                    </p>
+                    <p class="text-small" style="color: #777">
+                        <br>Kettlebell Deadlift 3 sets of 10
+                        <br>Kettlebell Swing 3 sets of 10
+                        <br>Plank Hold 1 set of 30 seconds
+                        <br>
+                        <br>Kettlebell Arm Bar 3 sets of 30 seconds
+                        <br>Get-up 3 sets of 1 Kettlebell Halo 1 set of 10/side
+                        <br>
+                        <br>Prying Goblet Squat 3 sets of 5
+                        <br>Goblet Squat 3 sets of 10
+                        <br>Goblet Squat Isometric Row 1 set of 30 seconds
+                    </p>
+                    <p>
+                        To pass the AMP: Starter Skills test, one must demonstrate safety and proper technique at all times.
+                        <br> If extra practice is required, our instructors are available for 1-on-1 private training.
+                    </p>
+                </div>
+                <div id="begin-step-five" class="col-md-12">
+                    <h1>step 5.</h1>
+                    <p>
+                        Pass the skills Test and continue your learning with either <a href="private-training.html">AMP: Private Training or Semi-Private Training</a>.
+                    </p>
+                </div>
+                <div id="begin-step-three" class="col-md-12">
+                    <h1>step 3.</h1>
+                    <p>
+                        Be realistic and stay consistent.
+                    </p>
+                    <p>
+                        Whereever you decide to train, continue learning, refining, and improving your skills.
+                    </p>
+                    <p>
+                        This is your never-ending journey, <a href="/">Always Making Progress.</a>
+                    </p>
+                </div>
+-->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer></footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bootstrap/js/bootstrap.min.js "></script>
+    <!-- Custom JS -->
+    <script src="../js/ampfit.js "></script>
+    <script src="../js/flowtype.js "></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js "></script>
+
+    <script>
+        $(document).ready(function() {
+            loadHeaderAndFooter('TRAINING');
+            setupCoursePage();
+        });
+        $(window).load(function() {
+            collapseMenuOnScroll();
+        });
+        $(window).on('beforeunload', function() {
+            $(window).scrollTop(0);
+        });
+
+    </script>
+
+    <script type="text/javascript">
+        var onLoad = function() {
+            widgetId = grecaptcha.render('componentId', {
+                'sitekey': '6Le2S3sUAAAAAMvNKBSlr3IVxG_yYFeFpfqYwwnt',
+                'callback': onSubmit,
+            });
+        };
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.headings,
+h1,
+h2,
+h3,
+li {
+    letter-spacing: 1px;
+}
+
+.bs-docs-sidebar {
+    top: 100px;
+}
+
+.bs-docs-sidebar .nav .nav > li > a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+[data-anchorjs-icon]::after {
+    content: attr(data-anchorjs-icon);
+}

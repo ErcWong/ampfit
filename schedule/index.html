@@ -11,8 +11,8 @@
     <title>AMPFit | Always Making Progress - Schedule</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/bootstrap-social.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap-social.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
@@ -24,8 +24,7 @@
     <link rel="stylesheet" href="../css/custom/index.wht.min.css">
 
     <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Lato:300|Open+Sans:300,400' rel='stylesheet'
-          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300|Open+Sans:300,400' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,63 +35,62 @@
 </head>
 
 <body>
-<header id="top"></header>
+    <header id="top"></header>
 
-<!-- Marketing messaging and featurettes
+    <!-- Marketing messaging and featurettes
 ================================================== -->
-<div class="container">
-    <!-- START THE FEATURETTES -->
-    <div class="row">
-        <div class="col-sm-12">
-            <h1 class="page-header">Schedule</h1>
-        </div>
-        <div class="col-sm-12 col-lg-12">
-            <ol class="breadcrumb">
-                <li><a href="..">home</a>
-                </li>
-                <li class="active">
-                    SCHEDULE
-                </li>
-            </ol>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div id="gcalendar" class="embed-responsive embed-responsive-gcal">
-                <iframe src="gcalendar.html"></iframe>
+    <div class="container">
+        <!-- START THE FEATURETTES -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h1 class="page-header">Schedule</h1>
+            </div>
+            <div class="col-sm-12 col-lg-12">
+                <ol class="breadcrumb">
+                    <li><a href="..">home</a>
+                    </li>
+                    <li class="active">
+                        SCHEDULE
+                    </li>
+                </ol>
             </div>
         </div>
-        <div class="col-sm-6">
-            <a class="btn btn-danger btn-ig pull-left"
-                href="https://www.google.com/calendar/render?cid=alwaysmakingprogress%40gmail.com"
-                style="font-size: 12px; position: relative; padding: 0 10px">add to Google Calendar</a>
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div id="gcalendar" class="embed-responsive embed-responsive-gcal">
+                    <iframe src="gcalendar.html"></iframe>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <a class="btn btn-danger btn-ig pull-left" href="https://www.google.com/calendar/render?cid=alwaysmakingprogress%40gmail.com" style="font-size: 12px; position: relative; padding: 0 10px">add to Google Calendar</a>
+            </div>
+            <div class="col-sm-6">
+                <a href="javascript:void(0)" onclick="scrollToTag('#top')"><i class="fa fa-arrow-up pull-right" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
-        <div class="col-sm-6">
-            <a href="javascript:void(0)" onclick="scrollToTag('#top')"><i class="fa fa-arrow-up pull-right" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
         <!-- /END THE FEATURETTES -->
-    <footer></footer>
-</div>
+        <footer></footer>
+    </div>
 
 
-<!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript
 ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Custom js for this template -->
-<script src="../js/ampfit.js"></script>
-<script>
-    $(document).ready(function() {
-        loadHeaderAndFooter('SCHEDULE');
-    });
-    $(window).load(function() {
-        collapseMenuOnScroll();
-    });
-</script>
+    <!-- Custom js for this template -->
+    <script src="../js/ampfit.js"></script>
+    <script>
+        $(document).ready(function() {
+            loadHeaderAndFooter('SCHEDULE');
+        });
+        $(window).load(function() {
+            collapseMenuOnScroll();
+        });
+
+    </script>
 </body>
 
 </html>

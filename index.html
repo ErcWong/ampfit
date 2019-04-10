@@ -11,8 +11,8 @@
     <title>AMPFit | Always Making Progress</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-social.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 
     <!-- Custom CSS -->
@@ -63,8 +63,8 @@
                     <div class="div-center-mid overlay">
                         <div class="carousel-caption div-center-in" style="transform: translate(0,50%)">
                             <button type="button" class="btn btn-lg btn-danger active">
-                                    <a href="./training" style="color: white">start here</a>
-                                </button>
+                                <a href="./training" style="color: white">start here</a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -164,20 +164,20 @@
                             <table cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td>
-                                        <img id="siimage" width="110px" height="38px" src="/contact/securimage_show.php?sid=<?php echo md5(time()) ?>" align="left" alt="" />
+                                        <img id="siimage" width="110px" height="38px" src="./contact/securimage_show.php?sid=<?php echo md5(time()) ?>" align="left" alt="" />
                                     </td>
                                     <td width="3"></td>
                                     <td valign="top">
                                         <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" id="SecurImage_as3" align="middle" height="19" width="19">
-        <param name="allowScriptAccess" value="sameDomain" />
-        <param name="allowFullScreen" value="false" />
-        <param name="movie" value="./contact/securimage_play.swf?audio=/contact/securimage_play.php&amp;bgColor1=#777&amp;bgColor2=#fff&amp;iconColor=#000&amp;roundedCorner=5" />
-        <param name="quality" value="high" />
-        <param name="bgcolor" value="#ffffff" />
-        <embed src="/contact/securimage_play.swf?audio=/contact/securimage_play.php" quality="high" bgcolor="#ffffff" name="SecurImage_as3" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="19" width="19" />
-    </object>
+                                            <param name="allowScriptAccess" value="sameDomain" />
+                                            <param name="allowFullScreen" value="false" />
+                                            <param name="movie" value="./contact/securimage_play.swf?audio=/contact/securimage_play.php&amp;bgColor1=#777&amp;bgColor2=#fff&amp;iconColor=#000&amp;roundedCorner=5" />
+                                            <param name="quality" value="high" />
+                                            <param name="bgcolor" value="#ffffff" />
+                                            <embed src="./contact/securimage_play.swf?audio=./contact/securimage_play.php" quality="high" bgcolor="#ffffff" name="SecurImage_as3" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="19" width="19" />
+                                        </object>
                                         <br />
-                                        <a tabindex="-1" href="#" title="Refresh Image" onclick="document.getElementById('siimage').src = '/contact/securimage_show.php?sid=' + Math.random(); return false"><img src="/contact/images/refresh.gif" alt="Refresh Image" onclick="this.blur()" /></a>
+                                        <a tabindex="-1" href="#" title="Refresh Image" onclick="document.getElementById('siimage').src = './contact/securimage_show.php?sid=' + Math.random(); return false"><img src="./contact/images/refresh.gif" alt="Refresh Image" onclick="this.blur()" /></a>
                                     </td>
                                 </tr>
                             </table>
@@ -286,9 +286,9 @@
     <!-- /.row -->
     <div id="contact" class="map" style="height: 400px">
         <iframe width="100%" height="100%" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5214.587063739399!2d-123.0977491052656!3d49.19499095823042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548675a613fcddc1%3A0x537848f515bde100!2sAMPFit+%7C+Always+Making+Progress!5e0!3m2!1sen!2sca!4v1508094834659" frameborder="0" style="border:0" allowfullscreen></iframe>
-        <br/>
+        <br />
         <small>
-        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5214.587063739399!2d-123.0977491052656!3d49.19499095823042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548675a613fcddc1%3A0x537848f515bde100!2sAMPFit+%7C+Always+Making+Progress!5e0!3m2!1sen!2sca!4v1508094834659"></a>
+            <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5214.587063739399!2d-123.0977491052656!3d49.19499095823042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548675a613fcddc1%3A0x537848f515bde100!2sAMPFit+%7C+Always+Making+Progress!5e0!3m2!1sen!2sca!4v1508094834659"></a>
         </small>
     </div>
 
@@ -324,7 +324,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Custom js for this template -->
     <script src="js/ampfit.js"></script>

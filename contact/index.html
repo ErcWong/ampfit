@@ -11,8 +11,8 @@
     <title>AMPFit | Always Making Progress</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/bootstrap-social.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap/css4/bootstrap-social.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -52,11 +52,48 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1303.6759438586757!2d-123.07961622948861!3d49.19388383172159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548675a613fcddc1%3A0x537848f515bde100!2sAMPFit+-+Always+Making+Progress!5e0!3m2!1sen!2sca!4v1431985068708"
-                            width="600" height="450" frameborder="0" style="border:0"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1303.6759438586757!2d-123.07961622948861!3d49.19388383172159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548675a613fcddc1%3A0x537848f515bde100!2sAMPFit+-+Always+Making+Progress!5e0!3m2!1sen!2sca!4v1431985068708" width="600" height="450" frameborder="0" style="border:0"></iframe>
                         </div>
                     </div>
                 </div>
+                <form class="formmail" action="../contact/formmail.php" method="post"><input type="hidden" name="required" value="name,email,comments" /><strong>Contact Form</strong><br />
+                    <br /> Name:
+                    <br />
+                    <input name="name" size="30" maxlength="30" type="text" />
+                    <br /> E-mail Address:<br />
+                    <input name="email" size="30" maxlength="30" type="text" />
+                    <br /> Message:
+                    <br />
+                    <textarea name="comments" cols="30" rows="8"></textarea>
+                    <br />
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <img id="siimage" width="110px" height="38px" src="../contact/securimage_show.php?sid=<?php echo md5(time()) ?>" align="left" alt="" />
+                            </td>
+                            <td width="3"></td>
+                            <td valign="top">
+                                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" id="SecurImage_as3" align="middle" height="19" width="19">
+                                    <param name="allowScriptAccess" value="sameDomain" />
+                                    <param name="allowFullScreen" value="false" />
+                                    <param name="movie" value="../contact/securimage_play.swf?audio=../contact/securimage_play.php&amp;bgColor1=#777&amp;bgColor2=#fff&amp;iconColor=#000&amp;roundedCorner=5" />
+                                    <param name="quality" value="high" />
+                                    <param name="bgcolor" value="#ffffff" />
+                                    <embed src="../contact/securimage_play.swf?audio=../contact/securimage_play.php" quality="high" bgcolor="#ffffff" name="SecurImage_as3" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="19" width="19" />
+                                </object>
+                                <br />
+                                <a tabindex="-1" href="#" title="Refresh Image" onclick="document.getElementById('siimage').src = '../contact/securimage_show.php?sid=' + Math.random(); return false"><img src="../contact/images/refresh.gif" alt="Refresh Image" onclick="this.blur()" /></a>
+                            </td>
+                        </tr>
+                    </table>
+                    <br /> Code:
+                    <br />
+                    <input name="code" size="12" type="text" />
+                    <br />
+                    <br />
+                    <input value="Send E-mail" name="submit" type="submit" />
+                    <input value="Clear" name="reset" type="reset" />
+                </form>
                 <!-- /END THE FEATURETTES -->
                 <!-- FOOTER -->
                 <div style="padding-bottom: 40px;">
@@ -76,7 +113,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Custom js for this template -->
     <script src="../js/ampfit.js"></script>
@@ -87,6 +124,7 @@
         $(window).load(function() {
             collapseMenuOnScroll();
         });
+
     </script>
 </body>
 

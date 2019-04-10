@@ -52,8 +52,26 @@
     margin-bottom: 0;
 }
 #about-trainer-owen {
-    background-image: url('../../img/amp/about/trainer_owen.jpg');
+    background-image: url('../../img/amp/about/instructor/owen.jpg');
     background-position: center top;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+#about-trainer-liv {
+    background-image: url('../../img/amp/about/instructor/liv.jpg');
+    background-position: center 25%;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+#about-trainer-amy {
+    background-image: url('../../img/amp/about/instructor/amy.jpg');
+    background-position: center 15%;
+    min-height: 400px;
+    margin-bottom: 20px;
+}
+#about-trainer-eric {
+    background-image: url('../../img/amp/about/instructor/eric.jpg');
+    background-position: center 20%;
     min-height: 400px;
     margin-bottom: 20px;
 }

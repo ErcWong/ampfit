@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AMPFit - FAQs</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="icon" type="image/ico" href="../img/favicon.ico" />
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="../css/custom/carousel.css">
+    <link rel="stylesheet" href="../css/custom/font.css">
+    <link rel="stylesheet" href="../css/custom/index.css">
+    <link rel="stylesheet" href="../css/custom/jumbotron.css">
+    <link rel="stylesheet" href="../css/custom/mobile.css">
+    <link rel="stylesheet" href="../css/custom/index.wht.min.css">
+    <link rel="stylesheet" href="../css/custom/hover.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css">
+
+    <!-- Custom Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300|Open+Sans:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js?onload=onLoad&render=explicit' async defer></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header id="top"></header>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+
+        <div class="row">
+            <div class="col-sm-12">
+                <ul id="trainer-nav" class="nav nav-pills" style="">
+                    <li class="nav-item active">
+                        <a class="nav-link" href=".">getting started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="private-training.html">private / semi-private</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-12">
+                <h1 class="page-header" style="color:#777">services
+                    <small>always making progress</small>
+                </h1>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row">
+                    <div id="begin-step-one" class="col-md-12">
+                        <h4>To schedule your free consultation, please fill out the form below! In your message, let us know when you are available to meet so we can get you booked most efficiently!</h4>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="formmail" action="../contact/formmail.php" method="post">
+                                    <input type="hidden" name="required" value="name,email,comments" />
+                                    <div class="form-group">
+                                        <label for="Name">Name</label>
+                                        <input name="name" class="form-control" id="InputName" placeholder="Name" size="30" maxlength="30" type="text">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputEmail">Email Address:</label>
+                                        <input name="email" class="form-control" id="InputEmail" placeholder="Email" size="30" maxlength="30" type="email">
+                                    </div>
+                                    <br /> Message:
+                                    <br />
+                                    <textarea name="comments" cols="30" rows="8"></textarea>
+                                    <br />
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <img id="siimage" width="110px" height="38px" src="../contact/securimage_show.php?sid=<?php echo md5(time()) ?>" align="left" alt="" />
+                                            </td>
+                                            <td width="3"></td>
+                                            <td valign="top">
+                                                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" id="SecurImage_as3" align="middle" height="19" width="19">
+                                                    <param name="allowScriptAccess" value="sameDomain" />
+                                                    <param name="allowFullScreen" value="false" />
+                                                    <param name="movie" value="./contact/securimage_play.swf?audio=../contact/securimage_play.php&amp;bgColor1=#777&amp;bgColor2=#fff&amp;iconColor=#000&amp;roundedCorner=5" />
+                                                    <param name="quality" value="high" />
+                                                    <param name="bgcolor" value="#ffffff" />
+                                                    <embed src="../contact/securimage_play.swf?audio=./contact/securimage_play.php" quality="high" bgcolor="#ffffff" name="SecurImage_as3" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" height="19" width="19" />
+                                                </object>
+                                                <br />
+                                                <a tabindex="-1" href="#" title="Refresh Image" onclick="document.getElementById('siimage').src = '../contact/securimage_show.php?sid=' + Math.random(); return false"><img src="../contact/images/refresh.gif" alt="Refresh Image" onclick="this.blur()" /></a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br /> Code:
+                                    <br />
+                                    <input name="code" size="12" type="text" />
+                                    <br />
+                                    <br />
+                                    <input value="Send E-mail" name="submit" type="submit" />
+                                    <input value="Clear" name="reset" type="reset" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="begin-step-two" class="col-md-12">
+                        <h1>step 2.</h1>
+                        <p>
+                            Schedule your <b>FREE</b> consultation
+                        </p>
+                    </div>
+                    <div id="begin-step-three" class="col-md-12">
+                        <h1>step 3.</h1>
+                        <p>
+                            Show up and start making progress
+                        </p>
+                    </div>
+                    <div class="docs-section col-md-12">
+                        <h1 id="FAQs" class="page-header">Frequently asked questions</h1>
+                        <h2 id="faq-1">
+                            <a class="anchorjs-link" href="#faq-1" aria-label="Anchor link for: scrollspy examples" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                            </a>how do i sign up
+                        </h2>
+                        <p>
+                            You start with a free strategy session. The strategy session gives you the opportunity to meet with a coach and see what Achieve Fitness is all about before you ever spend a penny! You can sign up for your strategy session by visiting our contact us page.</p>
+                        <h2 id="faq-2">
+                            <a class="anchorjs-link" href="#faq-1" aria-label="Anchor link for: scrollspy examples" data-anchorjs-icon="" style="font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 1em; line-height: inherit; font-family: anchorjs-icons; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+                            </a>how do i sign up
+                        </h2>
+                        <p>
+                            You start with a free strategy session. The strategy session gives you the opportunity to meet with a coach and see what Achieve Fitness is all about before you ever spend a penny! You can sign up for your strategy session by visiting our contact us page.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3" role="complementary">
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix" data-offset-top="80" data-offset-bottom="500">
+                    <ul class="nav">
+                        <li>
+                            <a href="#getting-started">getting started</a>
+                        </li>
+                        <li>
+                            <a href="#FAQs">FAQs</a>
+                            <ul class="nav">
+                                <li>
+                                    <a href="#faq-1">how do i sign up</a>
+                                </li>
+                                <li>
+                                    <a href="#faq-2">how long are your contracts</a>
+                                </li>
+                                <li>
+                                    <a href="#faq-3">is there a guarantee</a>
+                                </li>
+                                <li>
+                                    <a href="#faq-4">what does "semi-private" training mean</a>
+                                </li>
+                                <li>
+                                    <a href="#faq-4">do you offer student discounts</a>
+                                </li>
+                                <li>
+                                    <a href="#faq-4">will you ever raise my rates</a>
+                                </li>
+                                <li>
+                                    <a href="#faq-4">have more questions</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="col-md-12"></footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bootstrap/js/bootstrap.min.js "></script>
+    <!-- Custom JS -->
+    <script src="../js/ampfit.js "></script>
+    <script src="../js/flowtype.js "></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js "></script>
+
+    <script>
+        $(document).ready(function() {
+            loadHeaderAndFooter('TRAINING');
+            setupCoursePage();
+        });
+        $(window).load(function() {
+            collapseMenuOnScroll();
+        });
+        $(window).on('beforeunload', function() {
+            $(window).scrollTop(0);
+        });
+
+    </script>
+
+    <!--
+    <script type="text/javascript">
+        var onLoad = function() {
+            widgetId = grecaptcha.render('componentId', {
+                'sitekey': '6Le2S3sUAAAAAMvNKBSlr3IVxG_yYFeFpfqYwwnt',
+                'callback': onSubmit,
+            });
+        };
+    </script>
+-->
+
+</body>
+
+</html>
